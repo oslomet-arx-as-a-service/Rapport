@@ -1,3 +1,5 @@
-# Rapport
+# Report
 
-Repository containing notes, summaries, chapters, drafts, data and more for the bachelor thesis
+Repository containing raw chapters for bachelor project
+
+eatch chapter has seperate folders
