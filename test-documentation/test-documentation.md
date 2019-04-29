@@ -1,6 +1,9 @@
-# Preface
+### Preface
 The purpose of this documentation is to give the reader a detailed description of each test, and how the test are implemented. This documentent is written with the expectation that the reader has basic programming and testing knowledge.
 
-# Table of Content
+### Table of Content
 
-# Introduction
+### Goal
+The goal for these tests is to ensure that the service and the clients functionalities, works as they are expected to work. This is also to ensure that in an event that a feature fails, the right error message shows up with a detailed explaination on what went wrong and how to correct the error.
+
+Additionaly these tests were used to fullfil a test driven development work flow. As well as help ensure a agile work flow where each new feature has been tested and is stable before moving on to a new feature is implemented.
