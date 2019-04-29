@@ -8,8 +8,10 @@
 ### Introduction
 
 ### ARXaaS service
--Manual, set up steps. Https configuration.
--Troubleshooting, error description.
+- Manual, set up steps
+- Https configuration.
+- Troubleshooting
+- Error description.
 
 ### PyARXaaS client
 
