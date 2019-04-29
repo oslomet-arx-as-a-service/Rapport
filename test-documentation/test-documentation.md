@@ -10,15 +10,33 @@ The goal for these tests is to ensure that the service and the clients functiona
 Additionaly these tests were used to fullfil a test driven development work flow. As well as help ensure a agile work flow where each new feature has been tested and is stable before moving on to a new feature is implemented.
 
 ### Tools
-  #### Postman 
-  #### travis 
-  #### code climate 
-  #### snyk
-  #### JUnit 4 and 5
-  #### Spring test libraries
-  #### unittest(Python)
-  #### Pytest
-  #### coverage.py
+These are the tools the team used for testing:
+  - #### Postman
+    - The team used postman to craft network requests and send it towards the service end-points, in order to quickly test the service.
+   
+  - #### travis 
+    - The team used travis to automate the continues delivery pipeline. Each new branch pushed to the repository is tested in a virtual environment and has to pass before being allowed to be merged in to the master branch.
+  
+  - #### code climate 
+    - Code climate was used as a static code analyser that showed test coverage as well the maintainability the code.
+    
+  - #### snyk
+    - Snyk is used to ensure that the dependencies used in the project does not have any vulnerabilities
+    
+  - #### JUnit
+    - Used for unit testing for the service.
+    
+  - #### Spring test libraries
+    - Used to test our service web environment. Edge case testing to ensure that the correct error messages shows and for the integration testing.
+    
+  - #### unittest(Python)
+    - Used for unit testing the python client.
+    
+  - #### Pytest
+    - 
+    
+  - #### coverage.py
+    - 
   
 ### Planning
 
