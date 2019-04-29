@@ -1,4 +1,3 @@
-
 ### Front page
 
 ### Preface
@@ -7,26 +6,28 @@
 
 ### Introduction
 
-### ARXaaS REST web service
- - Short presentation
- - Technologies
- - Functionality
-    - Security/https settings
+### Planning and methods
+- Development method
+- Project phases
+ - Interation
+ - Planning
+ - Execution
+ - Project conclusion and documentation
+-Planning tools
+-Competence building
+-Budget(Google cloud)
 
-### Client side introduction
+### Development process
+- Challenges met and choices made
+- Descriptions of the sprints
+- Development tools
+- Lessons learned during development
 
-### PyARXaaS
-- Short presentation
-- Technologies
-- Functionality
+### Product specification
+- Main Specifications descriptions
+- Stretch goals descriptions
+- Delivery
 
-### WebARXaaS
--Short presentation
--Technologies
--Functionality
+### Closing 
+### Sources
 
-### Operations
-
-### Future developments
-
-### Conclusion
