@@ -1,8 +1,12 @@
 
 ### Front page
+
 ### Preface
+
 ### ToC
+
 ### Introduction
+
 ### ARXaaS REST web service
  - Short presentation
  - Technologies
@@ -10,6 +14,7 @@
     - Security/https settings
 
 ### Client side introduction
+
 ### PyARXaaS
 - Short presentation
 - Technologies
@@ -21,5 +26,7 @@
 -Functionality
 
 ### Operations
+
 ### Future developments
+
 ### Conclusion
