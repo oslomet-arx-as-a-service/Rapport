@@ -6,6 +6,14 @@ The terms data and dataset are used continuously throughout the documentation. U
 ### ToC
 ### Introduction
 ### Presentation of the group
+
+ - Sondre - IT
+ Worked part time for NAV IT AI-lab since fall 2018. Main competence is Java and Python development, but has worked with web development in previously.
+ - André
+ - Julian
+ - Viktor
+ - Jeremiah
+
 ### Presentation of client
 The Norwegian Labour and Welfare Administration (NAV) is the backbone of the Norwegian welfare state, administering a third of the national budget and servicing almost 2.8 million people through a range of schemes such as unemployment benefit, work assessment allowance, sickness benefit, pension, child benefit and cash-for-care benefit. 
 In addition, NAV manages and retains stewardship of several important data sources containing information on its users and the services it provides. NAV IT is currently in the midst of a digital transformation, undergoing significant changes in team organization, work processes and harnessing new technologies.
@@ -26,9 +34,18 @@ The AI-lab has therefore requested the group to:
 - Provide access to ARX functionality from modern data science toolsets and workflows
 - Provide an extendable framework for making state-of-the-art anonymisation methods accessible to a wider audience in NAV IT by lowering the barriers to use.  
 
-### “ARXaaS”
+### The Product - ARX as a Service
+ARX as a Service refers to the group of products that make up the ARX as a Service ecosystem. The center piece of this ecosystem is the micro service named ARXaaS. ARXaaS. Addidtionally to ARXaaS there are two client products that provides user friendly usage of the service.
+
 #### Current situation
-#### Anonymizing/Re-identifcation concept
+There are several products in the anonymization/de-identification space. But the tools fall mainly into two categories: 
+ - Proprietary solutions that works as a "walled garden" with limited integration with other tooling
+ - Open source projects built by and for researches
+
+ Common to both categories is the fact that most solutions are mainly focused on Graphical user interfaces. There is limited support for integration and further development. 
+#### The problem space - Anonymizing/Re-Identifcation 
+
+
 #### Solution description
 
 The system will provide access to anonymization tools for data scientists at NAV IT. A data scientist should be able to anonymize tabular dataset based on user-specific configurations. Configurability includes privacy models, column attribute types and transformation models that determine how much data will be lost in the resulting anonymized dataset. 
