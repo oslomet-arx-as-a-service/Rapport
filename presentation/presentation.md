@@ -43,8 +43,14 @@ There are several products in the anonymization/de-identification space. But the
  - Open source projects built by and for researches
 
  Common to both categories is the fact that most solutions are mainly focused on Graphical user interfaces. There is limited support for integration and further development. 
-#### The problem space - Anonymizing/Re-Identifcation 
+#### The problem space - Anonymization
+Anonymization, also referred to as de-identification is the process of reducing the probability that a person can be identified from a dataset.
 
+Anonymizing datasets is a critical component in research. Mainly because it permits sharing and using PII [TODO define] for secondary purposes.
+
+Secondary purposes are purposes that are not directly related to the primary use of the data (sending out newsletters, providing servies to the user, etc). 
+
+There are two types of anonymization tequ
 
 #### Solution description
 
