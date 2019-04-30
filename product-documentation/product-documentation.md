@@ -20,9 +20,9 @@
 
 ### WebARXaaS
 - Short presentation
-As a strech goal our employer wished for a low bar entry to the arx functionality taking advantage of the flexibility of the REST API service. Therefore there was made a easy to use web application which easily can be learned and used by people not familiar with programming, and who just wishes to quickly analyze or anonymize their data. All the core functionality the service have been made avaiable through the web service.
+As a stretch goal the employer wished for a way to quickly access the ARX functionality taking advantage of the flexibility of the REST API on the ARXaaS web serice. There was therefore decided to implement an interactive web frontend, so the users quickly can analyze or anonymize their data. Without the need for the user to install software on their local machine.
 - Technologies
-The interactive Web service is implemented in React using multiple third party frameworks in order to provide the best posible service
+The interactive Web service is implemented in React using multiple third party frameworks in order to provide the best possible service
 
 | Package     | Use                                                                                                                   |
 | ----------  | -----                                                                                                                 |
