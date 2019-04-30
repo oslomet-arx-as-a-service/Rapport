@@ -26,7 +26,7 @@ These are the tools the team used for testing:
   - #### JUnit
     - Used for unit testing for the service.
     
-  - #### Spring test libraries
+  - #### Spring boot starter test
     - Used to test our service web environment. Edge case testing to ensure that the correct error messages shows and for the integration testing.
     
   - #### unittest(Python)
