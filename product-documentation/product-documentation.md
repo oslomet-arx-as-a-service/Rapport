@@ -11,12 +11,14 @@
 - Technologies
 - Functionality
 - Security/https settings
+- Open source licence
 
 ### Client side introduction
 - PyARXaaS
 - Short presentation
 - Technologies
 - Functionality
+- Open source licence
 
 ### WebARXaaS
 - Short presentation
