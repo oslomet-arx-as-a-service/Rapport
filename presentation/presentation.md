@@ -77,9 +77,25 @@ We will briefly talk about the pseudonymization before moving on to Anonymizatio
  Main anonymization techniques:
 
  - Generalization
+    Reducing the precision of a attribute. e.g full date of birth becomes only month and year or home address becomes home state or even country.
  - Suppression
+    Replacing a value in a dataset with a null value. full name becomes '*'
  - Micro-aggregation
+    Sets of numeric attribute values can be transformed into a common value by user-specified aggregation functions.
  - Subsampling
+    Releasing only a subset of the dataset instead of all the records
+
+#### Risk assessment
+Re-Identification is the reverse of de-identification and is the primary threat addressed by laws and regulation[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]. Quantifying risk of re-identification associated with a dataset is of high importance. The key aspect for re-identification is the uniqueness of quasi identifying attributes and the uniqueness of the combinations of the attributes. Quasi attributes can be linked with additional data in the dataset or from external datasets to identify individuals.
+
+Three different threat scenarios are commonly used by researchers[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]
+
+- Prosecutor attack model
+    Under this model the attacker is assumed to a target specific individual and know data concerning the individual is present in the dataset. The risk of a successful attack can be calculated based on the distinguishably of the records in the dataset.
+- Journalist attack model
+    Under this model the attacker is assumed to target an arbitrary individual without knowing if the individual is present in the dataset. Regarded as a more realistic model than the prosecutor model.
+- Marketer attack model
+    Under this model the attacker is assumed to aim at re-identifying as many individuals as possible. The risk of a successful attack can be expressed as the expected average number of re-identified individuals from the dataset.
 
 #### Solution description
 
