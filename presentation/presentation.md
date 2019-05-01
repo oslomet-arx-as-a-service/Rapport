@@ -42,20 +42,52 @@ There are several products in the anonymization/de-identification space. But the
  - Proprietary solutions that works as a "walled garden" with limited integration with other tooling
  - Open source projects built by and for researches
 
- Common to both categories is the fact that most solutions are mainly focused on Graphical user interfaces. There is limited support for integration and further development. 
-#### The problem space - Anonymization
-Anonymization, also referred to as de-identification is the process of reducing the probability that a person can be identified from a dataset.
+ Common to both categories is the fact that most solutions are mainly focused on Graphical user interfaces. There is limited support for integration and further development.
 
-Anonymizing datasets is a critical component in research. Mainly because it permits sharing and using PII [TODO define] for secondary purposes.
+#### The problem space - De-Identification
+De-Identification is a common term for reducing the probability that a person can be identified from a dataset. Its opposite is re-identification or identifying a person in a generally assumed anonymous dataset. It is a critical component in research,mainly because it permits sharing and using *personal data* for secondary purposes. *Personal data* are any information which are related to an identified or identifiable natural person. Secondary purposes are purposes that are not directly related to the primary use of the data.
 
-Secondary purposes are purposes that are not directly related to the primary use of the data (sending out newsletters, providing servies to the user, etc). 
+There are two main types of de-identification:
+ - Anonymization
+ - Pseudonymization
 
-There are two types of anonymization tequ
+ De-Identification, Anonymization and Pseudonymization often confused and used with different intentions. There is a lack of clear definition of the terms. We have attempted to define the terms with guidance from our product owner.
+
+When De-Identifying a dataset there is always a trade-off to be had between *privacy* and *data utility*. i.e. How hard it is to identify a individual in the dataset (data  protection) and how much value can be extracted from the dataset (data utility). These two interest are always at odds when de-identifying.
+
+When de-identifying a datasets attributes (columns/fields) are categorized into the following categories:
+
+- Identifying Attributes
+    Attributes that are directly identifiable. e.g. phone number, email, full name, bank account number
+- Quasi Identifying Attributes
+    Attributes that while not directly identifiable could be when used with other information to identify a person. e.g. birth date, zipcode, workplace, gps location data
+- Sensitive Attributes
+    Sensitive Attributes is information that could be damaging if released about a person. e.g. voting, medical information, criminal record
+- Insensitive Attributes
+    These are all other attributes in the dataset. Data points that neither could identify or cause harm to a individual if released.
+
+We will briefly talk about the pseudonymization before moving on to Anonymization which has been the focus of our work.
+
+ **Pseudonymization**
+ Pseudonymization is a type of de-identification where the association between data and person is removed. It achieves this by introducing a new bi-directional mapping between a individual in the dataset and his or hers identifiers. Pseudonymization can be irreversible, in that case the mapping to the identifers are deleted or reversible. Pseudonymization is regarded as a weak form of de-identification as the identifiers have only been moved to a separate mapping.
+
+ **Anonymization**
+ Anonymization intends to irreversibly reduce the linkage between an individual and identifying information in a dataset. It stands in contrast to pseudonymization which only replaces identifying information with tokens or masks it.
+
+ Main anonymization techniques:
+
+ - Generalization
+ - Suppression
+ - Micro-aggregation
+ - Subsampling
 
 #### Solution description
 
 The system will provide access to anonymization tools for data scientists at NAV IT. A data scientist should be able to anonymize tabular dataset based on user-specific configurations. Configurability includes privacy models, column attribute types and transformation models that determine how much data will be lost in the resulting anonymized dataset. 
-A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data’s anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
+A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
 #### Deployment of solution
 
 ### Conclusion
+
+### References
+personal data: https://gdpr-info.eu/issues/personal-data/
