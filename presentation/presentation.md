@@ -1,12 +1,12 @@
 ### Front page
 ### Preface
-This is a summary presentation of the product we have developed. It's porpuse is to give a short but complete overview of the problem domain, the product development process and finally the concrete solution developed.
-The terms data and dataset are used continuously throughout the documentation. Unless anything else is specified, the term refers to tabular data/datasets. The problem space is data anonymization, as such, when talking about data/datasets we are generally referring to population data.
+This is a summary presentation of the product we have developed. It's purpose is to give a short but complete overview of the project background, the product development process and finally the concrete solution developed.
 
 ### ToC
 ### Introduction
-### Presentation of the group
+The terms data and dataset are used continuously throughout the documentation. Unless anything else is specified, the term refers to tabular data/datasets. The problem space is data anonymization, as such, when talking about data/datasets we are generally referring to population data.
 
+### Presentation of the group
  - Sondre - IT
  Worked part time for NAV IT AI-lab since fall 2018. Main competence is Java and Python development, but has worked with web development in previously.
  - André
