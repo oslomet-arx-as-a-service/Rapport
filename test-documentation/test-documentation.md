@@ -5,9 +5,7 @@ The purpose of this documentation is to give the reader a detailed description o
 
 
 ### Goal
-The goal for these tests is to ensure that the service and the clients functionalities, works as they are expected to work. This is also to ensure that in an event that a feature fails, the right error message shows up with a detailed explaination on what went wrong and how to correct the error.
-
-Additionaly these tests were used to fullfil a test driven development work flow. The tests help ensure an agile work flow, where each new feature is tested and stable before moving on to a new implementation of features.
+The goal for these tests is to ensure that the service and the clients functionalities, works as they are expected to work. This is also to ensure that in an event that a feature fails, the right error message shows up with a detailed explanation on what went wrong and how to correct the error.
 
 ### Tools
 These are the tools the team used for testing:
@@ -65,13 +63,81 @@ Ensuring a stable build is produced for each ending of a sprint is important, th
 
 - ### Snyk
  
+### Test Phases
+#### Test Design
+Test design is a process that describes “how” testing should be done. It includes processes for the identifying test cases by enumerating steps of the defined test conditions. The testing techniques defined in test strategy or plan is used for enumerating the steps.
 
-### Client testing
+#### Unit testing
+Unit tests are tests that test individual units or components in the system in isolation. A unit could be a class or a even a stand alone function.
 
-### Service testing
+Definition by ISTQB
 
-### Security
+unit testing: See component testing.
+component testing: The testing of individual software components.
 
-### Performance testing
+#### Integration testing
+Integrations tests that tests the level where individual units of the system are combined. The porpuse is to expose errors in the interactions between system units.
+
+Definition by ISTQB
+
+integration testing: Testing performed to expose defects in the interfaces and in the
+interactions between integrated components or systems.
+
+#### System testing
+System tests are tests that verify that the whole system works to specification.
+
+Definition by ISTQB
+system testing: The process of testing an integrated system to verify that it meets specified requirements.
+
+#### Acceptance testing
+Acceptance tests are test that verify the systems compliance with business requirements. These are the tests that should verify that the user of the system is receiving the requested value.
+
+Definition by ISTQB
+
+acceptance testing: Formal testing with respect to user needs, requirements, and business processes conducted to determine whether or not a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether or not to accept the system.
+#### Performance testing
+Performance test are tests that itend to determine how a system performs. Important variables that are measured are:
+- responsiveness
+- stability
+
+The team has primarily utilized these performance testing types:
+
+- Load testing
+  A type of performance test where the systems behaviors under increasing load is tested.
+- Stress testing
+  A type of performance test where the system behavior under extreme load is tested
+
+  Due to the user requirements and expected usage of the system spike and endurance testing was not completed.
+  - Endurance testing
+    The ARXaaS system does not use a database that could become overloaded or use other external services that could degrade over time.
+  - Spike testing
+    The ARXaaS system is deployed in a container orchestration service (Nais) where spikes are managed by the service.
+
+#### Static analysis
+
+### ARXaaS
+#### Design testing
+#### Unit testing
+#### Integration testing
+#### System testing
+#### Acceptance testing
+#### Performance testing
+#### Static analysis
+
+### PyARXaaS
+#### Design testing
+#### Unit testing
+#### Integration testing
+#### System testing
+#### Acceptance testing
+#### Performance testing
+#### Static analysis
+
+### WebARXaaS
+#### Acceptance testing
+
 
 ### Conclusion
+
+### References
+http://softwaretestingfundamentals.com/acceptance-testing/
