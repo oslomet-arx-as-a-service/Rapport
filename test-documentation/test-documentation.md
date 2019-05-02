@@ -62,6 +62,7 @@ Ensuring a stable build is produced for each ending of a sprint is important, th
  <images of code climate>
 
 - ### Snyk
+Snyk is used to check the dependencies used in the project for known vulnerabilities. A report is sent to the project team when a known vulnerability is detected. A dependencies with vulnerability is usual fixed by updating to the newest version. In a case where an update doesnt fix the vulnerabitily, the project team will look at the dependency and how it effects the project. Depending on the extent of the effect the team will either leave it be or completely replace the dependency.
  
 ### Test Phases
 #### Test Design
