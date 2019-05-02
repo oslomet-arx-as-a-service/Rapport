@@ -38,21 +38,21 @@ These are the tools the team used for testing:
   
 ### Planning
 
-From the start, the project team planned on unit testing and exploring the functionalities available in the ARX libraries.This will ensure a good understaing of the feature and make it easier to intergrate them in the service.
+From the star, the project team planned on unit testing and exploring the functionalities available in the ARX libraries.This will ensure a good understaing of the feature and make it easier to intergrate them in the service.
 
 Thereafter the project team decided to use test driven development on both the service- and client-side. The plan was to unit test each new method and make it pass, before moving on with an integration test and thereafter system testing of the end-points. Having a stable service end-piont will make it possilbe to work with the client-side parallelly and as early as possible.
 
-The project team decided on a test plan to ensure a stable build is always produced before merging with the master branch in the repository. The project team decided on which test methods to use, test method naming, repository merge rules and tools to use to enforce the merge rules.
+The project team decided on a test plan to ensure a stable build is always produced before merging with the master branch in the version control host. The project team decided on which test methods to use, test method naming, version control host merge rules and tools to use to enforce the merge rules.
 
 ### Execution
 Ensuring a stable build is produced for each ending of a sprint is important, therefor testing was continuesly done throughtout the project. For each new feature implemented a unit test must follow before being allowed to be merged to the master branch. Integration testing is done after all features in a sprint is implemented. Finaly system testing and edge case testing was done to ensure that the service works properly and in an event of an error, show a detailed explaination of what occured as well as make sure the correct error is shown.
 
 - #### Travis
-  For every push to github a travis build is started, in this build a virtual machine will run the program along with all the test. Each test must pass for travis to give a passing grade, this passing grade is used to restrict merging unstable builds to the repository.
+  For every push to github a travis job is started, in this job a virtual machine will run the program along with all the test. Each test must pass for travis to give a passing grade, this passing grade is used to restrict merging unstable builds to the version control host.
   
   <image of how travis looks /passing/failing>
   
-  A set of script is written to instruct travis what do upon a passing build. One of these steps is running jacoco. Jacoco will created a report on the test coverage of the service which will be then sent by the travis script to Code Climate.
+  A set of script is written to instruct travis what do upon a passing job. One of these steps is running jacoco. Jacoco will created a report on the test coverage of the service which will be then sent by the travis script to Code Climate.
   
   <image of travis scripts>
   
@@ -63,7 +63,7 @@ Ensuring a stable build is produced for each ending of a sprint is important, th
   
   
 - #### Code Climate
- Code Climate is used as a static code analysis tool. For each new push to the repository a Code Climate build is started, in this build Code Climate scans the codes and reports back a list of issues it finds. Code Climate also gets a test coverage result from Travis which is then given a grade. The team used this grade to see if a new feature has been tested. The grade will decrease if a new feature is pushed to the repository without it being tested. 
+ Code Climate is used as a static code analysis tool. For each new push to the version control host a Code Climate job is started, in this job Code Climate scans the codes and reports back a list of issues it finds. Code Climate also gets a test coverage result from Travis which is then given a grade. The team used this grade to see if a new feature has been tested. The grade will decrease if a new feature is pushed to the version control host without it being tested. 
  
  <images of code climate>
 
@@ -164,7 +164,6 @@ Bellow is an image all passed the system test:
 
 <img of edge cast and system test pass>
 
-#### Acceptance testing
 #### Performance testing
 #### Static analysis
 
@@ -173,12 +172,23 @@ Bellow is an image all passed the system test:
 #### Unit testing
 #### Integration testing
 #### System testing
-#### Acceptance testing
 #### Performance testing
 #### Static analysis
 
-### WebARXaaS
-#### Acceptance testing
+### Acceptance testing
+
+Acceptance testing was done by hosting a workshop. In this workshop both the product owner and three data scientist from NAV IT was present. The product owner and the participants followed a step by step guide on how to start and use our product. 
+
+The main focus of this workshop was to show both the anonymization and analyzation features, as well as show the different data the user recieves from the process. Explore the different error messages was also tested to see if they were detailed enough on explaining the type of error and the solution to fixing the error. 
+
+Feedback was collect on how to improve the service, as well as possible new features to be implemented.
+
+<img of workshop>
+
+#### WebARXaaS
+The web api was shown in the workshop and was mainly tested for the analyzation and anonymization features.
+
+<img of the web api>
 
 
 ### Conclusion
