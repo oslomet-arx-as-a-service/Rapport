@@ -9,12 +9,15 @@
 ### Planning and methods
 - Development method
 
-Agile working process https://agilemanifesto.org/principles.html
+Agile working process (https://agilemanifesto.org/principles.html)
 The decided to use a agile work process with our productowners demands and wishes as our top priority. The team worked in to week sprints. At the start of every sprint we did sprint planning and chose the user story's to add to the sprint backlog. We the added the user storys chosen for the sprint to our Khanban board in Asana. The team members then chose or assigned the different tasks as a group. A definition of done was specified for each sprint by the group.  An example of this was every feature had to be tested before merging into the master branch. During the each sprint the team had daily scrum meetings to keep the rest of the team updated on each individuals progress as well as to share knowledge in the team. At the end of the sprint the team had a sprint retro meeting where each member made post-it notes labeled start, stop and continue. The start post-it notes where suggestions of items to be implemented in the next sprint. The stop post-it notes where things that had not worked well for the team or an individual. The continue post-it notes where items that worked well in the sprint and the team member wanted to keep doing in the next sprint. The project was divided in to seven sprints with a duration of two weeks where we presented the new features to our product owner at the end of each sprint. Then based of the feed back from the product owner the team created new user story's and definition of done for the next sprint.
 
 CI pipeline
+
 Test driven development
+
 Code reviews 
+
 Feature slicing
 
 
