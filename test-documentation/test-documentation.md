@@ -50,7 +50,7 @@ Ensuring a stable build is produced for each ending of a sprint is important, th
   
   <image of travis scripts>
   
-  Jacoco has settings that tells it which classes to ignore when creating the test coverage report. These classes are ignored because they dont need to be tested.
+  Jacoco has settings that tells it which classes to ignore when creating the test coverage report. These classes are ignored because they are not meant to be tested.
   
   <image of jacoco settings>
   
