@@ -147,8 +147,7 @@ Integration testing is done on all the methods that uses the factory classes, an
 The integration is about making sure that the different methods from different classes can work together and create the correct data object.
 
 Image of all passed integration test:
-
-##### img of all integration test pass
+![integration test](/test-documentation/img/integrationTest.png )
 
 #### System testing
 
