@@ -45,7 +45,16 @@ There are several products in the anonymization/de-identification space. But the
  Common to both categories is the fact that most solutions are mainly focused on Graphical user interfaces. There is limited support for integration and further development.
 
 #### The problem space - De-Identification
-De-Identification is a common term for reducing the probability that a person can be identified from a dataset. Its opposite is re-identification or identifying a person in a generally assumed anonymous dataset. It is a critical component in research,mainly because it permits sharing and using *personal data* for secondary purposes. *Personal data* are any information which are related to an identified or identifiable natural person. Secondary purposes are purposes that are not directly related to the primary use of the data.
+De-Identification is a common term for reducing the probability that a person can be identified from a dataset. Dataset in this context refers to microdata. Microdata datasets are datasets that provide information on a set of variables for individuals. In practical terms this means each row in the dataset represents a individual or entity. Summarizing microdata into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research.
+
+Much of the literature, practices and frameworks in the de-identification space are targeted for distribution of medical data between researchers. NAV has a similar use case, but different in that the organization primarily is concerned with internal reuse of data. Every new usage of PII data in NAV has to go trough a strict risk assessment process[https://www.datatilsynet.no/regelverk-og-verktoy/veiledere/vurdering-av-personvernkonsekvenser/]. This means that data scientist working in NAV AI-lab that wants to research a new possible use for some data has to go trough a lengthy assessment to just be able to inspect the data. If the data the 
+
+From [Statistical Disclosure Control: A Practice Guide](https://buildmedia.readthedocs.org/media/pdf/sdcpractice/latest/sdcpractice.pdf)
+*"The aim of anonymizing microdata is to transform the datasets to achieve an “acceptable level” of disclosure risk. The
+level of acceptability of disclosure risk and the need for anonymization are usually at the discretion of the data producer
+and guided by legislation."*
+
+De-identification's opposite is re-identification or identifying a person in a generally assumed anonymous dataset. It is a critical component in research,mainly because it permits sharing and using *personal data* for secondary purposes. *Personal data* are any information which are related to an identified or identifiable natural person.
 
 There are two main types of de-identification:
  - Anonymization
@@ -55,7 +64,7 @@ There are two main types of de-identification:
 
 When De-Identifying a dataset there is always a trade-off to be had between *privacy* and *data utility*. i.e. How hard it is to identify a individual in the dataset (data  protection) and how much value can be extracted from the dataset (data utility). These two interest are always at odds when de-identifying.
 
-When de-identifying a datasets attributes (columns/fields) are categorized into the following categories:
+When de-identifying a datasets attributes(columns/fields) are categorized into the following categories:
 
 - Identifying Attributes
     Attributes that are directly identifiable. e.g. phone number, email, full name, bank account number
@@ -66,7 +75,14 @@ When de-identifying a datasets attributes (columns/fields) are categorized into 
 - Insensitive Attributes
     These are all other attributes in the dataset. Data points that neither could identify or cause harm to a individual if released.
 
-We will briefly talk about the pseudonymization before moving on to Anonymization which has been the focus of our work.
+Additionally quasi identifying attributes are further categorized in the following categories:
+
+- Categorical variables are values in a finite set. e.g. gender, religion, home state.
+
+- Continuous variables are values in a infinite set. e.g. income, weight, height. Due to their uniqueness they are often transformed into categorical variables when anonymizing
+
+
+We will briefly talk about the pseudonymization before moving on to Anonymization which has been the focus of the teams work.
 
  **Pseudonymization**
  Pseudonymization is a type of de-identification where the association between data and person is removed. It achieves this by introducing a new bi-directional mapping between a individual in the dataset and his or hers identifiers. Pseudonymization can be irreversible, in that case the mapping to the identifers are deleted or reversible. Pseudonymization is regarded as a weak form of de-identification as the identifiers have only been moved to a separate mapping.
@@ -85,8 +101,28 @@ We will briefly talk about the pseudonymization before moving on to Anonymizatio
  - Subsampling
     Releasing only a subset of the dataset instead of all the records
 
+Several models have been implemented to prevent the different disclosure types. We will only introduce the most important here. For a full overview see [https://arx.deidentifier.org/overview/privacy-criteria/]
+
+
+K-Anonymity
+
 #### Risk assessment
 Re-Identification is the reverse of de-identification and is the primary threat addressed by laws and regulation[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]. Quantifying risk of re-identification associated with a dataset is of high importance. The key aspect for re-identification is the uniqueness of quasi identifying attributes and the uniqueness of the combinations of the attributes. Quasi attributes can be linked with additional data in the dataset or from external datasets to identify individuals.
+
+In the literature these are the three types of disclosures that are of importance[https://buildmedia.readthedocs.org/media/pdf/sdcpractice/latest/sdcpractice.pdf]
+
+- Identity disclosure
+
+    Occurs if an attacker associates a known individual with a data record. e.g. If the attacker uses external information to in combination with a dataset to identify a person in the dataset.
+
+- Attribute disclosure
+
+    Occurs if an attacker is able to learn some new information about a person based on the information in the dataset. e.g. If a dataset show all males over 60 in Oslo has been on unemployment benefits.
+
+- Membership disclosure
+
+    Occurs if an attacker can determine if a individual is in a specific dataset without being able to identify the specific record.
+
 
 Three different threat scenarios are commonly used by researchers[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]
 
