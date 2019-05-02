@@ -42,7 +42,32 @@ The team worked actively on slicing up big features requested by the product own
 
 ### Product specification
 - Main Specifications descriptions
+
+Process
+The development team will use the SCRUM framework to organize tasks, work, and project progress.
+
+Functional demands
+
+Backend
+The system should anonymize the data based on the user’s desired anonymity level
+The system should be able to evaluate the anonymisation level of a given data set
+Frontend
+The Python package should support standard visualisation of the results.
+
+Non-Functional demands
+Backend
+Platform: Docker/Nais/Kubernetes
+Runtime: Java/JVM
+Framework: Spring
+
+Frontend (Consumers)
+Python package
+Javascript (websites)
+
 - Stretch goals descriptions
+
+Javascript (website)
+
 - Delivery
 
 ### Closing 
