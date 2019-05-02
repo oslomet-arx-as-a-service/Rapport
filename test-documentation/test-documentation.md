@@ -132,7 +132,31 @@ The service has been unit tested, and integration tested using JUnit 4 and 5. Sy
 
 Each method that integrates a feature from the ARXlibrary is unit tested. Along with these integrated methods, all the models and the most important components of the service has also been unit tested. 
 
-img of unit test code example
+    @Test
+    void create_returnData_is_correct(){
+        ARXDataFactory dataFactory = new ARXDataFactory();
+        Data data = dataFactory.create(testPayload);
+        DataHandle handle = data.getHandle();
+        List<String[]> actual = new ArrayList<>();
+        handle.iterator().forEachRemaining(actual::add);
+
+        String[][] rawData = {{"age", "gender", "zipcode" },
+                {"34", "male", "81667"},
+                {"35", "female", "81668"},
+                {"36", "male", "81669"},
+                {"37", "female", "81670"},
+                {"38", "male", "81671"},
+                {"39", "female", "81672"},
+                {"40", "male", "81673"},
+                {"41", "female", "81674"},
+                {"42", "male", "81675"},
+                {"43", "female", "81676"},
+                {"44", "male", "81677"}};
+        List<String[]> expected = List.of(rawData);
+        for(int x = 0; x<12;x++) {
+            Assertions.assertArrayEquals(expected.get(x), actual.get(x));
+        }
+    }
 
 Unit testing is done by using a test data and sending it in as a parameter. The resulting data is then checked by comparing it to an expected result.
 
@@ -142,7 +166,7 @@ Unit testing is done by using a test data and sending it in as a parameter. The 
 
 Integration testing is done on all the methods that uses the factory classes, and all the models used by the factory classes. A test object is generated and used as a parameter for integration testing. The resulting object from the integration tests is then checked if it managed to correcltly created the response model object.
 
-@Test
+    @Test
     void anonymize_should_return_with_list_of_attribute(){
         AnonymizeResult result = testAnonymizer.anonymize(testRequestPayload);
         Assertions.assertNotNull(result.getAttributes());
