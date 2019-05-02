@@ -132,6 +132,7 @@ The service has been unit tested, and integration tested using JUnit 4 and 5. Sy
 
 Each method that integrates a feature from the ARXlibrary is unit tested. Along with these integrated methods, all the models and the most important components of the service has also been unit tested. 
 
+```java
     @Test
     void create_returnData_is_correct(){
         ARXDataFactory dataFactory = new ARXDataFactory();
@@ -157,6 +158,7 @@ Each method that integrates a feature from the ARXlibrary is unit tested. Along 
             Assertions.assertArrayEquals(expected.get(x), actual.get(x));
         }
     }
+```
 
 Unit testing is done by using a test data and sending it in as a parameter. The resulting data is then checked by comparing it to an expected result.
 
@@ -166,6 +168,7 @@ Unit testing is done by using a test data and sending it in as a parameter. The 
 
 Integration testing is done on all the methods that uses the factory classes, and all the models used by the factory classes. A test object is generated and used as a parameter for integration testing. The resulting object from the integration tests is then checked if it managed to correcltly created the response model object.
 
+```java
     @Test
     void anonymize_should_return_with_list_of_attribute(){
         AnonymizeResult result = testAnonymizer.anonymize(testRequestPayload);
@@ -177,6 +180,7 @@ Integration testing is done on all the methods that uses the factory classes, an
         AnonymizeResult result = testAnonymizer.anonymize(testRequestPayload);
         Assertions.assertNotNull(result.getData());
     }
+```
 
 The integration is about making sure that the different methods from different classes can work together and create the correct data object.
 
@@ -186,7 +190,8 @@ Image of all passed integration test:
 #### System testing
 
 System testing is done on 3 end points in the service. Spring boot starter test is used to start the service and a request object is then used. A respons object is then generated and checked if it is correclty created and if the values inside the object are correct.
-    
+  
+```java
     @Test
     void getPayloadAnalyze_integration_test(){
         Request testRequestPayload = GenerateIntegrationTestData.zipcodeRequestPayload();
@@ -197,9 +202,11 @@ System testing is done on 3 end points in the service. Spring boot starter test 
         RiskProfile expected = GenerateIntegrationTestData.zipcodeAnalyzation();
         Assertions.assertEquals(expected,actual);
     }
+```
 
 Edge case testing was also done by generating request object with incorrect or invalid data. The end-points are then expected to throw an error exception, this exception is then compared to with an expected exection as wells making sure that end-points sends a detailed description of the error message and how to correct the error.
 
+```java
     @Test
     void getPayloadAnalyze_wrong_attribute_format(){
         Request wrongAttributeFormat = GenerateEdgeCaseData.zipcodeRequestPayload_wrong_attribute_format();
@@ -210,6 +217,7 @@ Edge case testing was also done by generating request object with incorrect or i
         assertNotNull(resultData);
         assertNotNull(resultData.getMessage());
     }
+```
 
 Bellow is an image all passed the system test:
 
