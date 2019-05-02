@@ -79,7 +79,7 @@ Additionally quasi identifying attributes are further categorized in the followi
 
 - Categorical variables are values in a finite set. e.g. gender, religion, home state.
 
-- Continuous variables are values in a infinite set. e.g. income, weight, height. Due to their uniqueness they are often transformed into categorical variables when anonymizing
+- Continuous variables are values in a infinite set. e.g. income, weight, height. Due to their intrinsic uniqueness they are often transformed into categorical variables when anonymizing
 
 
 We will briefly talk about the pseudonymization before moving on to Anonymization which has been the focus of the teams work.
@@ -104,7 +104,14 @@ We will briefly talk about the pseudonymization before moving on to Anonymizatio
 Several models have been implemented to prevent the different disclosure types. We will only introduce the most important here. For a full overview see [https://arx.deidentifier.org/overview/privacy-criteria/]
 
 
-K-Anonymity
+K-Anonymity[k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY](https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648)
+K-Anonymity ensures that the information for each person contained in the dataset cannot be distinguished from at least k-1 individuals whose information also appears in the dataset.
+
+L-Diversity
+L-Diversity protects a dataset against attribute disclosure. It does this by ensuring that each sensitive attribute has at least "l" represented values in each *equivalence class*. Different variants exist which differ in how they measure diversity. More here[https://dl.acm.org/citation.cfm?doid=1217299.1217302]
+
+T-Closeness
+T-Closeness also protects a dataset against attribute disclosure. I ensures that the distributions of values of a sensitive attribute within each equivalence class must have a distance of not more than t to the distribution of the attribute values in the input dataset. Also for T-Closeness there are several variants which differs in the way they measure the distance. More here[https://ieeexplore.ieee.org/document/4221659]
 
 #### Risk assessment
 Re-Identification is the reverse of de-identification and is the primary threat addressed by laws and regulation[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]. Quantifying risk of re-identification associated with a dataset is of high importance. The key aspect for re-identification is the uniqueness of quasi identifying attributes and the uniqueness of the combinations of the attributes. Quasi attributes can be linked with additional data in the dataset or from external datasets to identify individuals.
@@ -127,7 +134,7 @@ In the literature these are the three types of disclosures that are of importanc
 Three different threat scenarios are commonly used by researchers[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]
 
 - Prosecutor attack model
-    Under this model the attacker is assumed to a target specific individual and know data concerning the individual is present in the dataset. The risk of a successful attack can be calculated based on the distinguishably of the records in the dataset.
+    Under this model the attacker is assumed to a target specific individual and know data concerning the individual is present in the dttps://www.worldscientific.com/doi/abs/10.1142/S0218488502001648 attack can be calculatttps://www.worldscientific.com/doi/abs/10.1142/S0218488502001648of the records in the dataset.ttps://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
 - Journalist attack model
     Under this model the attacker is assumed to target an arbitrary individual without knowing if the individual is present in the dataset. Regarded as a more realistic model than the prosecutor model.
 - Marketer attack model
@@ -143,3 +150,12 @@ A common use case would be in a workflow where the data scientist is manipulatin
 
 ### References
 personal data: https://gdpr-info.eu/issues/personal-data/
+K-anonymity: https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
+L-diversity: https://dl.acm.org/citation.cfm?doid=1217299.1217302
+T-closeness: https://ieeexplore.ieee.org/document/4221659
+
+### Word list
+
+- Equivalence class
+
+    Records in a dataset that have the same values on the quasi-identifiers.
