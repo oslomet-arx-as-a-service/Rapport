@@ -144,13 +144,25 @@ Integration testing is done on all the methods that uses the factory classes, an
 
 <img of integration test example>
 
-Lits of Integration test:
+The integration is about making sure that the different methods from different classes can work together and create the correct data object.
+
+Image of all passed integration test:
 
 <img of all integration test pass>
 
 #### System testing
 
+System testing is done on 3 end points in the service. Spring boot starter test is used to start the service and a request object is then used. A respons object is then generated and checked if it is correclty created and if the values inside the object are correct.
 
+<img example of system testing>
+
+Edge case testing was also done by generating request object with incorrect or invalid data. The end-points are then expected to throw an error exception, this exception is then compared to with an expected exection as wells making sure that end-points sends a detailed description of the error message and how to correct the error.
+
+<img of edge case testing>
+
+Bellow is an image all passed the system test:
+
+<img of edge cast and system test pass>
 
 #### Acceptance testing
 #### Performance testing
