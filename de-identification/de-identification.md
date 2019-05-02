@@ -101,3 +101,11 @@ personal data: https://gdpr-info.eu/issues/personal-data/
 K-anonymity: https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
 L-diversity: https://dl.acm.org/citation.cfm?doid=1217299.1217302
 T-closeness: https://ieeexplore.ieee.org/document/4221659
+
+- Equivalence class
+
+    Records in a dataset that have the same values on the quasi-identifiers.
+
+- PII
+
+    PII or Personal Identifiable Information is any data that can be used to clearly identify an individual. 
