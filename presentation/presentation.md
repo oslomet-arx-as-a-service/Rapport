@@ -65,6 +65,10 @@ There exist several models for both quantifiable assess the disclosure risk for 
 #### Solution description
 The system will provide access to anonymization tools for data scientists at NAV IT. A data scientist should be able to anonymize tabular dataset based on user-specific configurations. Configurability includes privacy models, column attribute types and transformation models that determine how much data will be lost in the resulting anonymized dataset. A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
 
+##### System diagram
+
+![System diagram](img/ARXaaS_system_diagram.png)
+
 #### Deployment
 The team developed in a complete CI/CD pipeline for the core components using the Travis CI platform. As the client wished that the finished product could be deployed to NAVs internal container orchestration solution Nais, the team setup their own Kubernets cluster to continuously deploy to in the first sprints until the product stabilized and deployment moved to Nais.
 
