@@ -44,6 +44,7 @@ The team worked actively on slicing up big features requested by the product own
 - Main Specifications descriptions
 
 Process
+
 The development team will use the SCRUM framework to organize tasks, work, and project progress.
 
 Functional demands
