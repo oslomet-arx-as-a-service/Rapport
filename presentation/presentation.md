@@ -35,7 +35,7 @@ The AI-lab has therefore requested the group to:
 - Provide an extendable framework for making state-of-the-art anonymisation methods accessible to a wider audience in NAV IT by lowering the barriers to use.  
 
 ### The Product - ARX as a Service
-ARX as a Service refers to the group of products that make up the ARX as a Service ecosystem. The center piece of this ecosystem is the micro service named ARXaaS. Addidtionally to ARXaaS there are two client products that provides user friendly usage of the service.
+ARX as a Service refers to the group of products that make up the ARX as a Service ecosystem. The center piece of this ecosystem is the micro service named ARXaaS. Addidtionally to ARXaaS there are two clients named PyARXaaS and WebARXaaS. these products provide Python and WEB usage of the service.
 
 #### Current situation
 There are several products in the anonymization/de-identification space. But the tools fall mainly into two categories: 
