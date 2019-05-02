@@ -142,7 +142,17 @@ Unit testing is done by using a test data and sending it in as a parameter. The 
 
 Integration testing is done on all the methods that uses the factory classes, and all the models used by the factory classes. A test object is generated and used as a parameter for integration testing. The resulting object from the integration tests is then checked if it managed to correcltly created the response model object.
 
-##### img of integration test example
+@Test
+    void anonymize_should_return_with_list_of_attribute(){
+        AnonymizeResult result = testAnonymizer.anonymize(testRequestPayload);
+        Assertions.assertNotNull(result.getAttributes());
+    }
+
+    @Test
+    void anonymize_should_return_with_list_of_data(){
+        AnonymizeResult result = testAnonymizer.anonymize(testRequestPayload);
+        Assertions.assertNotNull(result.getData());
+    }
 
 The integration is about making sure that the different methods from different classes can work together and create the correct data object.
 
