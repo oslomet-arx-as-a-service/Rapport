@@ -38,7 +38,7 @@ These are the tools the team used for testing:
   
 ### Planning
 
-From the star, the project team planned on unit testing and exploring the functionalities available in the ARX libraries.This will ensure a good understaing of the feature and make it easier to intergrate them in the service.
+From the start, the project team planned on unit testing and exploring the functionalities available in the ARX libraries.This will ensure a good understaing of the feature and make it easier to intergrate them in the service.
 
 Thereafter the project team decided to use test driven development on both the service- and client-side. The plan was to unit test each new method and make it pass, before moving on with an integration test and thereafter system testing of the end-points. Having a stable service end-piont will make it possilbe to work with the client-side parallelly and as early as possible.
 
