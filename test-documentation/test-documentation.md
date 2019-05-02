@@ -38,7 +38,7 @@ These are the tools the team used for testing:
   
 ### Planning
 
-From the star, the project team planned on unit testing and exploring the functionalities available in the ARX libraries.This will ensure a good understaing of the feature and make it easier to intergrate them in the service.
+From the start, the project team planned on unit testing and exploring the functionalities available in the ARX libraries.This will ensure a good understaing of the feature and make it easier to intergrate them in the service.
 
 Thereafter the project team decided to use test driven development on both the service- and client-side. The plan was to unit test each new method and make it pass, before moving on with an integration test and thereafter system testing of the end-points. Having a stable service end-piont will make it possilbe to work with the client-side parallelly and as early as possible.
 
@@ -144,13 +144,25 @@ Integration testing is done on all the methods that uses the factory classes, an
 
 <img of integration test example>
 
-Lits of Integration test:
+The integration is about making sure that the different methods from different classes can work together and create the correct data object.
+
+Image of all passed integration test:
 
 <img of all integration test pass>
 
 #### System testing
 
+System testing is done on 3 end points in the service. Spring boot starter test is used to start the service and a request object is then used. A respons object is then generated and checked if it is correclty created and if the values inside the object are correct.
 
+<img example of system testing>
+
+Edge case testing was also done by generating request object with incorrect or invalid data. The end-points are then expected to throw an error exception, this exception is then compared to with an expected exection as wells making sure that end-points sends a detailed description of the error message and how to correct the error.
+
+<img of edge case testing>
+
+Bellow is an image all passed the system test:
+
+<img of edge cast and system test pass>
 
 #### Acceptance testing
 #### Performance testing

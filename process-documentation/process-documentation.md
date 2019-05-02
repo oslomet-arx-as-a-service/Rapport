@@ -15,7 +15,7 @@ The team decided to use a agile work process with our productowners demands and 
 CI pipeline
 
 Test driven development:
-
+In the teams definition of done it required tests to be made and passed for all features. This had to be done before merging into master. This worked well for the team and we ended up with 90% plus test coverage.The team also used Linter in the team members IDEs to make sure the code was clean.
 
 Code reviews:
 In the planning process the team decided to use Git as version control. After Travis,Code climate and SNYK test passed a team member had to review the pull request. A team member had to read and approve the code before a merge to master could be done.
