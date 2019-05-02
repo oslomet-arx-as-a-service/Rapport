@@ -7,13 +7,26 @@
 ### Introduction
 
 ### ARXaaS REST web service
+
 - Short presentation
 - Technologies
 - Functionality
+
+Logging:
+
+ARXaaS has logging implemented using log4j. For every data set that is analyzed and anonymized. The application provides metrics for received and completed requests. The log displays the size of the dataset, number of rows and columns, source IP, dataset bytesize, privacy model used, suppression limit and request processing time.
+
+<screenShotLog.png>
+
+In the case of an error or exception a full stack trace is printed to make debugging faster and more efficent.
+
+<ErrorLogStacktrace.png>
+
 - Security/https settings
 - Open source licence
 
 ### Client side introduction
+
 - PyARXaaS
 - Short presentation
 - Technologies
@@ -21,8 +34,16 @@
 - Open source licence
 
 ### WebARXaaS
+
 - Short presentation
-- Technologies
+As a stretch goal the employer wished for a way to quickly access the ARX functionality, taking advantage of the flexible REST API   provided by the ARXaaS service. It was therefore decided to implement an interactive web frontend. So the user can analyze or anonymize their data. Without the need for the user to install software on their local machine.
+- Technologies:
+The interactive Web service is implemented in React using multiple third party frameworks in order to provide the best possible service
+
+| Package     | Use                                                                                                                   |
+| ----------  | -----                                                                                                                 |
+| React       | React is a library for building interactive web user interfaces. It simplifies rendering content on the website and lets us split our code into many single purpose components.                                                                                  | BootStrap 4 | Open source toolkit for making flexible interfaces adaptable for a wide range of screen sizes including mobile phones. And gives the website a professional looking color scheme.                                                                            |
+
 - Functionality
 
 ### Operations
