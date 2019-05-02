@@ -48,7 +48,7 @@ There are several products in the anonymization/de-identification space. But the
  Common to both categories is the fact that most solutions are mainly focused on Graphical user interfaces. There is limited support for integration and further development.
 
 #### De-Identification
-Following is a short descripion of the field of de-identification. For more in-depth explanations see the chapter De-Identification.
+Following is a short description of the field of de-identification. For more in-depth explanations see the chapter De-Identification.
 
 De-Identification is a common term for reducing the probability that a person can be identified from a dataset containing *personal identifiable information* or PII. In practical terms this means each record in the dataset represents a individual or entity. Summarizing dataset containing PII into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research.
 
@@ -63,11 +63,10 @@ There exist several models for both quantifiable assess the disclosure risk for 
 
 
 #### Solution description
-The system will provide access to anonymization tools for data scientists at NAV IT. A data scientist should be able to anonymize tabular dataset based on user-specific configurations. Configurability includes privacy models, column attribute types and transformation models that determine how much data will be lost in the resulting anonymized dataset. 
-A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
+The system will provide access to anonymization tools for data scientists at NAV IT. A data scientist should be able to anonymize tabular dataset based on user-specific configurations. Configurability includes privacy models, column attribute types and transformation models that determine how much data will be lost in the resulting anonymized dataset. A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
 
 #### Deployment
-The team developed in a complete CI/CD pipeline for the core components using the Travis CI platform. As the client wished that the finished product could be deployed to NAVs internal container orchestration solution Nais, the team setup their own kubernets kluster to continously deploy to in the first sprints until the product stabilized and deployment moved to Nais.
+The team developed in a complete CI/CD pipeline for the core components using the Travis CI platform. As the client wished that the finished product could be deployed to NAVs internal container orchestration solution Nais, the team setup their own Kubernets cluster to continuously deploy to in the first sprints until the product stabilized and deployment moved to Nais.
 
 The deployment of a single merge to master for the main service goes through the following steps before it is deployed to the Nais platform. If there is any failures the deployment is stopped and the team is notified.
 
@@ -92,6 +91,8 @@ Having a complete CI/CD setup from essentially day meant the team was continousl
 
 ### Conclusion
 
+During the development of ARX as a Service the team learned and utilized a variety of new technologies. Experienced professional product development in a whole new domain (anonymization). A domain which puts a high premium on reliability and correctness. The team feels strongly that the have meet and delivered on the clients requests. The team has developed three separate technical products in synchronization with feedback from the customer. The success of the project was marked with a summer internship contracts from NAV IT for all team members the summer 2019. The team will during the summer focus on the further development of the product
+
 ### References
 personal data: https://gdpr-info.eu/issues/personal-data/
 K-anonymity: https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
@@ -107,3 +108,9 @@ T-closeness: https://ieeexplore.ieee.org/document/4221659
 - PII
 
     PII or Personal Identifiable Information is any data that can be used to clearly identify an individual. 
+
+Nais
+
+    NAIS is an application platform built to increase development speed by providing our developers at NAV with the best possible tools to develop and run their applications. url: https://nais.io
+
+
