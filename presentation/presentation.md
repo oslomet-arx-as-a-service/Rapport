@@ -68,6 +68,21 @@ The system will provide access to anonymization tools for data scientists at NAV
 ##### System diagram
 
 ![System diagram](img/ARXaaS_system_diagram.png)
+*Figure 1 - System diagram*
+
+As the system diagram shows the system consists of three(so far) separate systems.
+
+- ARXaaS - the anonymization microservice
+    A Java Spring boot microservice which utilizes the [ARX](https://arx.deidentifier.org/) de-identifier library to expose functionality in three key areas
+     - Dataset re-identification risk analysis
+     - Dataset anonymization
+     - Generation of generalization hierarchies
+- PyARXaaS - the wrapper package
+    A python wrapper package for NAVs data scientist. The main requirement the teams product owner at NAV was that the anonymization functionality was made available in Python. This package abstracts the REST calls to ARXaaS and provides a easy to use API for the data scientist to analyze and anonymize their datasets.
+- WebARXaaS - the stretch goal
+    The project stretch goal. The product owner was clear from day one that the python package was the main priority of the team. But there are other user groups for anonymization at NAV. User groups without the required experience with programming to use a Python package. For this usergroup a simple to use web application where they could perform analysis and anonymization would be practical
+
+These three products for the ARX as a Service ecosystem. The core functionality is the responsibility of the ARXaaS application. While the clients PyARXaaS and WebARXaaS provide user specific interfaces.
 
 #### Deployment
 The team developed in a complete CI/CD pipeline for the core components using the Travis CI platform. As the client wished that the finished product could be deployed to NAVs internal container orchestration solution Nais, the team setup their own Kubernets cluster to continuously deploy to in the first sprints until the product stabilized and deployment moved to Nais.
