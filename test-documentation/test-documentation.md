@@ -162,7 +162,7 @@ Edge case testing was also done by generating request object with incorrect or i
 
 Bellow is an image all passed the system test:
 
-##### img of edge cast and system test pass
+ ![system test](/test-documentation/img/systemTestpage2.png) 
 
 #### Performance testing
 #### Static analysis
