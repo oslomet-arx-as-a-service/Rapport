@@ -113,7 +113,7 @@ T-closeness: https://ieeexplore.ieee.org/document/4221659
 
     PII or Personal Identifiable Information is any data that can be used to clearly identify an individual. 
 
-Nais
+- Nais
 
     NAIS is an application platform built to increase development speed by providing our developers at NAV with the best possible tools to develop and run their applications. url: https://nais.io
 
