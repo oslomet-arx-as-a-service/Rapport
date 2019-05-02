@@ -200,7 +200,16 @@ System testing is done on 3 end points in the service. Spring boot starter test 
 
 Edge case testing was also done by generating request object with incorrect or invalid data. The end-points are then expected to throw an error exception, this exception is then compared to with an expected exection as wells making sure that end-points sends a detailed description of the error message and how to correct the error.
 
-##### img of edge case testing
+    @Test
+    void getPayloadAnalyze_wrong_attribute_format(){
+        Request wrongAttributeFormat = GenerateEdgeCaseData.zipcodeRequestPayload_wrong_attribute_format();
+        ResponseEntity<IllegalArgumentException> responseEntity = restTemplate.postForEntity("/api/analyze",wrongAttributeFormat,       IllegalArgumentException.class);
+        assertNotNull(responseEntity);
+        assertSame(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
+        var resultData = responseEntity.getBody();
+        assertNotNull(resultData);
+        assertNotNull(resultData.getMessage());
+    }
 
 Bellow is an image all passed the system test:
 
