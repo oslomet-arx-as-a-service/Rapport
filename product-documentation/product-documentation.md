@@ -51,7 +51,7 @@ Once the file is loaded, there will automatically be generated a section display
 
 The analyzation feature requires that the user already has loaded a *CSV* file, and set the correct *attribute types*.
 By pressing the *Analyze* button, the website will make a call to the backend service on `/api/analyzation` containing a JSON formatted payload containing all the loaded data together with metadata.
-Once the response back from the service is received it will be rendered multiple tables bellow containing metrics describing the analyzation quality.
+Once the response is received back from the service is received it will be rendered multiple tables bellow containing metrics describing the analyzation quality.
 
 | Metric table          | Content                                                                                             |
 | --------------------- | --------------------------------------------------------------------------------------------------- |
@@ -60,6 +60,16 @@ Once the response back from the service is received it will be rendered multiple
 
 #### Anonymization
 The anonymization feature requires that the user already loaded a *CSV* file, set the correct *attribute types*, and uploaded a *CSV* file containing a generalization hierarchy for each of the *quasi-identifying* attributes.
+By pressing the *Anonymize* button, the website will make a call to the backend service on `/api/anonymization` containing a JSON formatted payload containing all the loaded data together with metadata. 
+Once the response is received back from the server it will display tables containing the following tables.
+
+| Metric table          | Content                                                                                             |
+| --------------------- | --------------------------------------------------------------------------------------------------- |
+| Anonymization data    | The anonymized version of the dataset                                                               |
+| Reidentification risk | Contains percentage likelihood on various *re-identification risks*                                 |
+| Risk interval         | Gives metrics on how large portions of the entries in the data which is affected by each risk range |
+| Process time          | The time spent by the backend anonymizing the request in milliseconds.                              |
+| privacy models        | Containing metadata used by the backend for each of the applied privacy models.                     |
 
 
 ### Operations
