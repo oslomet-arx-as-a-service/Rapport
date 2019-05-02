@@ -1,5 +1,5 @@
 ### Preface
-The purpose of this documentation is to give the reader a detailed description of each test, and how the test are implemented. This documentent is written with the expectation that the reader has basic programming and testing knowledge.
+The purpose of this documentation is to give the reader a detailed description of each test, and how the test are implemented. This documentent is written with the expectation that the reader has basic programming and testing knowledge, and has read the product documentation.
 
 ### Table of Content
 
@@ -126,16 +126,38 @@ The team has primarily utilized these performance testing types:
 
 ### ARXaaS
 
-#### Design testing
+The service has been unit tested, and integration tested using JUnit 4 and 5. System testing was done by using Spring boot starter test. 
+
 #### Unit testing
+
+Each method that integrates a feature from the ARXlibrary is unit tested. Along with these integrated methods, all the models and the most important components of the service has also been unit tested. 
+
+<img of unit test code example>
+
+Unit testing is done by using a test data and sending it in as a parameter. The resulting data is then checked by comparing it to an expected result.
+
+<img of all unit test pass>
+
 #### Integration testing
+
+Integration testing is done on all the methods that uses the factory classes, and all the models used by the factory classes. A test object is generated and used as a parameter for integration testing. The resulting object from the integration tests is then checked if it managed to correcltly created the response model object.
+
+<img of integration test example>
+
+Lits of Integration test:
+
+<img of all integration test pass>
+
 #### System testing
+
+
+
 #### Acceptance testing
 #### Performance testing
 #### Static analysis
 
 ### PyARXaaS
-#### Design testing
+
 #### Unit testing
 #### Integration testing
 #### System testing
