@@ -42,9 +42,7 @@ From the star, the project team planned on unit testing and exploring the functi
 
 Thereafter the project team decided to use test driven development on both the service- and client-side. The plan was to unit test each new method and make it pass, before moving on with an integration test and thereafter system testing of the end-points. Having a stable service end-piont will make it possilbe to work with the client-side parallelly and as early as possible.
 
-The project team decided on a test plan to ensure a stable build is always produced before merging with the master branch in the repository. The project team decided on which test methods to use, test method naming, repository merge rules and tools to use to enforce the merge rules. 
-
-Travis and Code Climate was also planned to be used to ensure that a stable build is always produced.
+The project team decided on a test plan to ensure a stable build is always produced before merging with the master branch in the repository. The project team decided on which test methods to use, test method naming, repository merge rules and tools to use to enforce the merge rules.
 
 ### Execution
 Ensuring a stable build is produced for each ending of a sprint is important, therefor testing was continuesly done throughtout the project. For each new feature implemented a unit test must follow before being allowed to be merged to the master branch. Integration testing is done after all features in a sprint is implemented. Finaly system testing and edge case testing was done to ensure that the service works properly and in an event of an error, show a detailed explaination of what occured as well as make sure the correct error is shown.
