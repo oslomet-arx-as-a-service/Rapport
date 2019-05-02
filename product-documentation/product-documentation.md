@@ -7,21 +7,24 @@
 ### Introduction
 
 ### ARXaaS REST web service
+
 - Short presentation
 - Technologies
 - Functionality
 - Security/https settings
 
 ### Client side introduction
+
 - PyARXaaS
 - Short presentation
 - Technologies
 - Functionality
 
 ### WebARXaaS
+
 - Short presentation
-As a stretch goal the employer wished for a way to quickly access the ARX functionality taking advantage of the flexibility of the REST API on the ARXaaS web serice. There was therefore decided to implement an interactive web frontend, so the users quickly can analyze or anonymize their data. Without the need for the user to install software on their local machine.
-- Technologies
+As a stretch goal the employer wished for a way to quickly access the ARX functionality, taking advantage of the flexible REST API   provided by the ARXaaS service. It was therefore decided to implement an interactive web frontend. So the user can analyze or anonymize their data. Without the need for the user to install software on their local machine.
+- Technologies:
 The interactive Web service is implemented in React using multiple third party frameworks in order to provide the best possible service
 
 | Package     | Use                                                                                                                   |
