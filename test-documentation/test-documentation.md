@@ -50,27 +50,27 @@ Ensuring a stable build is produced for each ending of a sprint is important, th
 - #### Travis
   For every push to github a travis job is started, in this job a virtual machine will run the program along with all the test. Each test must pass for travis to give a passing grade, this passing grade is used to restrict merging unstable builds to the version control host.
   
-  <image of how travis looks /passing/failing>
+  ##### image of how travis looks /passing/failing
   
   A set of script is written to instruct travis what do upon a passing job. One of these steps is running jacoco. Jacoco will created a report on the test coverage of the service which will be then sent by the travis script to Code Climate.
   
-  <image of travis scripts>
+  ##### image of travis scripts
   
   Jacoco has settings that tells it which classes to ignore when creating the test coverage report. These classes are ignored because they are not meant to be tested.
   
-  <image of jacoco settings>
+  ##### image of jacoco settings
   
   
   
 - #### Code Climate
  Code Climate is used as a static code analysis tool. For each new push to the version control host a Code Climate job is started, in this job Code Climate scans the codes and reports back a list of issues it finds. Code Climate also gets a test coverage result from Travis which is then given a grade. The team used this grade to see if a new feature has been tested. The grade will decrease if a new feature is pushed to the version control host without it being tested. 
  
- <images of code climate>
+ ##### images of code climate
 
 - ### Snyk
 Snyk is used to check the dependencies used in the project for known vulnerabilities. A report is sent to the project team when a known vulnerability is detected. A dependencies with vulnerability is usual fixed by updating to the newest version. In a case where an update doesnt fix the vulnerabitily, the project team will look at the dependency and how it effects the project. Depending on the extent of the effect the team will either leave it be or completely replace the dependency.
 
-<image of snyk>
+##### image of snyk
 
 ### Test Phases <OBS! maybe this belongs in the appendixes>
 #### Test Design
@@ -132,37 +132,37 @@ The service has been unit tested, and integration tested using JUnit 4 and 5. Sy
 
 Each method that integrates a feature from the ARXlibrary is unit tested. Along with these integrated methods, all the models and the most important components of the service has also been unit tested. 
 
-<img of unit test code example>
+img of unit test code example
 
 Unit testing is done by using a test data and sending it in as a parameter. The resulting data is then checked by comparing it to an expected result.
 
-<img of all unit test pass>
+##### img of all unit test pass
 
 #### Integration testing
 
 Integration testing is done on all the methods that uses the factory classes, and all the models used by the factory classes. A test object is generated and used as a parameter for integration testing. The resulting object from the integration tests is then checked if it managed to correcltly created the response model object.
 
-<img of integration test example>
+##### img of integration test example
 
 The integration is about making sure that the different methods from different classes can work together and create the correct data object.
 
 Image of all passed integration test:
 
-<img of all integration test pass>
+##### img of all integration test pass
 
 #### System testing
 
 System testing is done on 3 end points in the service. Spring boot starter test is used to start the service and a request object is then used. A respons object is then generated and checked if it is correclty created and if the values inside the object are correct.
 
-<img example of system testing>
+##### img example of system testing
 
 Edge case testing was also done by generating request object with incorrect or invalid data. The end-points are then expected to throw an error exception, this exception is then compared to with an expected exection as wells making sure that end-points sends a detailed description of the error message and how to correct the error.
 
-<img of edge case testing>
+##### img of edge case testing
 
 Bellow is an image all passed the system test:
 
-<img of edge cast and system test pass>
+##### img of edge cast and system test pass
 
 #### Performance testing
 #### Static analysis
@@ -183,12 +183,12 @@ The main focus of this workshop was to show both the anonymization and analyzati
 
 Feedback was collect on how to improve the service, as well as possible new features to be implemented.
 
-<img of workshop>
+##### img of workshop
 
 #### WebARXaaS
 The web api was shown in the workshop and was mainly tested for the analyzation and anonymization features.
 
-<img of the web api>
+##### img of the web api
 
 
 ### Conclusion
