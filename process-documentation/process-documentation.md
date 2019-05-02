@@ -19,7 +19,7 @@ Test driven development
 Code reviews 
 
 Feature slicing
-
+The team worked actively on slicing up big features requested by the product owner into smaller features. After slicing the features the team evaluated the different features and decided with the product owner which features where best to implement first. This made sure the product owner got features delivered fast in small increments that provided the most value as fast as possible.
 
 - Project phases
  - Interation
