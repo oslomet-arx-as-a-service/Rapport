@@ -59,8 +59,9 @@ Once the response is received back from the service is received it will be rende
 | Risk interval         | Gives metrics on how large portions of the entries in the data which is affected by each risk range |
 
 #### Anonymization
+
 The anonymization feature requires that the user already loaded a *CSV* file, set the correct *attribute types*, and uploaded a *CSV* file containing a generalization hierarchy for each of the *quasi-identifying* attributes.
-By pressing the *Anonymize* button, the website will make a call to the backend service on `/api/anonymization` containing a JSON formatted payload containing all the loaded data together with metadata. 
+By pressing the *Anonymize* button, the website will make a call to the backend service on `/api/anonymization` containing a JSON formatted payload containing all the loaded data together with metadata.
 Once the response is received back from the server it will display tables containing the following tables.
 
 | Metric table          | Content                                                                                             |
@@ -71,8 +72,40 @@ Once the response is received back from the server it will display tables contai
 | Process time          | The time spent by the backend anonymizing the request in milliseconds.                              |
 | privacy models        | Containing metadata used by the backend for each of the applied privacy models.                     |
 
-
 ### Operations
+
+This webapplication is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file in the root of the project directory.  
+Note that the backend ARXaaS service must be available in order to be utilizing the *analyzation* and *anonymization* functionality.
+
+#### Configuration
+
+ By default the application is connecting towards the URL defined inside `web-aaas\src\App.js`. The url should be changed if your organization is running your own ARXaaS service. There is also a possible to define the backend url manually inside on the website, but this is mainly intended for testing purposes as the entered URL currently does not get saved.
+
+ ```javascript
+  const [endpoint, setEndpoint] = useState('http://35.228.21.181:8080')
+ ```
+
+#### Starting the application
+
+In order to start the application locally you must have a local installation of *NodeJS* newer than `10.15` and the packet manager *npm* installed.
+
+ 1. Make sure the current directory of your terminal is the root directory of *WebARXaaS*.
+ 2. Run `npm install` in your terminal in order to download all the dependencies specified in package.json.
+ 3. Run `npm start` in your terminal. This will start up an instance of the application running locally on port 3000.
+ 4. You can now access the website locally by navigating to http://localhost:3000/ with your web browser.
+
+#### Deploying with docker
+
+The main way of deploying WebAaaS is through docker. You will find the docker file below located in `web-aaas\Dockerfile`
+
+```Docker
+FROM nginx
+COPY build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+```
+
+
+
 
 ### Future developments
 
