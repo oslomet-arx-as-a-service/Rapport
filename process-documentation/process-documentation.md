@@ -12,7 +12,9 @@
 Agile working process:
 The team decided to use a agile work process with our productowners demands and wishes as our top priority. The team worked in to week sprints. At the start of every sprint we did sprint planning and chose the user story's to add to the sprint backlog. We the added the user storys chosen for the sprint to our Khanban board in Asana. The team members then chose or assigned the different tasks as a group. A definition of done was specified for each sprint by the group.  An example of this was every feature had to be tested before merging into the master branch. During the each sprint the team had daily scrum meetings to keep the rest of the team updated on each individuals progress as well as to share knowledge in the team. At the end of the sprint the team had a sprint retro meeting where each member made post-it notes labeled start, stop and continue. The start post-it notes where suggestions of items to be implemented in the next sprint. The stop post-it notes where things that had not worked well for the team or an individual. The continue post-it notes where items that worked well in the sprint and the team member wanted to keep doing in the next sprint. The project was divided in to seven sprints with a duration of two weeks where we presented the new features to our product owner at the end of each sprint. Then based of the feed back from the product owner the team created new user story's and definition of done for the next sprint.
 
-CI pipeline
+CI pipeline:
+The team decided early in the process to set up a CI pipeline to automate tests and deployment.
+Every time a team member pushed a commit to our version control host Git . Travis testes every branch in a virtual environment before it can be allowed to be merged into master branch. If the job passes all test. It can be merged into to master branch providing it passes Code climate static code analyses test and SNYK vulnerability tests. After a team member approves the code review the branch is merged into master branch. Travis then deploys docker container to Google cloud and the NAV IT nais platform. Before deploying JAR and javadoc to Maven witch the hosts are Javadoc.
 
 Test driven development:
 In the teams definition of done it required tests to be made and passed for all features. This had to be done before merging into master. This worked well for the team and we ended up with 90% plus test coverage.The team also used Linter in the team members IDEs to make sure the code was clean.
@@ -40,9 +42,35 @@ The team worked actively on slicing up big features requested by the product own
 
 ### Product specification
 - Main Specifications descriptions
+
+Process
+
+The development team will use the SCRUM framework to organize tasks, work, and project progress.
+
+Functional demands
+
+Backend
+The system should anonymize the data based on the user’s desired anonymity level
+The system should be able to evaluate the anonymisation level of a given data set
+Frontend
+The Python package should support standard visualisation of the results.
+
+Non-Functional demands
+Backend
+Platform: Docker/Nais/Kubernetes
+Runtime: Java/JVM
+Framework: Spring
+
+Frontend (Consumers)
+Python package
+Javascript (websites)
+
 - Stretch goals descriptions
+
+Javascript (website)
+
 - Delivery
 
 ### Closing 
 ### Sources
-
+https://agilemanifesto.org/
