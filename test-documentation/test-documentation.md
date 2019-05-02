@@ -186,8 +186,17 @@ Image of all passed integration test:
 #### System testing
 
 System testing is done on 3 end points in the service. Spring boot starter test is used to start the service and a request object is then used. A respons object is then generated and checked if it is correclty created and if the values inside the object are correct.
-
-##### img example of system testing
+    
+    @Test
+    void getPayloadAnalyze_integration_test(){
+        Request testRequestPayload = GenerateIntegrationTestData.zipcodeRequestPayload();
+        ResponseEntity<RiskProfile> responseEntity = restTemplate.postForEntity("/api/analyze",testRequestPayload, RiskProfile.class);
+        assertNotNull(responseEntity);
+        assertSame(HttpStatus.OK , responseEntity.getStatusCode());
+        RiskProfile actual = Objects.requireNonNull(responseEntity.getBody());
+        RiskProfile expected = GenerateIntegrationTestData.zipcodeAnalyzation();
+        Assertions.assertEquals(expected,actual);
+    }
 
 Edge case testing was also done by generating request object with incorrect or invalid data. The end-points are then expected to throw an error exception, this exception is then compared to with an expected exection as wells making sure that end-points sends a detailed description of the error message and how to correct the error.
 
