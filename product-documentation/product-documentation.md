@@ -37,7 +37,7 @@ In the case of an error or exception a full stack trace is printed to make debug
 
 #### Short presentation
 
-As a stretch goal, the employer wished for a way to quickly access the ARX functionality, taking advantage of the flexible REST API provided by the ARXaaS service. It was therefore decided to implement an interactive web frontend. So the user can analyze or anonymize their data. Without the need for the user to install software on their local machine.
+As a stretch goal, the employer wished for a way to quickly access the ARX functionality. It was therefore decided to implement an interactive web frontend, by taking advantage of the flexible REST API provided by the ARXaaS service. Making this client available will give the user the posibility to analyze or anonymize their data, without the need to install software on their local machine.
 
 #### Technologies
 
@@ -56,15 +56,15 @@ Where the two main functionalities is *analyzation* and *anonymization*.
 
 ##### DataImport
 
-The dataImport step is mandatory wherever the user wish to analyze or anonymize the data.
-To load data the user clicks the load button, and selects a file.
-Once the file is loaded, there will automatically be generated a section displaying each of the attribute headers from the file below.
+The data import step is mandatory whenever the user wish to analyze or anonymize the data.
+To load data the user clicks the load button, and selects a *CSV* file.
+Once the *CSV* file is loaded, a automatically generated section will be displayed, showing each of the attribute headers from the csv file below the data import area.
 
 ##### Analyzation
 
 The analyzation feature requires that the user already has loaded a *CSV* file, and set the correct *attribute types*.
-By pressing the *Analyze* button, the website will make a call to the backend service on `/api/analyzation` containing a JSON formatted payload containing all the loaded data together with metadata.
-Once the response is received back from the service is received it will be rendered multiple tables bellow containing metrics describing the analyzation quality.
+By pressing the *Analyze* button, the website will make a call to the backend service on `/api/analyzation` containing a JSON formatted payload, containing all the loaded data together with metadata.
+Once the response is received back from the service it will render multiple tables bellow containing metrics describing the analyzation quality.
 
 | Metric table          | Content                                                                                             |
 | --------------------- | --------------------------------------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ Once the response is received back from the service is received it will be rende
 
 #### Anonymization
 
-The anonymization feature requires that the user already loaded a *CSV* file, set the correct *attribute types*, and uploaded a *CSV* file containing a generalization hierarchy for each of the *quasi-identifying* attributes.
+The anonymization feature requires that the user already loaded a *CSV* file, set the correct *attribute types*, and uploaded a *CSV* file containing a generalization hierarchy/transformation model for each of the *quasi-identifying* attributes.
 By pressing the *Anonymize* button, the website will make a call to the backend service on `/api/anonymization` containing a JSON formatted payload containing all the loaded data together with metadata.
 Once the response is received back from the server it will display tables containing the following tables.
 
