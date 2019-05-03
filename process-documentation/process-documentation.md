@@ -26,12 +26,16 @@ In the planning process the team decided to use Git as version control. After Tr
 Feature slicing:
 The team worked actively on slicing up big features requested by the product owner into smaller features. After slicing the features. The team evaluated the different features and decided with the product owner which features where best to implement first. This made sure that the product owner got features delivered fast. Deliverys where made in small increments that provided the most value as fast as possible.
 
-- Project phases
+### Project phases
 
- - Interation
+ - Initiation
+ 
  - Planning
+ 
  - Execution
+ 
  - Project conclusion and documentation
+ 
 -Planning tools
 -Competence building
 -Budget(Google cloud)
