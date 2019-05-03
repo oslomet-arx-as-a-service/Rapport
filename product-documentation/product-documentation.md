@@ -116,7 +116,7 @@ In order to generate files ready to be deployed to production you must first bui
 2. Run the command `npm buid`, this command is an alias for `react-scripts build` and will generate production ready files into the */build* directory.
 3. Copy the content of the */build* into the public directory of a webserver. To do this you can use the *nginx* docker image by using the docker image in the root directory of the project.
 4. `docker build --tag=webarxaas .`
-5. `docker run -p 8080:80 webarxaas`
+5. `docker run -p 80:8080 webarxaas`
 
 ```Docker
 FROM nginx
