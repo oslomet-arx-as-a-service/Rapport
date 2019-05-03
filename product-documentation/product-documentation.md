@@ -46,7 +46,7 @@ The interactive Web service is implemented in React using multiple third-party f
 | Package     | Use                                                                                                                   |
 | ------------| --------------------------------------------------------------------------------------------------------------------- |
 | React       | React is a library for building interactive web user interfaces. It simplifies rendering content on the website and lets us split our code into many single-purpose components. |
-| BootStrap 4 | Open source toolkit for making flexible interfaces adaptable for a wide range of screen sizes including mobile phones. And gives the website a professional looking color scheme. |
+| React-BootStrap | Open source toolkit for making flexible interfaces adaptable for a wide range of screen sizes including mobile phones. And gives the website a professional looking color scheme. |
 | Papa Parse  | Powerful tool for parsing and building CSV files with JavaScript                                                      |
 
 #### Functionality
@@ -87,7 +87,7 @@ Once the response is received back from the server it will display tables contai
 
 ### Operations
 
-This webapplication is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file in the root of the project directory.  
+This web application is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file in the root of the project directory.  
 Note that the backend ARXaaS service must be available in order to be utilizing the *analyzation* and *anonymization* functionality.
 
 #### Configuration
@@ -102,14 +102,21 @@ Note that the backend ARXaaS service must be available in order to be utilizing 
 
 In order to start the application locally you must have a local installation of *NodeJS* newer than `10.15` and the packet manager *npm* installed.
 
- 1. Make sure the current directory of your terminal is the root directory of *WebARXaaS*.
- 2. Run `npm install` in your terminal in order to download all the dependencies specified in package.json.
- 3. Run `npm start` in your terminal. This will start up an instance of the application running locally on port 3000.
- 4. You can now access the website locally by navigating to http://localhost:3000/ with your web browser.
+1. Make sure the current directory of your terminal is the root directory of *WebARXaaS*.
+2. Run `npm install` in your terminal in order to download all the dependencies specified in package.json.
+3. Run `npm start` in your terminal. This will start up an instance of the application running locally on port 3000.
+4. You can now access the website locally by navigating to http://localhost:3000/ with your web browser.
 
-#### Deploying with docker
+#### Deploying to production
 
-The main way of deploying WebAaaS is through docker. You will find the docker file below located in `web-aaas\Dockerfile`
+This application is built using the node *create-react-app* package.
+In order to generate files ready to be deployed to production you must first build the application.
+
+1. Run the command `npm install` inside the project directory, in order to ensure you got the necessary dependencies downloaded locally.
+2. Run the command `npm buid`, this command is an alias for `react-scripts build` and will generate production ready files into the */build* directory.
+3. Copy the content of the */build* into the public directory of a webserver. To do this you can use the *nginx* docker image by using the docker image in the root directory of the project.
+4. `docker build --tag=webarxaas .`
+5. `docker run -p 80:8080 webarxaas`
 
 ```Docker
 FROM nginx
@@ -117,9 +124,9 @@ COPY build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 ```
 
-
-
-
 ### Future developments
+
+- Hierarchy builder
+- More visualizations
 
 ### Conclusion
