@@ -74,8 +74,13 @@ Once the response is received back from the service it will render multiple tabl
 #### Anonymization
 
 The anonymization feature requires that the user already loaded a *CSV* file, set the correct *attribute types*, and uploaded a *CSV* file containing a generalization hierarchy/transformation model for each of the *quasi-identifying* attributes.
-By pressing the *Anonymize* button, the website will make a call to the backend service on `/api/anonymization` containing a JSON formatted payload containing all the loaded data together with metadata.
-Once the response is received back from the server it will display tables containing the following tables.
+
+##### Hierarchy import guide
+
+##### Privacy model guide
+
+By pressing the *Anonymize* button, the website will make a call to the backend service on `/api/anonymization` containing a JSON formatted payload, containing all the loaded data together with metadata.
+Once the response is received back from the server, it will display tables containing the following tables.
 
 | Metric table          | Content                                                                                             |
 | --------------------- | --------------------------------------------------------------------------------------------------- |
@@ -83,16 +88,16 @@ Once the response is received back from the server it will display tables contai
 | Reidentification risk | Contains percentage likelihood on various *re-identification risks*                                 |
 | Risk interval         | Gives metrics on how large portions of the entries in the data which is affected by each risk range |
 | Process time          | The time spent by the backend anonymizing the request in milliseconds.                              |
-| privacy models        | Containing metadata used by the backend for each of the applied privacy models.                     |
+| privacy models        | Containing metadata used by the serivce for each of the applied privacy models, and transformation model level used on the quasi-identifying attribute types.                     |
 
 ### Operations
 
-This web application is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file in the root of the project directory.  
-Note that the backend ARXaaS service must be available in order to be utilizing the *analyzation* and *anonymization* functionality.
+This web application is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file, in the root of the project directory.  
+Note that the ARXaaS service must be available via a server or running localy, in order to be utilizing the *analyzation* and *anonymization* functionality.
 
 #### Configuration
 
- By default the application is connecting towards the URL defined inside `web-aaas\src\App.js`. The url should be changed if your organization is running your own ARXaaS service. There is also a possible to define the backend url manually inside on the website, but this is mainly intended for testing purposes as the entered URL currently does not get saved.
+ By default the application is connecting towards the URL defined inside `web-aaas\src\App.js`. The url should be changed if your organization is running your own ARXaaS service. There is also a possible to define the serivce url manually inside on the website, but this is mainly intended for testing purposes as the entered URL currently does not get saved.
 
  ```javascript
   const [endpoint, setEndpoint] = useState('http://35.228.21.181:8080')
@@ -101,7 +106,7 @@ Note that the backend ARXaaS service must be available in order to be utilizing 
 #### Starting the application
 
 In order to start the application locally you must have a local installation of *NodeJS* newer than `10.15` and the packet manager *npm* installed.
-
+## missing steps on where to find and download WebARXaaS
 1. Make sure the current directory of your terminal is the root directory of *WebARXaaS*.
 2. Run `npm install` in your terminal in order to download all the dependencies specified in package.json.
 3. Run `npm start` in your terminal. This will start up an instance of the application running locally on port 3000.
@@ -111,7 +116,7 @@ In order to start the application locally you must have a local installation of 
 
 This application is built using the node *create-react-app* package.
 In order to generate files ready to be deployed to production you must first build the application.
-
+## missing steps on where to find and download WebARXaaS
 1. Run the command `npm install` inside the project directory, in order to ensure you got the necessary dependencies downloaded locally.
 2. Run the command `npm buid`, this command is an alias for `react-scripts build` and will generate production ready files into the */build* directory.
 3. Copy the content of the */build* into the public directory of a webserver. To do this you can use the *nginx* docker image by using the docker image in the root directory of the project.
