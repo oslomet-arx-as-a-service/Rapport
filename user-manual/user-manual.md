@@ -120,6 +120,12 @@ docker run -p 8080:8080 -d arxaas/aaas --server.ssl.key-store-type=<keystore typ
 #### Error description.
 
 ### PyARXaaS client
+#### Introduction
+This documentation contains a step-by-step guide on how to start and use the Python Client. Jupyter notebook was used as the IDE tool for running the Python client.
+
+        - The API documentation can be found here: https://pyaaas.readthedocs.io/en/latest/
+        
+
 
 ### WebARXaaS client
 
