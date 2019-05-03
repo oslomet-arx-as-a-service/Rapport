@@ -30,10 +30,10 @@ Make sure that you have docker installed. Docker can be found here: https://www.
 
 ##### Run the service on localhost from jar (download ARXaaS executable jar from Maven and execute it)
  Make that you have the latest version of java installed before going through these steps.
- 
   1. Go to https://search.maven.org/search?q=g:no.oslomet and download the latest version of ARXaaS
   2. Open the command-line interpreter and run the jar file
-        java -jar <path to jar>
+        
+            java -jar <path to jar>
   
 #### Https configuration.
 #### Troubleshooting
