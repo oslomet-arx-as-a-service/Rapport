@@ -35,18 +35,90 @@ In the case of an error or exception a full stack trace is printed to make debug
 
 ### WebARXaaS
 
-- Short presentation
-As a stretch goal the employer wished for a way to quickly access the ARX functionality, taking advantage of the flexible REST API   provided by the ARXaaS service. It was therefore decided to implement an interactive web frontend. So the user can analyze or anonymize their data. Without the need for the user to install software on their local machine.
-- Technologies:
-The interactive Web service is implemented in React using multiple third party frameworks in order to provide the best possible service
+#### Short presentation
+
+As a stretch goal, the employer wished for a way to quickly access the ARX functionality, taking advantage of the flexible REST API   provided by the ARXaaS service. It was therefore decided to implement an interactive web frontend. So the user can analyze or anonymize their data. Without the need for the user to install software on their local machine.
+
+#### Technologies
+
+The interactive Web service is implemented in React using multiple third-party frameworks in order to provide the best possible service
 
 | Package     | Use                                                                                                                   |
-| ----------  | -----                                                                                                                 |
-| React       | React is a library for building interactive web user interfaces. It simplifies rendering content on the website and lets us split our code into many single purpose components.                                                                                  | BootStrap 4 | Open source toolkit for making flexible interfaces adaptable for a wide range of screen sizes including mobile phones. And gives the website a professional looking color scheme.                                                                            |
+| ------------| --------------------------------------------------------------------------------------------------------------------- |
+| React       | React is a library for building interactive web user interfaces. It simplifies rendering content on the website and lets us split our code into many single-purpose components. |
+| BootStrap 4 | Open source toolkit for making flexible interfaces adaptable for a wide range of screen sizes including mobile phones. And gives the website a professional looking color scheme. |
+| Papa Parse  | Powerful tool for parsing and building CSV files with JavaScript                                                      |
 
-- Functionality
+#### Functionality
+
+All the functionality can be accessed through a single page application.
+Where the two main functionalities is *analyzation* and *anonymization*.
+
+##### DataImport
+
+The dataImport step is mandatory wherever the user wish to analyze or anonymize the data.
+To load data the user clicks the load button, and selects a file.
+Once the file is loaded, there will automatically be generated a section displaying each of the attribute headers from the file below.
+
+##### Analyzation
+
+The analyzation feature requires that the user already has loaded a *CSV* file, and set the correct *attribute types*.
+By pressing the *Analyze* button, the website will make a call to the backend service on `/api/analyzation` containing a JSON formatted payload containing all the loaded data together with metadata.
+Once the response is received back from the service is received it will be rendered multiple tables bellow containing metrics describing the analyzation quality.
+
+| Metric table          | Content                                                                                             |
+| --------------------- | --------------------------------------------------------------------------------------------------- |
+| Reidentification risk | Contains percentage likelihood on various *re-identification risks*                                 |
+| Risk interval         | Gives metrics on how large portions of the entries in the data which is affected by each risk range |
+
+#### Anonymization
+
+The anonymization feature requires that the user already loaded a *CSV* file, set the correct *attribute types*, and uploaded a *CSV* file containing a generalization hierarchy for each of the *quasi-identifying* attributes.
+By pressing the *Anonymize* button, the website will make a call to the backend service on `/api/anonymization` containing a JSON formatted payload containing all the loaded data together with metadata.
+Once the response is received back from the server it will display tables containing the following tables.
+
+| Metric table          | Content                                                                                             |
+| --------------------- | --------------------------------------------------------------------------------------------------- |
+| Anonymization data    | The anonymized version of the dataset                                                               |
+| Reidentification risk | Contains percentage likelihood on various *re-identification risks*                                 |
+| Risk interval         | Gives metrics on how large portions of the entries in the data which is affected by each risk range |
+| Process time          | The time spent by the backend anonymizing the request in milliseconds.                              |
+| privacy models        | Containing metadata used by the backend for each of the applied privacy models.                     |
 
 ### Operations
+
+This webapplication is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file in the root of the project directory.  
+Note that the backend ARXaaS service must be available in order to be utilizing the *analyzation* and *anonymization* functionality.
+
+#### Configuration
+
+ By default the application is connecting towards the URL defined inside `web-aaas\src\App.js`. The url should be changed if your organization is running your own ARXaaS service. There is also a possible to define the backend url manually inside on the website, but this is mainly intended for testing purposes as the entered URL currently does not get saved.
+
+ ```javascript
+  const [endpoint, setEndpoint] = useState('http://35.228.21.181:8080')
+ ```
+
+#### Starting the application
+
+In order to start the application locally you must have a local installation of *NodeJS* newer than `10.15` and the packet manager *npm* installed.
+
+ 1. Make sure the current directory of your terminal is the root directory of *WebARXaaS*.
+ 2. Run `npm install` in your terminal in order to download all the dependencies specified in package.json.
+ 3. Run `npm start` in your terminal. This will start up an instance of the application running locally on port 3000.
+ 4. You can now access the website locally by navigating to http://localhost:3000/ with your web browser.
+
+#### Deploying with docker
+
+The main way of deploying WebAaaS is through docker. You will find the docker file below located in `web-aaas\Dockerfile`
+
+```Docker
+FROM nginx
+COPY build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+```
+
+
+
 
 ### Future developments
 
