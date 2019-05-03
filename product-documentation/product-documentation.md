@@ -37,7 +37,7 @@ In the case of an error or exception a full stack trace is printed to make debug
 
 #### Short presentation
 
-As a stretch goal, the employer wished for a way to quickly access the ARX functionality, taking advantage of the flexible REST API   provided by the ARXaaS service. It was therefore decided to implement an interactive web frontend. So the user can analyze or anonymize their data. Without the need for the user to install software on their local machine.
+As a stretch goal, the employer wished for a way to quickly access the ARX functionality, taking advantage of the flexible REST API provided by the ARXaaS service. It was therefore decided to implement an interactive web frontend. So the user can analyze or anonymize their data. Without the need for the user to install software on their local machine.
 
 #### Technologies
 
@@ -115,8 +115,9 @@ In order to generate files ready to be deployed to production you must first bui
 1. Run the command `npm install` inside the project directory, in order to ensure you got the necessary dependencies downloaded locally.
 2. Run the command `npm buid`, this command is an alias for `react-scripts build` and will generate production ready files into the */build* directory.
 3. Copy the content of the */build* into the public directory of a webserver. To do this you can use the *nginx* docker image by using the docker image in the root directory of the project.
-4. `docker build --tag=webarxaas .`
-5. `docker run -p 80:8080 webarxaas`
+4. Run the command `docker build --tag=webarxaas .` from the root directory of the application, to make docker start the building of the docker image shown below.
+5. For starting the built docker image which was built on the previous step, run the command `docker run -p 80:8080 webarxaas`. This will start the docker container running the application, making the server start running on port 80.
+6. Use your browser to navigate to the website at http://localhost:80 and check that the website is up and running
 
 ```Docker
 FROM nginx
@@ -126,7 +127,10 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 ### Future developments
 
+#### Webarx
 - Hierarchy builder
 - More visualizations
+- Upload the image on dockerhub
 
 ### Conclusion
+
