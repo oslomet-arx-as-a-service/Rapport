@@ -252,5 +252,7 @@ The web api was shown in the workshop and was mainly tested for the analyzation 
 
 ### Conclusion
 
+The continues testing of each new feature on the service- and client-side before merging with the master branch ensured a stable build. This made it easier to see if the new features is unstable or has some problems. The project team also recieved positive feedback from both the product owner and the test group.
+
 ### References
 http://softwaretestingfundamentals.com/acceptance-testing/
