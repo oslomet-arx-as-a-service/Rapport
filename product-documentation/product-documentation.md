@@ -117,6 +117,7 @@ In order to generate files ready to be deployed to production you must first bui
 3. Copy the content of the */build* into the public directory of a webserver. To do this you can use the *nginx* docker image by using the docker image in the root directory of the project.
 4. `docker build --tag=webarxaas .`
 5. `docker run -p 80:8080 webarxaas`
+6. Use your browser to navigate to the website at http://localhost:80 and check that the website is up and running
 
 ```Docker
 FROM nginx
