@@ -47,6 +47,9 @@ The project team decided on a test plan to ensure a stable build is always produ
 ### Execution
 Ensuring a stable build is produced for each ending of a sprint is important, therefor testing was continuesly done throughtout the project. For each new feature implemented a unit test must follow before being allowed to be merged to the master branch. Integration testing is done after all features in a sprint is implemented. Finaly system testing and edge case testing was done to ensure that the service works properly and in an event of an error, show a detailed explaination of what occured as well as make sure the correct error is shown.
 
+![merge rules](/test-documentation/img/mergeRules.png)
+![merge rules](/test-documentation/img/mergeRulesApprove.png)
+
 - #### Travis
   For every push to github a travis job is started, in this job a virtual machine will run the program along with all the test. Each test must pass for travis to give a passing grade, this passing grade is used to restrict merging unstable builds to the version control host.
   
