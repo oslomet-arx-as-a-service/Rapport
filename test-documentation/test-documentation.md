@@ -255,7 +255,7 @@ The web api was shown in the workshop and was mainly tested for the analyzation 
 
 ### Conclusion
 
-By following a continues integration workflow by continuesly testing each new feature on the service- and client-side, ensured that the new branch is stable before merging with the master branch. Having a test driven development process ensured a the project was continuesly tested for everytime a new method was made. This made it easier to see if the new features is unstable or has some problems. The project team also recieved positive feedback from both the product owner and the test group.
+By following a continues integration workflow by continuesly testing each new feature on the service- and client-side, ensured that the new branch is stable before merging with the master branch in the version control host repository. Having a test driven development process ensured a the project was continuesly tested for everytime a new method was made. This made it easier to see if the new features is unstable or has some problems. The project team also recieved positive feedback from both the product owner and the test group.
 
 ### References
 http://softwaretestingfundamentals.com/acceptance-testing/
