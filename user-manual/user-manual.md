@@ -131,6 +131,51 @@ This document contains a step-by-step guide on how to start and use the Python C
 
 ### WebARXaaS client
 
+The WebARXaaS client files can be found and downloaded here: https://github.com/oslomet-arx-as-a-service/WebARXaaS
+
+#### Starting the application
+
+In order to start the application locally you must have a local installation of *NodeJS* newer than `10.15` and the packet manager *npm* installed.
+1. Download the WebARXaaS client
+2. Make sure the current directory of your terminal is the root directory of *WebARXaaS*.
+3. Run `npm install` in your terminal in order to download all the dependencies specified in package.json.
+4. Run `npm start` in your terminal. This will start up an instance of the application running locally on port 3000.
+5. You can now access the website locally by navigating to http://localhost:3000/ with your web browser.
+
+#### Deploying to production
+
+This application is built using the node *create-react-app* package.
+In order to generate files ready to be deployed to production you must first build the application.
+1. Download the WebARXaaS client
+2. Run the command `npm install` inside the project directory, in order to ensure you got the necessary dependencies downloaded locally.
+3. Run the command `npm buid`, this command is an alias for `react-scripts build` and will generate production ready files into the */build* directory.
+4. Copy the content of the */build* into the public directory of a webserver. To do this you can use the *nginx* docker image by using the docker image in the root directory of the project.
+5. Run the command `docker build --tag=webarxaas .` from the root directory of the application, to make docker start the building of the docker image shown below.
+6. For starting the built docker image which was built on the previous step, run the command `docker run -p 80:8080 webarxaas`. This will start the docker container running the application, making the server start running on port 80.
+7. Use your browser to navigate to the website at http://localhost:80 and check that the website is up and running
+
+```Docker
+FROM nginx
+COPY build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+```
+
+#### Configuration
+
+ By default the application is connecting towards the URL defined inside `web-aaas\src\App.js`. The url should be changed if your organization is running your own ARXaaS service. There is also a possible to define the serivce url manually inside on the website, but this is mainly intended for testing purposes as the entered URL currently does not get saved.
+
+ ```javascript
+  const [endpoint, setEndpoint] = useState('http://35.228.21.181:8080')
+ ```
+
+##### Analyzing
+
+#### Anonymizing
+
+##### Hierarchy import guide
+
+##### Privacy model guide
+
 ### Statistics
 - Stress
 - Metrics dashboard
