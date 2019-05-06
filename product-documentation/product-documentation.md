@@ -124,7 +124,7 @@ In order to generate files ready to be deployed to production you must first bui
 5. For starting the built docker image which was built on the previous step, run the command `docker run -p 80:8080 webarxaas`. This will start the docker container running the application, making the server start running on port 80.
 6. Use your browser to navigate to the website at http://localhost:80 and check that the website is up and running
 
-```Docker
+```docker
 FROM nginx
 COPY build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
