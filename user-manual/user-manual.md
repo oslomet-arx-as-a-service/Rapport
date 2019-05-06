@@ -122,7 +122,7 @@ docker run -p 8080:8080 -d arxaas/aaas --server.ssl.key-store-type=<keystore typ
 #### Introduction
 This document contains a step-by-step guide on how to start and use the Python Client. The python client was designed with the expectation that it would be used in Jupyter notebook, but it can be used on different IDE.
 
-        - The API documentation can be found here: https://pyaaas.readthedocs.io/en/latest/
+   - The API documentation can be found here: https://pyaaas.readthedocs.io/en/latest/
         
 #### Installing PyARXaaS Client
         
