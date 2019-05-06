@@ -1,7 +1,8 @@
 ### Front page
 
 ### Preface
-The purpose of this document is to give the reader a technical view of how the system has been build and the functionalities available in both the service and clients. This document also shows how the client works with service. This documentent is written with the expectation of being used for working with operations, maintinance or future development. It is therefor expected that the reader has programming knowledge. For better understanding of this document we recommend reading the presentation documentation first.
+
+The purpose of this document is to give the reader a technical view of how the system has been build and the functionalities available in both the service and clients. This document also shows how the client works with service. This document is written with the expectation of being used for working with operations, maintenance or future development. It is therefor expected that the reader has programming knowledge. For better understanding of this document we recommend reading the presentation documentation first.
 
 ### Introduction
 
@@ -11,7 +12,7 @@ The purpose of this document is to give the reader a technical view of how the s
 - Technologies
 #### Functionality
 
-The service has 3 end points, to reach these end-points a client must use a HTTP POST call to an web address that is running the service. These end points are written using a REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The end point address is formed by using an anotation on each controller and method.
+The service has 3 end points, to reach these end-points a client must use a HTTP POST call to an web address that is running the service. These end points are written using a REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The end point address is formed by using an annotation on each controller and method.
 
 Example of a controller with a REST api end point:
 
@@ -26,7 +27,7 @@ public class AnalyzationController {
 ```
 
 By following the REST architecture the web address is form in this format
-{web address of the service}/api/{function}. The resulting 3 end-points can then be reached by writting:
+{web address of the service}/api/{function}. The resulting 3 end-points can then be reached by writing:
   - {web address of the service}/api/analyze
   - {web address of the service}/api/anonymize
   - {web address of the service}/api/hierarchy
@@ -139,7 +140,6 @@ Once the response is received back from the server, it will display tables conta
 
 This web application is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file, in the root of the project directory.  
 Note that the ARXaaS service must be available via a server or running localy, in order to be utilizing the *analyzation* and *anonymization* functionality.
-
 
 ### Future developments
 
