@@ -8,11 +8,27 @@
 
 ### ARXaaS REST web service
 
-- Short presentation
-- Technologies
-- Functionality
+#### Short presentation
 
-Logging:
+The main requirement from the customer was that making the *ARX* functionality available for their data scientist users as a part of their daily workflow. *ARX as a Service* provides a REST API on which there can be built many different clients, optimized for different usecases.
+
+#### Technologies
+
+Spring framework provides state of the art functionality for creating Web applications with high security and performance. 
+
+#### Functionality
+
+##### Endpoints
+
+##### Anonymization
+
+##### Analyzation
+
+##### Hierarchy generator
+
+##### Https
+
+##### Logging
 
 ARXaaS has logging implemented using log4j. For every data set that is analyzed and anonymized. The application provides metrics for received and completed requests. The log displays the size of the dataset, number of rows and columns, source IP, dataset bytesize, privacy model used, suppression limit and request processing time.
 
@@ -24,6 +40,8 @@ In the case of an error or exception a full stack trace is printed to make debug
 
 - Security/https settings
 - Open source license
+
+##### Error handeling
 
 ### Client side introduction
 
