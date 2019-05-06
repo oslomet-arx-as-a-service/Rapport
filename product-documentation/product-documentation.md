@@ -8,8 +8,14 @@ The purpose of this document is to give the reader a technical view of how the s
 
 ### ARXaaS REST web service
 
-- Short presentation
-- Technologies
+#### Short presentation
+
+The main requirement from the customer was that making the *ARX* functionality available for their data scientist users as a part of their daily workflow. *ARX as a Service* provides a REST API on which there can be built many different clients, optimized for different usecases.
+
+#### Technologies
+
+Spring framework provides state of the art functionality for creating Web applications with high security and performance. 
+
 #### Functionality
 
 The service has 3 end points, to reach these end-points a client must use a HTTP POST call to an web address that is running the service. These end points are written using a REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The end point address is formed by using an annotation on each controller and method.
@@ -74,6 +80,8 @@ In the case of an error or exception a full stack trace is printed to make debug
 
 - Security/https settings
 - Open source license
+
+##### Error handeling
 
 ### Client side introduction
 
