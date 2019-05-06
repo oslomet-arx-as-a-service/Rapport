@@ -2,7 +2,7 @@
 The purpose of this documentation is to give the reader a detailed description of each test, and how the test are implemented. This documentent is written with the expectation that the reader has basic programming and testing knowledge, and has read the product documentation.
 
 ### Goal
-The goal for these tests is to ensure that the service and the clients functionalities, works as they are expected to work. This is also to ensure that in an event that a feature fails, the right error message shows up with a detailed explanation on what went wrong and how to correct the error.
+The goal for these tests is to ensure that the service and the clients functionalities, works as they are expected to work. This is also to ensure that in an event that a feature fails, the right error message shows up with a detailed explanation on what went wrong and how to correct the error. 
 
 ### Tools
 These are the tools the team used for testing:
@@ -255,7 +255,7 @@ The web api was shown in the workshop and was mainly tested for the analyzation 
 
 ### Conclusion
 
-The continues testing of each new feature on the service- and client-side before merging with the master branch ensured a stable build. This made it easier to see if the new features is unstable or has some problems. The project team also recieved positive feedback from both the product owner and the test group.
+By following a continues integration workflow by continuesly testing each new feature on the service- and client-side, ensured that the new branch is stable before merging with the master branch. Having a test driven development process ensured a the project was continuesly tested for everytime a new method was made. This made it easier to see if the new features is unstable or has some problems. The project team also recieved positive feedback from both the product owner and the test group.
 
 ### References
 http://softwaretestingfundamentals.com/acceptance-testing/
