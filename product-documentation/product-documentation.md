@@ -41,7 +41,7 @@ This document will describe the functionality of each end point. This section wi
 
 This end point can be reached by writting "{web address of the serice}/api/analyze" and is a HTTP POST method.
 
-The end point recieves a request object containing a data set to be analyzed and the attribute type list of the data set. The end points returns a object containing a risk profile that describes the re-identification risk and distribution of risk in a data set.
+The end point recieves a request object containing a data set to be analyzed and the attribute type list of the data set. The end point returns an object containing a risk profile that describes the re-identification risk and distribution of risk in a data set.
 
 This end point creates a ARX data object with the data set and attribute type taken from the request object. This ARX data object is then analyzed against re-identification risk. After the analyzation process is done, a risk profile object containing a list of re-identification risk and destribution of risk is created and sent back as a response object.
 
@@ -49,7 +49,11 @@ The risk profile object contains a re-identification risk that describes how ano
 
 ##### Anonymization
 
+This end point can be reached by writting "{web address of the serice}/api/anonymize" and is a HTTP POST method.
 
+The end point recieves a request object contianing a data set to be anonymized, list of attribute types containing transformation models(hierarchy) and privacy models. This end point returns an object containing a anonymized data set, a risk profile, and a anonymization metrics.
+
+This end point uses the data taken from the request object and anonymizes it against re-identification risk, based on the attribute types, privacy model and transformation model defined in the request object. After the anonymization process is done, the anonymized data set is then analyzed on how anonymous it is.
 
 #### Logging:
 
