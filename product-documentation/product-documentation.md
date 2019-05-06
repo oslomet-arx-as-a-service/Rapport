@@ -10,9 +10,33 @@
 
 - Short presentation
 - Technologies
-- Functionality
+#### Functionality
 
-Logging:
+The service has 3 end-points, to reach these end-points a client must use a HTTP POST call to an web address that is running the service. These end-points are written using a REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The end-point address is formed by using an anotation on each controller and method.
+
+Example of a controller with a REST api end-point:
+
+```java
+
+@RequestMapping("/api/analyze")
+public class AnalyzationController {
+
+    @PostMapping
+    public RiskProfile getPayloadAnalyze(@Valid @RequestBody Request payload, HttpServletRequest request) {
+
+```
+
+By following the REST architecture the web address is form in this format
+{web address of the service}/api/{function}. The resulting 3 end-points can then be reached by writting:
+  - {web address of the serice}/api/anonymize
+  - {web address of the serice}/api/analyze
+  - {web address of the serice}/api/hierarchy
+  
+When an end-point recieves a request object, it gets validated if it is correctly formated. When the validation process fails the end-point will send a response in the form of an error message. This validation works as an extra safety net, because the clients are designed to always send a request object with the correct format. When the validation process succeeds the service will send a response object containing a JSON body that gets unpacked and mapped by the clients. When the object is correclty formated but containts invalid parameters, the end-point will send a response object containing the error message and how to correct the error.
+
+
+
+#### Logging:
 
 ARXaaS has logging implemented using log4j. For every data set that is analyzed and anonymized. The application provides metrics for received and completed requests. The log displays the size of the dataset, number of rows and columns, source IP, dataset bytesize, privacy model used, suppression limit and request processing time.
 
