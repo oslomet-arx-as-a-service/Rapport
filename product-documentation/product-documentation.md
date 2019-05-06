@@ -53,7 +53,9 @@ This end point can be reached by writting "{web address of the serice}/api/anony
 
 The end point recieves a request object contianing a data set to be anonymized, list of attribute types containing transformation models(hierarchy) and privacy models. This end point returns an object containing a anonymized data set, a risk profile, and a anonymization metrics.
 
-This end point uses the data taken from the request object and anonymizes it against re-identification risk, based on the attribute types, privacy model and transformation model defined in the request object. After the anonymization process is done, the anonymized data set is then analyzed on how anonymous it is.
+This end point uses the data taken from the request object and anonymizes it against re-identification risk, based on the attribute types, privacy model and transformation model defined in the request object. After the anonymization process is done, the anonymized data set is then analyzed on how anonymous it is and creates a risk profile.
+
+The anonymization metrics contains the transformation level used on each quasi-identifying attribute type and the meta data on the privacy models used to anonymize the data set.
 
 #### Logging:
 
