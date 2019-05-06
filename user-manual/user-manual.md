@@ -3,16 +3,15 @@
 
 ### Preface
 
-The purpose of this document is to give the reader a step-by-step guide on how to start the service, and how to use the clients. The user guides are written with the expectation that the end user is a data scientist or a person that has basic programming knowledge.
+The purpose of this document is to give the reader a step-by-step guide on how to start the service, and how to use the clients. The user guides are written with the expectation that the reader is a data scientist or a person that has basic programming knowledge.
 
 ### ARXaaS service
 
 #### Introduction
+This document contains a step-by-step guide on how to start the service, and how to configure it to run as a https. The service application is available as docker image and java archive file(jar). These files can be downloaded form docker hub and maven central.
 
-This documentaion contains a step-by-step guide on how to start the service. The service application is available as docker image and java archive file(jar). These files can be downloaded form docker hub and maven central.
-
-    - The API doucmentaion can be found here: https://oslomet-arx-as-a-service.github.io/ARXaaS/#analyze-controller 
-    - The javadoc can be found here: https://javadoc.io/doc/no.oslomet/arxaas/0.3.2-RELEASE
+   - The API doucmentaion can be found here: https://oslomet-arx-as-a-service.github.io/ARXaaS/#analyze-controller 
+   - The javadoc can be found here: https://javadoc.io/doc/no.oslomet/arxaas/0.3.2-RELEASE
 
 #### Manual, set up steps
 #### Running the service locally
@@ -28,7 +27,7 @@ Make sure that you have docker installed. Docker can be found here: https://www.
 
         docker run arxaas/aaas
 
-##### Run the service on localhost from jar (download ARXaaS executable jar from Maven and execute it)
+##### Run the service on localhost from a jar (download ARXaaS executable jar from Maven and execute it)
  Make that you have the latest version of java installed before going through these steps.
   1. Go to https://search.maven.org/search?q=g:no.oslomet and download the latest version of ARXaaS
   2. Open the command-line interpreter and run the jar file
@@ -121,9 +120,12 @@ docker run -p 8080:8080 -d arxaas/aaas --server.ssl.key-store-type=<keystore typ
 
 ### PyARXaaS client
 #### Introduction
-This documentation contains a step-by-step guide on how to start and use the Python Client. Jupyter notebook was used as the IDE tool for running the Python client.
+This document contains a step-by-step guide on how to start and use the Python Client. The python client was designed with the expectation that it would be used in Jupyter notebook, but it can be used on different IDE.
 
         - The API documentation can be found here: https://pyaaas.readthedocs.io/en/latest/
+        
+#### Installing PyARXaaS Client
+        
         
 
 
