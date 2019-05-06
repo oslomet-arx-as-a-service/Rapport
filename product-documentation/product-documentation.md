@@ -12,9 +12,9 @@
 - Technologies
 #### Functionality
 
-The service has 3 end-points, to reach these end-points a client must use a HTTP POST call to an web address that is running the service. These end-points are written using a REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The end-point address is formed by using an anotation on each controller and method.
+The service has 3 end points, to reach these end-points a client must use a HTTP POST call to an web address that is running the service. These end points are written using a REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The end point address is formed by using an anotation on each controller and method.
 
-Example of a controller with a REST api end-point:
+Example of a controller with a REST api end point:
 
 ```java
 
@@ -28,11 +28,27 @@ public class AnalyzationController {
 
 By following the REST architecture the web address is form in this format
 {web address of the service}/api/{function}. The resulting 3 end-points can then be reached by writting:
-  - {web address of the serice}/api/anonymize
   - {web address of the serice}/api/analyze
+  - {web address of the serice}/api/anonymize
   - {web address of the serice}/api/hierarchy
   
 When an end-point recieves a request object, it gets validated if it is correctly formated. When the validation process fails the end-point will send a response in the form of an error message. This validation works as an extra safety net, because the clients are designed to always send a request object with the correct format. When the validation process succeeds the service will send a response object containing a JSON body that gets unpacked and mapped by the clients. When the object is correclty formated but containts invalid parameters, the end-point will send a response object containing the error message and how to correct the error.
+
+#### End points
+
+This document will describe the functionality of each end point. This section will explain what each end point does and the response object it sends back to the user, as well as the different actions used with the request object sent to the end points.
+
+##### Analyzation
+
+This end point can be reached by writting "{web address of the serice}/api/analyze" and is a HTTP POST method.
+
+The end point recieves a request object containing a data set to be analyzed and the attribute type list of the data set. The end points returns a object containing a risk profile that describes the re-identification risk and distribution of risk in a data set.
+
+This end point creates a ARX data object with the data set and attribute type taken from the request object. This ARX data object is then analyzed against re-identification risk. After the analyzation process is done, a risk profile object containing a list of re-identification risk and destribution of risk is created and sent back as a response object.
+
+The risk profile object contains a re-identification risk that describes how anonymous the data set is and the destribution of risk in the data set.
+
+##### Anonymization
 
 
 
