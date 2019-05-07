@@ -27,9 +27,9 @@ public class AnalyzationController {
 
 By following the REST architecture the web address is form in this format
 {web address of the service}/api/{function}. The resulting 3 end-points can then be reached by writting:
-  - {web address of the serice}/api/analyze
-  - {web address of the serice}/api/anonymize
-  - {web address of the serice}/api/hierarchy
+  - {web address of the service}/api/analyze
+  - {web address of the service}/api/anonymize
+  - {web address of the service}/api/hierarchy
   
 When an end-point recieves a request object, it gets validated if it is correctly formated. When the validation process fails the end-point will send a response in the form of an error message. This validation works as an extra safety net, because the clients are designed to always send a request object with the correct format. When the validation process succeeds the service will send a response object containing a JSON body that gets unpacked and mapped by the clients. When the object is correclty formated but containts invalid parameters, the end-point will send a response object containing the error message and how to correct the error.
 
@@ -39,7 +39,7 @@ This document will describe the functionality of each end point. This section wi
 
 ##### Analyzation
 
-This end point can be reached by writting "{web address of the serice}/api/analyze" and is a HTTP POST method.
+This end point can be reached by writting "{web address of the service}/api/analyze" and is a HTTP POST method.
 
 The end point recieves a request object containing a data set to be analyzed and the attribute type list of the data set. The end point returns an object containing a risk profile that describes the re-identification risk and distribution of risk in a data set.
 
@@ -49,7 +49,7 @@ The risk profile object contains a re-identification risk that describes how ano
 
 ##### Anonymization
 
-This end point can be reached by writting "{web address of the serice}/api/anonymize" and is a HTTP POST method.
+This end point can be reached by writting "{web address of the service}/api/anonymize" and is a HTTP POST method.
 
 The end point recieves a request object contianing a data set to be anonymized, list of attribute types containing transformation models(hierarchy) and privacy models. This end point returns an object containing a anonymized data set, a risk profile, and a anonymization metrics.
 
@@ -59,7 +59,7 @@ The anonymization metrics contains the transformation level used on each quasi-i
 
 ##### Hierarchy
 
-This end point can be reached by writting "{web address of the serice}/api/hierarchy" and is a HTTP POST method.
+This end point can be reached by writting "{web address of the service}/api/hierarchy" and is a HTTP POST method.
 
 #### Logging:
 
