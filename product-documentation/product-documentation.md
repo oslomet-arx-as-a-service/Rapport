@@ -149,6 +149,44 @@ Once the response is received back from the server, it will display tables conta
 This web application is built using *Node.js*. All the necessary dependencies for the project is specified inside the `package.json` file, in the root of the project directory.  
 Note that the ARXaaS service must be available via a server or running localy, in order to be utilizing the *analyzation* and *anonymization* functionality.
 
+<<<<<<< HEAD
+=======
+#### Configuration
+
+ By default the application is connecting towards the URL defined inside `web-aaas\src\App.js`. The url should be changed if your organization is running your own ARXaaS service. There is also a possible to define the serivce url manually inside on the website, but this is mainly intended for testing purposes as the entered URL currently does not get saved.
+
+ ```javascript
+  const [endpoint, setEndpoint] = useState('http://35.228.21.181:8080')
+ ```
+
+#### Starting the application
+
+In order to start the application locally you must have a local installation of *NodeJS* newer than `10.15` and the packet manager *npm* installed.
+## missing steps on where to find and download WebARXaaS
+1. Make sure the current directory of your terminal is the root directory of *WebARXaaS*.
+2. Run `npm install` in your terminal in order to download all the dependencies specified in package.json.
+3. Run `npm start` in your terminal. This will start up an instance of the application running locally on port 3000.
+4. You can now access the website locally by navigating to http://localhost:3000/ with your web browser.
+
+#### Deploying to production
+
+This application is built using the node *create-react-app* package.
+In order to generate files ready to be deployed to production you must first build the application.
+## missing steps on where to find and download WebARXaaS
+1. Run the command `npm install` inside the project directory, in order to ensure you got the necessary dependencies downloaded locally.
+2. Run the command `npm buid`, this command is an alias for `react-scripts build` and will generate production ready files into the */build* directory.
+3. Copy the content of the */build* into the public directory of a webserver. To do this you can use the *nginx* docker image by using the docker image in the root directory of the project.
+4. Run the command `docker build --tag=webarxaas .` from the root directory of the application, to make docker start the building of the docker image shown below.
+5. For starting the built docker image which was built on the previous step, run the command `docker run -p 80:8080 webarxaas`. This will start the docker container running the application, making the server start running on port 80.
+6. Use your browser to navigate to the website at http://localhost:80 and check that the website is up and running
+
+```docker
+FROM nginx
+COPY build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+```
+
+>>>>>>> 466dd8d9343c972fab9d35ea8352c94960b0f6ae
 ### Future developments
 
 #### Webarx
