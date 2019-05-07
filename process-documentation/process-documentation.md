@@ -286,17 +286,15 @@ Documentation
 
 #### Sprint 2 review 
 
-    Started working with implementing javadoc. 
+Started working with implementing javadoc. 
 
-    Started back-end implementation of analyzing against re-identification risk. 
+Started back-end implementation of analyzing against re-identification risk. 
 
-    Started back-end implementation of l-diversity risk. 
+Started back-end implementation of l-diversity risk. 
 
-    Implemented functionality to programmatically display information from my request object in the frontend. 
+Implemented functionality to programmatically display information from my request object in the frontend. 
 
-    Started implementing maven deployment and generation of PGP-keypair. 
-
- 
+Started implementing maven deployment and generation of PGP-keypair. 
 
 #### Sprint 2 retro: 
 
