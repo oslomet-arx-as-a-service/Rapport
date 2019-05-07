@@ -124,6 +124,7 @@ The team presented the pre-project rapport to Eva the teams Bachelor thesis supe
 Eva also provided guidance for the requirements document the group has to finalize by 20.01.19 
 
  - Which demands are from NAV and which demands have the group formulated. 
+
 #### Sprint 0 retro:
 
 In this first unofficial sprint we did not do a sprint retro.
@@ -487,7 +488,151 @@ Where each team member writes down at least one thing for each the three categor
 
 - Continue to keep product owner in focus 
 
+![](img/StarStopContinueSprint3.png)
+
 #### Sprint 4
+
+Duration monday 03.03.19 - friday 15.03.19 
+
+#### Sprint 4 Summary: 
+
+Created a new increment of PyARXaaS and ARXaaS with support for anonymizing data sets with Privacy Models and already generated hierarchies, and analyzing risk profile of a given dataset. 
+
+Implemented the l-diversity feature for the python client. Fixed a bug when reading a in the python client where csv files were not read with utf 8. Implemented a feature to analyze a dataset before anonymizing. Started working on implementing a feature to receive anonymization analytics and better error messages when assigning a hierarchy on non-quasi-identifying attributes. 
+
+Started working on a quick step-by-step guide on how to use the client and its features. 
+
+#### Sprint 4 Backlog:
+
+- [INCOMPLETED] As a data scientist, I would like the possibility to choose more than one set of anonymized data set output, Currently only showing best  ranked result. Possibility to choose subsets of data ranked as 2 or 3 if the user needs less washed data-set.  
+
+- [INCOMPLETED] As a data scientist, I would like to get anomyzation analytics for a given data set. 
+
+- [INCOMPLETED] As a data scientist, I would like to get a error message if we assign a hierarchy for a data set field that has a sensitive attribute. 
+
+- [INCOMPLETED] As a data scientist, I would like a documentation to guide me through the complete process of anonymizing a dataset using Pyaaas and ARXaaS 
+
+- [INCOMPLETED] As a data scientist, I would like to be able to set a global value generalization as my transformation scheme (hierarchy) for column field  
+
+- [COMPLETED] As a data scientist, I would like to be able to analyze my dataset before anonymization 
+
+- [COMPLETED] As a data-scientist, I would like Pandas read functionality for utf8. Æ,Ø,Å is currently not recognized. 
+
+- [COMPLETED] As a data-scientist, I would like the front-end to handle data field columns that contain spaces. l-diversity funciton currently splits the column names containing spaces. 
+
+- [COMPLETED] [BUG] ARXaaS cannot handle CSV files using other than "," separator 
+
+- [COMPLETED] As a project team, we would like Travis to deploy ARXaaS 
+
+#### Sprint 4 Goals: 
+
+Test Coverage 
+
+- AaaS test maintain 80%+ 
+- PyAaaS test maintain 80%+ 
+- Create AaaS integration tests for new and old functionality 
+
+Documentation: 
+
+- AaaS Javadoc 
+
+    - All Classes 
+
+    - All Controller methods 
+
+    - All Service methods 
+
+    - All ARX util methods 
+
+- PyAaaS docstring 
+
+    - All classes 
+
+    - All class methods 
+
+    - Complex internal 
+- Functions/methods 
+
+    - public functions 
+
+
+From Sprint 3: 
+
+Every project member is responsible for writing a short summery of their day in the project diary. 
+
+We schedule a debrief meeting (10 mins per member)before each Sprint Review for sharing of concrete features they have worked on. 
+
+We will make ourselves available for the PO(Robindra) at least one day a week. 
+
+Refactor and reduce Technical debt. 
+
+- Split AaaS ARX wrapper in classes. 
+
+- Split PyAaaS AnonymizationPayload class. 
+
+#### Sprint 4 review: 
+
+- Implemented a new model that fixed separator problem when making a Data object in the backend. 
+
+- Implemented a fix for hierarchies overwriting attribute types of dataset fields. 
+
+- Implemented a function to analyze a dataset before anonymizing. 
+
+- Importing csv with utf-8 support. 
+
+- Fixed a bug when setting L-diversity with white spaces on dataset field name. 
+
+- Splitting out ARXWrapper into domain specific classes. 
+
+- Refactored the backend model for better  communication with the domain. 
+
+#### Sprint 4 retro: 
+
+Where each team member writes down at least one thing for each the three categories.
+
+#### Start: 
+
+- Think about expanding to new features (logging, encryption, webpage). 
+
+- Take more tasks. 
+
+- Finalizing the project structure so we can working in parallel more easily. 
+
+- Start Landing PyaaaS. 
+
+- Start stretch goal planning(what can we get done in time). 
+
+#### Stop: 
+
+- Naming things imprecisely, if unsure ask?. 
+
+- Underestimating how much we can do in a sprint. 
+
+- Slacking on docs, logs and rapports regarding the project. 
+
+- Need more structured sprints with a more thought out planning phase. 
+
+#### Continue: 
+
+- Communicating problems etc. 
+
+- Being motivated, showing up on time 
+
+- Looking for ways to improve 
+
+- Pair programming 
+
+- Motivation 
+
+- Attendance 
+
+- Challenge ideas, assumptions and decisions 
+
+- Listening to the users, and taking their needs into account 
+
+- Continue feedback loop with Robindra 
+
+- Continue with good work discipline(Don’t get lazy) and stay focused.
 
 #### Sprint 5
 
