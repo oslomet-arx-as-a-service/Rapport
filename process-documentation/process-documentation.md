@@ -88,7 +88,7 @@ The team worked in two week sprints and used seven sprints to complete the appli
 
 Duration: Monday 07.01.19 - Friday 18.01.19
 
-#### Summary:
+#### Sprint 0 Summary:
 
 The team finalized the project assignment with NAV IT and started working on writing the pre-project report.  
 
@@ -96,7 +96,7 @@ Created a repository in the version control host Github,  where the team members
 
 Created the project webpage. 
 
-#### Sprint Backlog: 
+#### Sprint 0 Backlog: 
 
 - [COMPLETED] Finalize the project with NAV IT 
 
@@ -108,11 +108,11 @@ Created the project webpage.
 
 - [COMPLETED] Publish the project webpage 
 
-#### Goals: 
+#### Sprint 0 Goals: 
 
 - We did not create any sprint goals for this sprint 
 
-#### Sprint review: 
+#### Sprint 0 review: 
 
 The team finalized the project with NAV IT. The team did group education in Scrum and Phyton programming. As well as completing the entire backlog.
 The team presented the pre-project rapport to Eva the teams Bachelor thesis supervisor. Eva approved the teams pre-project rapport, but pointed out important areas of improvement for the final rapport.
@@ -124,7 +124,7 @@ The team presented the pre-project rapport to Eva the teams Bachelor thesis supe
 Eva also provided guidance for the requirements document the group has to finalize by 20.01.19 
 
  - Which demands are from NAV and which demands have the group formulated. 
-#### Sprint retro:
+#### Sprint 0 retro:
 
 In this first unofficial sprint we did not do a sprint retro.
 
@@ -132,13 +132,13 @@ In this first unofficial sprint we did not do a sprint retro.
 
 Duration monday 21,01.19 - friday 01.02.19 
 
-#### Summary:
+#### Sprint 1 Summary:
 
 Started working on implementing the continues integration workflow on both the service and client repository in the version control host Github. Began with implementing a feature to anonymize a dataset with a k-anonymity privacy model. 
 
 Finished implementing the spring controller class in the service, and started to build a docker image and published the service to google container registry. 
 
-#### Sprint Backlog: 
+#### Sprint 1 Backlog: 
 
 - [COMPLETED] Implement python wrapper API for k-anonymity 
 
@@ -150,7 +150,7 @@ Finished implementing the spring controller class in the service, and started to
 
 - [COMPLETED] Setup travis for PyAaaS 
 
-#### Sprint Goals: 
+#### Sprint 1 Goals: 
 
 In sprint 1 we defined this definition of done (DoD) as part of our Sprint: 
 
@@ -170,7 +170,7 @@ In sprint 1 we defined this definition of done (DoD) as part of our Sprint:
 
 - Code complaint to Static code review 
 
-#### Sprint review
+#### Sprint 1 review
 
 Participants: 
 - Robindra 
@@ -213,7 +213,7 @@ Requests for the next Sprint:
 
 - Provide continuous feedback to user when completing subactions with Python wrapper 
 
-#### Sprint retro: 
+#### Sprint 1 retro: 
 
 Good ot ordered by priority: 
 
@@ -231,7 +231,7 @@ Challenging
 
 Duration monday 04,02.19 - friday 15.02.19 
 
-#### Summary: 
+#### Sprint 2 Summary: 
 
 The team started working on implenting a new features , anonymizing a dataset with a L-diversity privacy model and receiving a re-identification risk profile when analyzing a dataset.  
 
@@ -239,7 +239,7 @@ The team started working on creating a javadoc for the service.
 
 Created a feature in the client where the different settings to be used to anonymize a dataset is shown before being sent to the service. 
 
-#### Sprint Backlog: 
+#### Sprint 2 Backlog: 
 
 - [INCOMPLETED] As a data-scientist, I would like to retrieve analytics of re-identification risk for my dataset. 
 
@@ -249,7 +249,7 @@ Created a feature in the client where the different settings to be used to anony
 
 - [COMPLETED] As a developer using PyARXaaS I would like to receive information about the configurations about my anonymization payload before I run the anonymization process. 
 
-#### Sprint Goals: 
+#### Sprint 2 Goals: 
  
 Test Coverage_
 
@@ -283,7 +283,7 @@ Documentation
 
     - Split ARX wrapper in classes 
 
-#### Sprint review 
+#### Sprint 2 review 
 
     Started working with implementing javadoc. 
 
@@ -297,7 +297,7 @@ Documentation
 
  
 
-#### Sprint retro: 
+#### Sprint 2 retro: 
 
 Completed 18.02.19 
 
@@ -344,6 +344,148 @@ Improvements:
 - Improve focus on product owner
 
 #### Sprint 3
+
+Duration monday 18.02.19 - friday 01.03.19 
+
+#### Sprint 3 Summary:
+
+Finished implementing the analyzation feature for the service and client. Finished implementing the different L-diversity privacy model for the service. Continued to work on more documentation for the javadoc.  
+
+Started working on implementing a feature in the continues integration pipeline, to build a docker image of the service and publishing it to the google cloud repository. Started exploring the possibilities on implementing a feature for global value generalization as a transformation scheme. 
+
+#### Sprint 3 Backlog:
+
+- [INCOMPLETED] As a data scientist, I would like to be able to set a global value generalization as my transformation scheme for column field. 
+
+- [INCOMPLETED] As a data engineer supporting the ARXaaS service, I would like to be able to deploy the service to a docker container environment. 
+
+- [COMPLETED] As a user of the system, I would like java-docs for easy functionality lookup. 
+
+- [COMPLETED] As a data scientist, I would like to be able to use ℓ-Diversity as a Privacy Model  for my dataset 
+
+- [COMPLETED] As a data-scientist, I would like to retrieve analytics of re-identification risks for my dataset. 
+
+#### Sprint 3 Goals: 
+
+- Test Coverage: 
+
+    - AaaS test maintain 80%+ 
+
+    - PyAaaS test maintain 80%+ 
+
+    - create AaaS intergration tests for new and old functionality 
+
+- Documentation: 
+
+    - AaaS Javadoc 
+
+        - All Classes 
+
+        - All Controller methods 
+
+        - All Service methods 
+
+        - All ARX util methods 
+
+  -  PyAaaS docstring 
+
+        - All classes 
+
+        - All class methods 
+
+        - Complex internal functions/methods 
+
+        - public functions 
+
+Goals from sprint 2:
+
+- Every project member is responsible for writing a short summery of their day in the project diary. 
+
+- We schedule a debrief meeting (10 mins per member) before each Sprint Review for sharing of concrete features they have worked on. 
+
+- We will make ourself available for the product owner(Robindra) at least one day a week 
+
+- Refactor and reduce Technical debt 
+
+  -  Split AaaS ARX wrapper in classes 
+
+  - Split PyAaaS  
+
+  -  AnonymizationPayload class 
+
+#### Sprint 3 review 
+
+Implemented the feature to retrieve analytics of re-identification risks for the dataset 
+
+Implemented generation of javadoc in maven and automatically deploy it to an online service for hosting using travis. 
+
+Split the ArxWrapper back-end class into modules. 
+
+Fully implemented the use of L-diversity and its variants. 
+
+Successfully deploying to maven central with along with the  javadoc. 
+
+Generated PGP-keypair and encrypt all the jar-s and pom file upon deployment. 
+
+Sonatype authentication upon deployment. 
+
+#### Sprint 3 retro 
+
+We are going to keep concrete improvement from the last sprint. This has worked well for the group and the product owner. 
+
+Every project member is responsible for writting a short summery of their day in the project diary. 
+
+We schedule a debrief meeting (10 mins per member)before each Sprint Review for sharing of concrete features they have worked on. 
+
+We will make ourself available for the Product owner(Robindra) at least one day a week. 
+
+#### The group did a Start-stop-continue session 
+
+Where each team member writes down at least one thing for each the three categories. 
+
+#### Start doing: 
+
+- If we have to change workplace or time. Try to do it in daytime the day before 
+
+- Start documenting completed features 
+
+- Star increasing documentation frequency? 
+
+- Python course? 
+
+- Start focus on building features 
+
+#### Stop doing: 
+
+- Stop coming a little late 
+
+- Stop overestimating how much we can do in a sprint 
+
+- Stop late meeting changes when we don’t need to. Try do it in the daytime 
+
+- Stop assuming that  someone else will fix it 
+
+#### Continue doing: 
+
+- Continue being open and helping each outer 
+
+- Continue working dynamically 
+
+- Continue planning daily schedules 
+
+- Continue Planning daily schedules  
+
+- Continue showing up at time 
+
+- Continue with good moral 
+
+- Continue daily individual project diary  
+
+- Continue to find errors 
+
+- Continue to take care of each outer 
+
+- Continue to keep product owner in focus 
 
 #### Sprint 4
 
