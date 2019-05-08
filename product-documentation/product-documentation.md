@@ -3,7 +3,7 @@
 ### Preface
 The purpose of this document is to give the reader a technical view of how the system has been build and the functionalities available in both the service and clients. This document also shows how the client works with the service. 
 
-This documentent is written with the expectation of being used for working with operations, maintinance or future development, it is therefor expected that the reader has programming knowledge. For better understanding of this document we recommend reading the presentation documentation first.
+This document is written with the expectation of being used for working with operations, maintinance or future development, it is therefore expected that the reader has programming knowledge. For better understanding of this document we recommend reading the presentation documentation first.
 
 ### Introduction
 
