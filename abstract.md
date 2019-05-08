@@ -1,9 +1,12 @@
 # Abstract
 
-Companies all over the world are increasingly feeling the demand for privacy protections of user data.
-At the same time demand for data science and ML shows no sign of slowing down. One strategy to solve this tension is data anonymization.
-Data anonymization is a large field with many projects worldwide contributing worldwide. But the field has been largely dominated by medical research.
-The tooling currently leading the pack is not well suited for modern day data driven enterprise.
+Businesses worldwide store large amounts of user information, and according to the current trend of digitalization, they are likely to keep storing more. They know that there is value to be gained from analyzing said information, but they are limited from doing so. Among limiting factors, laws and ethics regarding sensitive user information present prominent obstructions. Is it possible for businesses to learn from their data without detriment to their users' privacy? If not, how can the risks of reidentification be mitigated?
+
+One could assume that the frequency in problems emerging from the questions aforementioned, might increase proportionally, or even exponentially along with the increase in storage of user data. If so, there would be demand for strategies that could help to solve these problems. One such strategy is data anonymization against reidentification.
+
+In simple terms, data anonymization is equivalent to controlled information disposal. It is information generalization at the cost of data integrity. For an enterprise, manually performing such tasks on large amounts of data would obviously be time consuming and expensive. There exist tools that are created for alleviating this burden, but at the current time, they are mostly ineffecient and technically demanding. One such tool is ARX Deidentifier, a Java GUI application powered by an anonymization library. While ARX Deidentified provides state of the art algorithms and functionality for anonymization, it is still quite demanding and impractical from the standpoint of continous delivery. We are proposing a solution to the problem by wrapping ARX Deidentifier's functionality in an online RESTful anonymization service. We would like to offer the ability to anonymize data by sending a request from any place in the world with an internet connection, from any client performing RESTful requests.
+
+For instance, a data anonymization service would receive an example request, consisting of a data set to be anonymized and anonymization parameters. The service's objective would be to return a manipulated data set that satisfies the desired level of anonymity. Preferably, the service will have disposed of as little information as possible in order to reach that level, and the set's reidenticiation risks will have become reduced as a result. The dataset could now be used for the desired purpose with a lesser impact on the privacy of persons involved in the dataset. Our objective has been to create a service capable of handling the described workload.
 
 ARXaaS, or ARX-as-a-Service is bachelor thesis project completed by a group of students from OsloMet on behalf of NAV IT.
 The project aims to provide access to best-in-class anonymization features from the well renowned ARX project in a package better suited for data driven development.
