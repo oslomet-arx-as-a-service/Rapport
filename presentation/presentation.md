@@ -5,9 +5,11 @@ This chapter is a summary of the product we have developed. It's purpose is to g
 ### ToC
 
 ### Introduction
-The planning for this bachelor project was initiated on the 18.07.2018. After that, the development was officially started on the 08.01.19 and lasted until 06.05.2019. Then, the team worked on this report until the deadline on the 23.05.2019. The team has been working in Oslo, at OsloMet university and NAV IT headquarters in Sannergata 2, four days a week with fixed core work hours nine to four.
+The planning for this bachelor project was initiated on the 18.07.2018. After that, the development was officially started on the 08.01.19 and lasted until 06.05.2019. Then, the team worked on this report until the deadline on the 23.05.2019. The solution was deployed on NAV ITs internal platform first 15.april and has bean continuously deployed to until the report phase of the project. The team has been working in Oslo, at OsloMet university and NAV IT headquarters in Sannergata 2, four days a week with fixed core work hours nine to four. 
 
-The terms data and dataset are used continuously throughout the documentation. Unless anything else is specified, the term refers to tabular data/datasets. The problem space is data anonymization, as such, when talking about data/datasets we are generally referring to population data.
+This work could not have been completed without the excellent support from our stakeholders at NAV IT Robindra, Paul, Gøran and Erik. We also wish to thank NAV IT for trusting us with this important work, providing us with space to work in, inviting us to present to both internally at NAV and to other public sector agencies such as DiFi and the norwegian tax administration, and lastly for guiding us continuously thorough the process.
+
+The terms data and dataset are used continuously throughout the documentation. Unless anything else is specified, the term refers to tabular data/datasets containing population data.
 
 ### Presentation of the group
  - Sondre - IT,
@@ -21,7 +23,6 @@ The terms data and dataset are used continuously throughout the documentation. U
 The Norwegian Labour and Welfare Administration (NAV) is the backbone of the Norwegian welfare state, administering a third of the national budget and servicing almost 2.8 million people through a range of schemes such as unemployment benefit, work assessment allowance, sickness benefit, pension, child benefit and cash-for-care benefit. 
 In addition, NAV manages and retains stewardship of several important data sources containing information on its users and the services it provides. NAV IT is currently in the midst of a digital transformation, undergoing significant changes in team organization, work processes and harnessing new technologies.
 Its use of data in the development of new and improved services is often contingent upon strict data privacy practices and its ability to innovate in a privacy-preserving manner.
-
 
 Our client for this assignment is NAV IT Data og Innsikt. Data og Innsikt is a department within NAV IT. The department delivers the development of systems and operations of data storage, data processing, data access and analytics.
 
@@ -39,7 +40,7 @@ The AI-lab has therefore requested the group to:
 - Provide an extendable framework for making state-of-the-art anonymization methods accessible to a wider audience in NAV IT by lowering the barriers to use.
 
 ### The solution - Anonymization as a Service
-Anonymization as a Service refers to the group of products that make up the Anonymization as a Service ecosystem. The center piece of this ecosystem is the micro service named ARXaaS or ARX as a Service. Additionally to ARXaaS there are two clients named PyARXaaS and WebARXaaS. These products provide integration with ARXaaS from Python context and as a Web application.
+Anonymization as a Service refers to the group of products that make up the Anonymization as a Service ecosystem. The center piece of this ecosystem is the microservice named ARXaaS or ARX as a Service. ARXaaS is named after the core library ARX which is a top of class anonymization product. Without ARX being open-source and available for extension this project would not be feasible. Additionally to ARXaaS there are two clients named PyARXaaS and WebARXaaS. These products provide integration with ARXaaS from a Python context and as a Web application.
 
 #### Current situation
 
