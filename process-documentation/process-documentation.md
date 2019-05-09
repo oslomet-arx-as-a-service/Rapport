@@ -873,7 +873,7 @@ Where each team member writes down at least one thing for each the three categor
 
 ![](img/Sprint6_1.ashx)
 
-![](img/Sprint6_1.ashx)
+![](img/Sprint6_2.ashx)
 
 #### Sprint 7
 
