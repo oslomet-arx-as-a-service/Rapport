@@ -10,17 +10,12 @@ The planning for this bachelor project was initiated on the 18.07.2018. After th
 The terms data and dataset are used continuously throughout the documentation. Unless anything else is specified, the term refers to tabular data/datasets. The problem space is data anonymization, as such, when talking about data/datasets we are generally referring to population data.
 
 ### Presentation of the group
-<<<<<<< HEAD
- - Sondre - IT
- Worked part time for NAV IT AI-lab since fall 2018. Main competence is Java and Python development, but has worked with web development in the past.
-=======
  - Sondre - IT,
- Worked part time for NAV IT AI-lab since fall 2018. Main competence is Java and Python development, but has worked with web development in previously.
->>>>>>> b68a9b0a7454950a6484f2285ffb1a4028f3f301
+ Worked part time for NAV IT AI-lab since fall 2018. Has helped keep the team connected to different project stakeholders in NAV IT. Main competence is Java and Python development, but has worked with web development previously.
  - André
  - Julian
  - Viktor
- - Jeremiah has a bachelors degree in machine engineering. Currently studying for a bachelors degree in software engineering. Worked as an intern for OXX from January to May 2019. Main compentence in Java, javascript, c#, MySql.
+ - Jeremiah has a bachelors degree in machine engineering. Currently studying for a bachelors degree in software engineering. Worked as an intern for OXX from January to May 2019. Main compentence in Java, javascript, C#, MySql.
 
 ### Presentation of client
 The Norwegian Labour and Welfare Administration (NAV) is the backbone of the Norwegian welfare state, administering a third of the national budget and servicing almost 2.8 million people through a range of schemes such as unemployment benefit, work assessment allowance, sickness benefit, pension, child benefit and cash-for-care benefit. 
