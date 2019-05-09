@@ -880,8 +880,6 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 7
 
-##### Sprint
-
 Duration: 15.04.19 - 26.04.19 
 
 #### Sprint 7 Summary:
