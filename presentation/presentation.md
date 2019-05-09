@@ -1,14 +1,17 @@
 ### Front page
 ### Preface
-This is a summary presentation of the product we have developed. It's purpose is to give a short but complete overview of the project background, the product development process and finally the concrete solution developed.
+This chapter is a summary of the product we have developed. It's purpose is to give a short but complete overview of the project background, the product development process and finally the concrete solution developed.
 
 ### ToC
+
 ### Introduction
+The planning for this bachelor project was initiated on the 18.07.2018. After that, the development was officially started on the 08.01.19 and lasted until 06.05.2019. Then, the team worked on this report until the deadline on the 23.05.2019. The team has been working in Oslo, at OsloMet university and NAV IT headquarters in Sannergata 2, four days a week with fixed core work hours nine to four.
+
 The terms data and dataset are used continuously throughout the documentation. Unless anything else is specified, the term refers to tabular data/datasets. The problem space is data anonymization, as such, when talking about data/datasets we are generally referring to population data.
 
 ### Presentation of the group
  - Sondre - IT
- Worked part time for NAV IT AI-lab since fall 2018. Main competence is Java and Python development, but has worked with web development in previously.
+ Worked part time for NAV IT AI-lab since fall 2018. Main competence is Java and Python development, but has worked with web development in the past.
  - André
  - Julian
  - Viktor
