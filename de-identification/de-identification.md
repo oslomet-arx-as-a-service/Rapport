@@ -1,4 +1,12 @@
 # De-Identification
+
+
+## Preface
+
+## Table of Contents
+
+## Introduction
+
 De-Identification, Anonymization and Pseudonymization often confused and used with different intentions. There is a lack of clear definition of the terms. We have attempted to define the terms with guidance from our product owner.
 
 De-Identification is a common term for reducing the probability that a person can be identified from a dataset. These datasets are commonly refered to as microdata datasets. Microdata datasets are datasets that provide information on a set of variables for individuals. In practical terms this means each row in the dataset represents a individual or entity. Summarizing microdata into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research.
@@ -9,6 +17,26 @@ level of acceptability of disclosure risk and the need for anonymization are usu
 and guided by legislation."*
 
 De-identification is a critical component in research,  mainly because it protects the privacy of individuals because once de-identified, a data set is considered to no longer contain personal identifiable information(PII). If a dataset does not include PII its use or distribution does not violate any privacy laws such as GDPR[https://gdpr.eu/data-privacy/]
+
+## Terminology
+
+- Equivalence class
+
+    Records in a dataset that have the same values on the quasi-identifiers.
+
+- PII
+
+    PII or Personal Identifiable Information is any data that can be used to clearly identify an individual.
+
+- Masking
+
+    the process of removing a variable or replacing it with pseudonymous or encrypted information.
+
+- Variable
+
+    column of values in a data set representing a set of attributes.
+
+## De-identification overview
 
 There are two main types of de-identification:
  - Anonymization
@@ -52,6 +80,7 @@ Additionally quasi identifying attributes are further categorized in the followi
  - Subsampling
     Releasing only a subset of the dataset instead of all the records
 
+Reducing the risk of disclosure 
 Several models have been implemented to prevent the different disclosure types. We will only introduce the most important here. For a full overview see [https://arx.deidentifier.org/overview/privacy-criteria/]
 
 
@@ -100,10 +129,3 @@ K-anonymity: https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
 L-diversity: https://dl.acm.org/citation.cfm?doid=1217299.1217302
 T-closeness: https://ieeexplore.ieee.org/document/4221659
 
-- Equivalence class
-
-    Records in a dataset that have the same values on the quasi-identifiers.
-
-- PII
-
-    PII or Personal Identifiable Information is any data that can be used to clearly identify an individual. 
