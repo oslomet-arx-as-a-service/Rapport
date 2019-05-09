@@ -112,7 +112,7 @@ Created the project webpage.
 
 - We did not create any sprint goals for this sprint 
 
-#### Sprint 0 review: 
+#### Sprint 0 Review: 
 
 The team finalized the project with NAV IT. The team did group education in Scrum and Phyton programming. As well as completing the entire backlog.
 The team presented the pre-project rapport to Eva the teams Bachelor thesis supervisor. Eva approved the teams pre-project rapport, but pointed out important areas of improvement for the final rapport.
@@ -125,13 +125,13 @@ Eva also provided guidance for the requirements document the group has to finali
 
  - Which demands are from NAV and which demands have the group formulated. 
 
-#### Sprint 0 retro:
+#### Sprint 0 Retro:
 
 In this first unofficial sprint we did not do a sprint retro.
 
 #### Sprint 1
 
-Duration monday 21,01.19 - friday 01.02.19 
+Duration 21.01.19 - 01.02.19 
 
 #### Sprint 1 Summary:
 
@@ -171,7 +171,7 @@ In sprint 1 we defined this definition of done (DoD) as part of our Sprint:
 
 - Code complaint to Static code review 
 
-#### Sprint 1 review
+#### Sprint 1 Review
 
 Participants: 
 - Robindra 
@@ -214,7 +214,7 @@ Requests for the next Sprint:
 
 - Provide continuous feedback to user when completing subactions with Python wrapper 
 
-#### Sprint 1 retro: 
+#### Sprint 1 Retro: 
 
 Good ot ordered by priority: 
 
@@ -230,7 +230,7 @@ Challenging
 
 #### Sprint 2
 
-Duration monday 04,02.19 - friday 15.02.19 
+Duration 04.02.19 - 15.02.19 
 
 #### Sprint 2 Summary: 
 
@@ -284,7 +284,7 @@ Documentation
 
     - Split ARX wrapper in classes 
 
-#### Sprint 2 review 
+#### Sprint 2 Review 
 
 Started working with implementing javadoc. 
 
@@ -296,7 +296,7 @@ Implemented functionality to programmatically display information from my reques
 
 Started implementing maven deployment and generation of PGP-keypair. 
 
-#### Sprint 2 retro: 
+#### Sprint 2 Retro: 
 
 Completed 18.02.19 
 
@@ -344,7 +344,7 @@ Improvements:
 
 #### Sprint 3
 
-Duration monday 18.02.19 - friday 01.03.19 
+Duration 18.02.19 - 01.03.19 
 
 #### Sprint 3 Summary:
 
@@ -412,7 +412,7 @@ Goals from sprint 2:
 
   -  AnonymizationPayload class 
 
-#### Sprint 3 review 
+#### Sprint 3 Review 
 
 Implemented the feature to retrieve analytics of re-identification risks for the dataset 
 
@@ -428,7 +428,7 @@ Generated PGP-keypair and encrypt all the jar-s and pom file upon deployment.
 
 Sonatype authentication upon deployment. 
 
-#### Sprint 3 retro 
+#### Sprint 3 Retro 
 
 We are going to keep concrete improvement from the last sprint. This has worked well for the group and the product owner. 
 
@@ -490,7 +490,7 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 4
 
-Duration monday 03.03.19 - friday 15.03.19 
+Duration 03.03.19 - 15.03.19 
 
 #### Sprint 4 Summary: 
 
@@ -563,7 +563,7 @@ Goals from Sprint 3:
 
     - Split PyAaaS AnonymizationPayload class. 
 
-#### Sprint 4 review: 
+#### Sprint 4 Review: 
 
 - Implemented a new model that fixed separator problem when making a Data object in the backend. 
 
@@ -581,7 +581,10 @@ Goals from Sprint 3:
 
 #### Sprint 4 retro: 
 
-Where each team member writes down at least one thing for each the three categories.
+The group did a Start-stop-continue session 
+
+Where each team member writes down at least one thing for each the three categories. 
+
 
 #### Start: 
 
@@ -629,7 +632,7 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 5
 
-Duration monday 18.03.19 - friday 31.03.19 
+Duration: 18.03.19 - 31.03.19 
 
 #### Sprint 5 Summary: 
 
@@ -663,7 +666,7 @@ From Sprint 4:
 
 - Make sure deciscions are documented – Viktor 
 
-#### Sprint 5 review: 
+#### Sprint 5 Review: 
 
 Team presented implemeted features from Sprint 5 to Erik and Robindra. Robindra reqested the team to present the project on Fagforum for kunstig inteligens/data science i offentlig sektor. 
 
@@ -689,8 +692,10 @@ Notes from team:
 
 #### Sprint 5 Retro: 
 
-Where each team member writes down at least one thing for each the three categories.
- 
+The group did a Start-stop-continue session 
+
+Where each team member writes down at least one thing for each the three categories. 
+
 
 #### Start: 
 
@@ -748,7 +753,131 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 6
 
+Duration: 01.04.19 - 12.04.19 
+
+#### Sprint 6 Summary: 
+
+The group prepared and had a presentation at DiFi about the bachelor project, and had a workshop with NAV data scientist on analyzing and anonymizing a dataset.  
+
+Started working on the Web app, that can connect to the analyze end point. Implemented 2 types of T-closeness and can be used to anonymize a dataset. The team decided not to implement the 3rd type of T-closeness as this was a bigger task than expected and would take a whole new sprint to fulfill. Fully implemented SSL encryption and created documentation on how to use it. Finished implementing metadata on the anonymization performed on a given dataset. Started PyARXaaS documentation in sphinx. Implemented edge case test and integration test of the end points. 
+
+#### Sprint 6 Backlog:
+
+[COMPLETED] as a data interested employee in NAV I would like to be able to analyze the risk profile of a given dataset in a web app 
+
+[COMPLETED] As a data scientist I would like that ARXaaS has been stress tested and what load I can expect the system to handle  
+
+[COMPLETED] As a developer on the bachelor project I would like the endpoints to have integration tests with edge cases and data content correctness tests (using ARX GUI as fasit)  
+
+[COMPLETED] Implement T-closeness(++) Privacy Model in service and Python client  
+
+[COMPLETED] Create Presentation for AI/data science forum 
+
+[COMPLETED] as a data scientist I would like metadata on the anonymization performed on a given dataset 
+
+[COMPLETED] End to end SSL Encryption between ARXaaS and clients 
+
+#### Sprit Goals:
+
+- By the end of the Sprint the team wants to be able to say the product usable by data scientist in NAV 
+
+- Test coverage on ARXaaS 70%++, Integration tests for all main endpoints with end case coverage 
+
+Suggestions for Sprint 7 backlog:
+
+- Create presentation for AI user forum - H 
+
+- Implement T-closeness(++) Privacy Model in service and Python client 
+
+- As a data scientist I would like that ARXaaS has been stress tested and what load I can expect the system to handle 
+
+- As a developer on the bachelor project I would like good test data to write tests with 
+
+- As a developer on the bachelor project I would like the end points to have integration tests with edge cases and data content correctness tests (using ARX GUI as fasit) 
+
+- As a NAV employee in I would like a web application to anonymize data with K-anonymity and L-diversity and imported csv hierarchies 
+
+- As a data scientist I would like to create hierarchies for my dataset using the ARXaaS service 
+
+Bugs to fix: 
+
+- Return data from anonymization does not have correct attribute types 
+
+#### Sprint 6 Retro:
+
+The group did a Start-stop-continue session 
+
+Where each team member writes down at least one thing for each the three categories. 
+
+#### Start:
+
+- Thinking deployment/shipping (applications/packages/docs/ci pipeline) 
+
+- Thinking handover in regards to code/docs 
+
+- Reaching out for assistance on hard features 
+
+- Bringing in team members on feature work (pair-program) 
+
+- Better motivation after assigned task is done 
+
+- Better planning and feedback before and after presentation/workshop 
+
+- More peer programming 
+
+- More pictures 
+
+- Writing documentation more targeted at the user 
+
+#### Stop: 
+
+- Winging it (Maybe small practice round) 
+
+- Not logging enough in asana when performing a task 
+
+- Not using branches in webarx, must make it easier to work in paralell 
+
+- Workshop 
+
+    - not tested  
+
+    - no dry run 
+
+#### Continue: 
+
+- Take ownership of the product 
+
+- Learning about ARX system 
+
+- Learning about anonymization 
+
+- Pair-programming when possible 
+
+- Reviews and merging principles 
+
+- Attendance 
+
+- Motivation 
+
+- Teamwork 
+
+- Tasks done 
+
+- Good feedback 
+
+- Customer happy 
+
+- Group still positive and working hard 
+
+- Being productive, and limiting the scope of tasks 
+
+![](img/Sprint6_1.png)
+
+![](img/Sprint6_1.png)
+
 #### Sprint 7
+
+
 
 #### Development tools
 
