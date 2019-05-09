@@ -442,7 +442,7 @@ We will make ourself available for the Product owner(Robindra) at least one day 
 
 Where each team member writes down at least one thing for each the three categories. 
 
-#### Start doing: 
+#### Start: 
 
 - If we have to change workplace or time. Try to do it in daytime the day before 
 
@@ -454,7 +454,7 @@ Where each team member writes down at least one thing for each the three categor
 
 - Start focus on building features 
 
-#### Stop doing: 
+#### Stop: 
 
 - Stop coming a little late 
 
@@ -464,7 +464,7 @@ Where each team member writes down at least one thing for each the three categor
 
 - Stop assuming that  someone else will fix it 
 
-#### Continue doing: 
+#### Continue: 
 
 - Continue being open and helping each outer 
 
@@ -533,40 +533,35 @@ Test Coverage
 Documentation: 
 
 - AaaS Javadoc 
-
     - All Classes 
-
     - All Controller methods 
-
     - All Service methods 
-
     - All ARX util methods 
 
 - PyAaaS docstring 
 
     - All classes 
-
     - All class methods 
-
     - Complex internal 
+
 - Functions/methods 
 
     - public functions 
 
 
-From Sprint 3: 
+Goals from Sprint 3: 
 
-Every project member is responsible for writing a short summery of their day in the project diary. 
+- Every project member is responsible for writing a short summery of their day in the project diary. 
 
-We schedule a debrief meeting (10 mins per member)before each Sprint Review for sharing of concrete features they have worked on. 
+- We schedule a debrief meeting (10 mins per member)before each Sprint Review for sharing of concrete features they have worked on. 
 
-We will make ourselves available for the PO(Robindra) at least one day a week. 
+- We will make ourselves available for the PO(Robindra) at least one day a week. 
 
-Refactor and reduce Technical debt. 
+- Refactor and reduce Technical debt. 
 
-- Split AaaS ARX wrapper in classes. 
+    - Split AaaS ARX wrapper in classes. 
 
-- Split PyAaaS AnonymizationPayload class. 
+    - Split PyAaaS AnonymizationPayload class. 
 
 #### Sprint 4 review: 
 
@@ -633,6 +628,123 @@ Where each team member writes down at least one thing for each the three categor
 - Continue with good work discipline(Don’t get lazy) and stay focused.
 
 #### Sprint 5
+
+Duration monday 18.03.19 - friday 31.03.19 
+
+#### Sprint 5 Summary: 
+
+ARXaaS went in to production on the NAIS platform. The team implemented HTTPS support and configuration of HTTPS. Metrics from the service was made available through Spring boot actuator and prometheus endpoints. The team implemeted logging service using Log4j. Exceptions are now returned to client with descriptive HTTP status. Risk profile has been made more rich with distrubited risk as a new data point and attacker success rate. Metrics from anonymization like attribute generalization is now returned with the anonymized data. Time elapsed when anonymizing is also returned. Properties of the PrivacyModels used in anonymization are included. Service now also has a subpage for documentation of the service and it's endpoints using Swagger.  Refactoring of the domain models is on-going. 
+
+#### Sprint 5 Backlog: 
+
+[INCOMPLETED] As a data engineer, I would like to have proper logging from a running ARXaaS application 
+
+[INCOMPLETED] As a maintainer, I would like PyAaaS and ARXaaS to be as decoupled as possible 
+
+[INCOMPLETED] As a data scientist I would like metadata on the anonymization performed on a given dataset 
+
+[COMPLETED] As a data scientist, I would like ARXaaS to be OpenAPI compliant so functionality can easily be discovered and used 
+
+[COMPLETED] As a data scientist, I would like to have a richer risk profile for my data set 
+
+[COMPLETED] As a data scientist, I would like descriptive exceptions when something went wrong. 
+
+[COMPLETED] As a data engineer i would like operational information about the running application 
+
+[COMPLETED] End to end SSL Encryption between ARXaaS and clients 
+
+#### Sprint 5 Goals: 
+
+From Sprint 4: 
+
+- Pair-program on features – Sondre is taskmaster 
+
+- Make sure product is shippable at end of Sprint – Julian is taskmaster 
+
+- Make sure deciscions are documented – Viktor 
+
+#### Sprint 5 review: 
+
+Team presented implemeted features from Sprint 5 to Erik and Robindra. Robindra reqested the team to present the project on Fagforum for kunstig inteligens/data science i offentlig sektor. 
+
+Wishes for next Sprint by Robindra   : 
+
+- T-closness (with more models if possible/easy) 
+
+- Create presentation 
+
+- System dynamic for changes in the ARX project 
+
+Notes from team: 
+
+- More integration tests 
+
+- Increase test coverage(jacoco to properly read junit5??) 
+
+- After implemeting a new feature present it to team 
+
+- User documentation for setup of ARXaaS 
+
+- User documentation for PyAaaS(Sphinx) 
+
+#### Sprint 5 Retro: 
+
+Where each team member writes down at least one thing for each the three categories.
+ 
+
+#### Start: 
+
+- Researching before building 
+
+- Learning ARX system/data 
+
+- Learning de-identification 
+
+- Refactoring 
+
+- Following best practice 
+
+- Pair-programming 
+
+- More pair-programming 
+
+- More smaller commits/pull-request 
+
+- Precise commits/pull-request 
+
+- Invest more time into making tasks more well defined 
+
+- Take small breaks when the air in the room is bad. 
+
+- More Java courses to improve my code quality 
+
+#### Continue: 
+
+- Challange assumptions 
+
+- Moral/motivation 
+
+- Questioning 
+
+- Attendance 
+
+- Efficiently dividing tasks among team members 
+
+- good code reviews 
+
+- good team cooperation 
+
+- good communication 
+
+- team is solution orientated 
+
+#### Stop: 
+
+- Long/big pullreqests 
+
+- Big pull-request 
+
+- Adding too many tasks to sprint? 
 
 #### Sprint 6
 
