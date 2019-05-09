@@ -104,11 +104,21 @@ In the case of an error or exception, a full stack trace is printed to make debu
 
 ### Client side introduction
 
-- PyARXaaS
-- Short presentation
-- Technologies
-- Functionality
-- Open source license
+
+### PyARXaaS
+PyARXaaS is a Python client package that provides abstractions for interacting with a ARXaaS instance. It is inspired by other client packages like PyGithub[https://github.com/PyGithub/PyGithub]. It  makes the integration of the risk analysis and de-identification functionality of ARXaaS as easy and intuitive as possible. The main user group of the package are data scientist that would be familiar and accustomed to work with data in Python. The main requirement from the client was that the anonymization functionality was to be made available in Python, this is the product which delivers on this requirement.
+
+**The package features**
+- ARXaaS class for configuration and calling actions.
+- Dataset class for encapsulating and configuring a dataset
+- Privacy Model classes for configuring the Privacy Models to use in anonymization.
+- Easy integration with pandas DataFrames[https://pandas.pydata.org/]
+
+#### Short presentation
+#### Technologies
+#### Functionality
+#### Open source license
+PyARXaaS is distributed under the MIT license. See LICENCE [https://github.com/oslomet-arx-as-a-service/PyARXaaS/blob/master/LICENSE]
 
 ### WebARXaaS
 
