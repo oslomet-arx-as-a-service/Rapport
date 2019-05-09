@@ -55,13 +55,17 @@ We will briefly talk about the pseudonymization before moving on to Anonymizatio
 
 When anonymizing a datasets attributes are categorized into the following categories:
 
-- Identifying Attributes
+- Identifying 
+
     Attributes that are directly identifiable. e.g. phone number, email, full name, bank account number
 - Quasi Identifying Attributes
+
     Attributes that while not directly identifiable could be when used with other information to identify a person. e.g. birth date, zipcode, workplace, gps location data
 - Sensitive Attributes
+
     Sensitive Attributes is information that could be damaging if released about a person. e.g. voting, medical information, criminal record
 - Insensitive Attributes
+
     These are all other attributes in the dataset. Data points that neither could identify or cause harm to a individual if released.
 
 Additionally quasi identifying attributes are further categorized in the following categories:
