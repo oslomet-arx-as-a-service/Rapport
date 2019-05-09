@@ -871,9 +871,9 @@ Where each team member writes down at least one thing for each the three categor
 
 - Being productive, and limiting the scope of tasks 
 
-![](img/Sprint6_1.png)
+![](img/Sprint6_1.ashx)
 
-![](img/Sprint6_1.png)
+![](img/Sprint6_1.ashx)
 
 #### Sprint 7
 
