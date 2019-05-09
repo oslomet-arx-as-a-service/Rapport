@@ -39,25 +39,25 @@ The AI-lab has therefore requested the group to:
 
 - Provide an extendable framework for making state-of-the-art anonymization methods accessible to a wider audience in NAV IT by lowering the barriers to use.
 
+#### De-Identification
+Following is a short description of de-identification. For more in-depth explanations see the chapter De-Identification.
+
+De-Identification is a common term for reducing the probability that a person can be identified from a dataset containing *personal identifiable information* otherwise known as PII. transforming dataset containing PII into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research on the raw data. De-identification permits sharing and using datasets containing PII by transforming the data util it can not longer be classified as PII.
+
+There exist several models and algorithms for both quantifiable assess the disclosure risk for a given dataset and anonymize a dataset until it meets required risk thresholds. 
+
 ### The solution - Anonymization as a Service
 Anonymization as a Service refers to the group of products that make up the Anonymization as a Service ecosystem. The center piece of this ecosystem is the microservice named ARXaaS or ARX as a Service. ARXaaS is named after the core library ARX which is a top of class anonymization product. Without ARX being open-source and available for extension this project would not be feasible. Additionally to ARXaaS there are two clients named PyARXaaS and WebARXaaS. These products provide integration with ARXaaS from a Python context and as a Web application.
 
 #### Current situation
 
-Much of the literature, practices and frameworks in the de-identification space are targeted for distribution of medical data between researchers. NAV has a similar use case, but different in that the organization primarily is concerned with internal reuse of data. Every new usage of PII data in NAV has to go trough a Data Protection Impact Assessment or DPIA[https://www.datatilsynet.no/regelverk-og-verktoy/veiledere/vurdering-av-personvernkonsekvenser/]. This means that data scientist working in NAV AI-lab that wants to research a new possible use for some data has to go trough a lengthy assessment just to be able to inspect the data. A lot of time is spent on getting the necessary access to be able to do preliminary assessments of data. Often the data is gauged to be insufficient and the time spent on the DPIA is more or less wasted.
+Much of the literature, practices and frameworks in the de-identification space are targeted for distribution of medical data between researchers. NAV has a similar use case, but different in that the organization primarily is concerned with internal reuse of data. Every new usage of PII data in NAV has to go trough a Data Protection Impact Assessment or DPIA[https://www.datatilsynet.no/regelverk-og-verktoy/veiledere/vurdering-av-personvernkonsekvenser/]. This means that data scientist working in NAV AI-lab that wants to research a new possible use for some data has to go trough a lengthy assessment just to be able to inspect the data. A lot of time is spent on getting the necessary access to be able to do preliminary assessments of data. Often the data is gauged to be insufficient and the time spent on the DPIA is more or less wasted. If the data was anonymized the process could be sped up. In addition it would open up new possibilities for sharing and reuse of data internally at NAV. The data driven revolution is in full swing all around the world[https://dzone.com/articles/what-it-means-to-be-a-data-driven-enterprise-and-h]. Core to the data driven enterprise paradigm is the sharing of data internally in the enterprise. Making anonymization easier would put NAV in a better position to become more data driven and by effect provide better services to their users (Every inhabitant of Norway).
 
 There are several products in the anonymization/de-identification space. But the tools fall mainly into two categories: 
  - Proprietary solutions that works as a "walled garden" with limited integration with other tooling
  - Open source projects built by and for researches
 
  Common to both categories is the fact that most solutions are mainly focused on Graphical user interfaces. There is limited support for integration and further development.
-
-#### De-Identification
-Following is a short description of the field of de-identification. For more in-depth explanations see the chapter De-Identification.
-
-De-Identification is a common term for reducing the probability that a person can be identified from a dataset containing *personal identifiable information* otherwise known as PII. Summarizing dataset containing PII into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research. De-identification permits sharing and using datasets containing PII by transforming the data util it can not longer be classified as PII.
-
-There exist several models for both quantifiable assess the disclosure risk for a given dataset and anonymize a dataset until it meets required risk thresholds. See the de-identification chapter for more in-depth documentation on the field of de-identification.
 
 #### Solution description
 The solution provides access to anonymization tools for data scientists at NAV IT. A data scientist is able to analyze and anonymize tabular dataset based on user-provided configurations. Tje user can configure privacy models, attribute types and transformation models(hierarchies). A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
