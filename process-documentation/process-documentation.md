@@ -877,7 +877,136 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 7
 
+Duration: 15.04.19 - 26.04.19 
 
+#### Sprint 7 Summary:
+
+The group prepared a demo of the final presentation for Eva about the bachelor project. Then the group also had a presentation for the sprint review. 
+
+Started implementing the different features for the Web app. All feature except for hierarchy generation are now available on the web app. The web app still needs a design overhaul. 
+
+Implemented suppression limit to be taken in a parameter, as well as logging the limit used. The suppression limit is now available on both the python client and the web app. 
+
+Privacy models used to anonymize the dataset are now logged as well. 
+
+Prepared different datasets and hierarchies to be load tested on the service.  
+
+Implemented hierarchy generation end-point on the service and is now available on the python client. 
+
+#### Sprint 7 Backlog: 
+
+[INCOMPLETED] Visualization/Description of Re-identifaction risk (K=?)  
+
+[COMPLETED] As a NAV user I would like a intuitive webapp to analyze and anonymize datasets 
+
+[COMPLETED]  ARXaaS hierarchy generation 
+
+[COMPLETED] Python wrapper hardning 
+
+[COMPLETED] Load testing using proper "hard to anonymize datasets" 
+
+[COMPLETED] As a Data scientist I would like the supression limit to be passed as a parameter  
+
+[COMPLETED] As a data scientist, I would like ARXaaS to provide richer logging 
+
+#### Sprint 7 Goals: 
+
+- The team prepares for handover on all technical deliveries - Andre 
+
+- Atleast two persons has knowledge on a given feature - Sondre 
+
+#### Sprit Retro: 
+
+The group did a sprint retro session for the entire project divided in:
+ 
+- Positive Learnings 
+- Negative Learnings 
+- Suprises  
+
+Where each team member writes down at least one thing for each the three categories.
+
+#### Positive Learnings: 
+
+- Continous Integration worked really well (thanks, Accelerate!)
+
+- Knowledge is well shared and spread across team members 
+
+- Sprint retro has worked well 
+
+- Solid agreement on decisions and productive discussions 
+
+- Spring Boot is a good framework for creating professional web applications 
+
+- Time spent on sprint planning makes time spent elsewhere more efficient. Time boxing worked well 
+
+- Great team 
+
+- Pair programming has worked really well 
+
+- Delivered a production worthy, whole product 
+
+- Test driven programming worked well 
+
+- Learning fullstack/professional product development 
+
+- Pair-programming 
+
+- The importance of keeping everyone up to date and engaged 
+
+- The importance of planning well ahead, and having everyone agreeing on the decisions along the way 
+
+- Scrum retro has worked well
+
+- Software
+
+
+- Share knowledge
+
+- Continues delivery 
+
+#### Negative Learnings:
+
+- Preparing for workshops, presentations has been underprioritized 
+
+- Creating software is time consuming, and cannot always be produced effectively by a single worker 
+
+- Taking time off in the middle of the semester is stressful 
+
+- Refactoring is tough 
+
+- Definition of Done and speccing is super hard, time consuming 
+
+- Estimating time requisites takes too much effort 
+
+- Learning new tech, especially Python is tough 
+
+- Creating good user stories is very demanding, 
+
+Perhaps format could be less stale if it had been less static and repetitive. Also more knowledge on user stories from product owner, better collaboration on creating them 
+
+- Need agile coach? 
+
+- Software takes time, nobody can do it all alone 
+
+- Prepare better for workshops and presentation 
+
+#### Suprises:
+
+- Lists and maps are pretty useful 
+
+- Putting effort into aligning team is valuable 
+
+- Very little time loss/waste from unfortunate events 
+
+- Pair programming requires some scheduling 
+
+- Knowledge silos appear fast 
+
+- Effort when aligning team 
+
+- Meetings and admin takes a lot of time 
+
+- Sprint retro 
 
 #### Development tools
 
