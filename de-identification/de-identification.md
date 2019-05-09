@@ -101,10 +101,13 @@ In the literature these are the three types of disclosures that are of importanc
 Three different threat scenarios are commonly used by researchers[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]
 
 - Prosecutor attack model
+
     Under this model the attacker is assumed to a target specific individual and know data concerning the individual is present in the dttps://www.worldscientific.com/doi/abs/10.1142/S0218488502001648 attack can be calculatttps://www.worldscientific.com/doi/abs/10.1142/S0218488502001648of the records in the dataset.ttps://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
 - Journalist attack model
+
     Under this model the attacker is assumed to target an arbitrary individual without knowing if the individual is present in the dataset. Regarded as a more realistic model than the prosecutor model.
-- Marketer attack model
+- Marketer attack 
+
     Under this model the attacker is assumed to aim at re-identifying as many individuals as possible. The risk of a successful attack can be expressed as the expected average number of re-identified individuals from the dataset.
 
 
@@ -116,12 +119,15 @@ Several models have been implemented to prevent the different disclosure types. 
 
 
 K-Anonymity[k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY](https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648)
+
 K-Anonymity ensures that the information for each person contained in the dataset cannot be distinguished from at least k-1 individuals whose information also appears in the dataset.
 
 L-Diversity
+
 L-Diversity protects a dataset against attribute disclosure. It does this by ensuring that each sensitive attribute has at least "l" represented values in each *equivalence class*. Different variants exist which differ in how they measure diversity. More here[https://dl.acm.org/citation.cfm?doid=1217299.1217302]
 
 T-Closeness
+
 T-Closeness also protects a dataset against attribute disclosure. I ensures that the distributions of values of a sensitive attribute within each equivalence class must have a distance of not more than t to the distribution of the attribute values in the input dataset. Also for T-Closeness there are several variants which differs in the way they measure the distance. More here[https://ieeexplore.ieee.org/document/4221659]
 
 ## Anonymizing a dataset
@@ -142,7 +148,10 @@ The release model is how and tho whom the dataset will be made available. This w
 
 ### References
 personal data: https://gdpr-info.eu/issues/personal-data/
+
 K-anonymity: https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
+
 L-diversity: https://dl.acm.org/citation.cfm?doid=1217299.1217302
+
 T-closeness: https://ieeexplore.ieee.org/document/4221659
 
