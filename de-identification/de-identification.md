@@ -80,19 +80,6 @@ Additionally quasi identifying attributes are further categorized in the followi
  - Subsampling
     Releasing only a subset of the dataset instead of all the records
 
-Reducing the risk of disclosure 
-Several models have been implemented to prevent the different disclosure types. We will only introduce the most important here. For a full overview see [https://arx.deidentifier.org/overview/privacy-criteria/]
-
-
-K-Anonymity[k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY](https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648)
-K-Anonymity ensures that the information for each person contained in the dataset cannot be distinguished from at least k-1 individuals whose information also appears in the dataset.
-
-L-Diversity
-L-Diversity protects a dataset against attribute disclosure. It does this by ensuring that each sensitive attribute has at least "l" represented values in each *equivalence class*. Different variants exist which differ in how they measure diversity. More here[https://dl.acm.org/citation.cfm?doid=1217299.1217302]
-
-T-Closeness
-T-Closeness also protects a dataset against attribute disclosure. I ensures that the distributions of values of a sensitive attribute within each equivalence class must have a distance of not more than t to the distribution of the attribute values in the input dataset. Also for T-Closeness there are several variants which differs in the way they measure the distance. More here[https://ieeexplore.ieee.org/document/4221659]
-
 #### Risk assessment
 Re-Identification is the reverse of de-identification and is the primary threat addressed by laws and regulation[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]. Quantifying risk of re-identification associated with a dataset is of high importance. The key aspect for re-identification is the uniqueness of quasi identifying attributes and the uniqueness of the combinations of the attributes. Quasi attributes can be linked with additional data in the dataset or from external datasets to identify individuals.
 
@@ -121,7 +108,37 @@ Three different threat scenarios are commonly used by researchers[https://www.sc
     Under this model the attacker is assumed to aim at re-identifying as many individuals as possible. The risk of a successful attack can be expressed as the expected average number of re-identified individuals from the dataset.
 
 
-##
+## Privacy Models
+
+Privacy models also referred to as privacy criterion are used when anonymizing a dataset. In essence the models define rules the dataset should follow. Anonymization tools such as ARX implement algorithms for transforming dataset to conform to user supplied privacy models.
+
+Several models have been implemented to prevent the different disclosure types. We will only introduce the most important here. For a full overview see [https://arx.deidentifier.org/overview/privacy-criteria/]
+
+
+K-Anonymity[k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY](https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648)
+K-Anonymity ensures that the information for each person contained in the dataset cannot be distinguished from at least k-1 individuals whose information also appears in the dataset.
+
+L-Diversity
+L-Diversity protects a dataset against attribute disclosure. It does this by ensuring that each sensitive attribute has at least "l" represented values in each *equivalence class*. Different variants exist which differ in how they measure diversity. More here[https://dl.acm.org/citation.cfm?doid=1217299.1217302]
+
+T-Closeness
+T-Closeness also protects a dataset against attribute disclosure. I ensures that the distributions of values of a sensitive attribute within each equivalence class must have a distance of not more than t to the distribution of the attribute values in the input dataset. Also for T-Closeness there are several variants which differs in the way they measure the distance. More here[https://ieeexplore.ieee.org/document/4221659]
+
+## Anonymizing a dataset
+
+Anonymization of dataset for public release has been thoroughly described, documented and in some cases put into law by many countries and governing bodies[https://www.ipc.on.ca/wp-content/uploads/2016/08/Deidentification-Guidelines-for-Structured-Data.pdf]. We will give a short recap of the process.
+
+The process roughly breaks down into the following steps:
+
+1. determine the release model
+2. determine an acceptable re-identification risk threshold
+3. classify variables
+4. calculate the risk
+5. anonymize the data
+6. assess data utility
+
+The release model is how and tho whom the dataset will be made available. This will guide the risk threshold. A dataset that is to be used by a internally employed data-scientist with a signed NDA have different risk model from a dataset which is to be released publicly. Dataset fields are then classified into the before mentioned categories (identifying, quasiidentifying, sensitive, insensitive). Risk is calculating according to the disclosure models (identity, attribute, membership). If the dataset risk is above the threshold the dataset is anonymized using privacy models. The act of choosing the right privacy model for the dataset is also context dependent. But if the dataset contains sensitive attributes a privacy model which handles sensitive attributes should be employed. Finally the utility is judged. Different tooling exist to help in this step, ARX also implements a utility analysis tool[https://arx.deidentifier.org/anonymization-tool/analysis/] but this project has not focused or implemented any features for this step of the process.
+
 
 ### References
 personal data: https://gdpr-info.eu/issues/personal-data/
