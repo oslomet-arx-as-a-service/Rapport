@@ -5,17 +5,20 @@
 ### ToC
 
 ### Introduction
+This chapter covers the work process of the bachelor project. Points of significance include methods and tools that have assisted the team in developing the product and organizing the worflow.
 
-This report contains the work done in this bachelor project that led to the final result. The project planning started 18.07.2018 and the bachelor project started 08.01.19 and lasted to 23.05.2019. The team has worked at Oslomet university in Oslo and NAV IT headquarters at sannergata 2 in Oslo. The team has worked together four days a week with fixed core work hour's nine to four. These days the team have worked together as a group, where they have worked on there assigned sprint tasks as well as made important project decisions. In addition to this all team members have worked from home as well.
+Agile methods from the Scrum framework have been adopted across the entire duration of the project.
+According to the agile manifesto...[Quote agile manifesto]
+Over the course of the project period, the team has been in close contact with the product owner at NAV IT. In the first meeting with the product owner, the minimal viable product was decided. 
+"The system should anonymize a tabular data set based on the user’s desired anonymity level with a minimum of K=4 anonymity".
+This functionality was to be delivered in a Python client. As a stretch goal the  product owner and the team wanted a web application.
 
-In the course of the project period the team has had close contact with the product owner Robindra at NAV IT. In the first meeting with the product owner the minimal viable product was decided. The system should anonymize a tabular data set based on the user’s desired anonymity level with a minimum of K=4 anonymity. This functionality was to be delivered in a Phyton client. As a stretch goal the  product owner and the team wanted a WEB application.
-
-This document starts with the teams planning and development methods......
+This document starts with the team’s planning and development methods......
 #[need more]
 
 ### Planning and methods
 
-This chapter will explain the creation of the team and planning of the project as well as the planning during the project. The chapter starts with development methods applied by the team. Followed by project phases and the project conclusion and documentation.
+This chapter explains the creation of the team and planning of the project as well as the planning during the project. The chapter starts with development methods applied by the team, followed by documentation about project phases and conclusion.
 
 ### Development methods
 
@@ -26,7 +29,7 @@ Our approach was to deliver a minimum viable product and the deliver small featu
 
 The team decided to use a agile work process with our product owner's demands and wishes as our top priority. The team worked in to week sprints. At the start of every sprint the team did sprint planning and chose the user story's to add to the sprint backlog. The team then added the user storys chosen for the sprint to our Khanban board in Asana. The team members chose or assigned the different tasks as a group. A definition of done was specified for each sprint by the group. An example of this was every feature had to be tested before merging into the master branch. During the each sprint the team had daily scrum meetings to keep the rest of the team updated on each individuals progress as well as to share knowledge in the team. At the end of the sprint the team had a sprint retro meeting where each member made post-it notes labeled start, stop and continue. The start post-it notes where suggestions of items to be implemented in the next sprint. The stop post-it notes where things that had not worked well for the team or an individual. The continue post-it notes where items that worked well in the sprint and the team member wanted to keep doing in the next sprint. The project was divided in to seven sprints with a duration of two weeks where we presented the new features to our product owner at the end of each sprint. Then based of the feedback from the product owner the team created new user story's and definition of done for the next sprint.
 
-#### Continues integration pipeline
+#### Continous integration pipeline
 
 The team decided early in the process to set up a CI pipeline to automate tests and deployment.
 Every time a team member pushed a commit to our version control host Git . Travis testes every branch in a virtual environment before it can be allowed to be merged into master branch. If the job passes all test. It can be merged into to master branch providing it passes Code climate static code analyses test and SNYK vulnerability tests. After a team member approves the code review the branch is merged into master branch. Travis then deploys docker container to Google cloud and the NAV IT nais platform. Before deploying JAR and javadoc to Maven witch then hosts are Javadoc.
@@ -51,7 +54,7 @@ The team worked actively on slicing up big features requested by the product own
  
  #### Planning
 
- The team in Norway Sondre, André, Viktor and Jeremiah had a meeting with NAV IT while Julian was studying abroad. This information meeting was with Tommy and Gøran. In short, the goal was to build a "pipeline" from raw data that NAV sits on and make available to stakeholders outside NAV (media, private persons, etc.). The pipeline was to accommodate the entire range from integration with raw data systems at NAV, to visualization and typically front-end solutions. The product that NAV's Open Data project was to deliver is a common platform / toolbox for delivering open data to the Norwegian population. The idea was that the team will deliver a contribution to this project. The team must be involved in developing the plan for the specific product we are going to deliver, but it will be within the Open Data project framework. Concrete features in the Open Data project that the team could participate in was, API - backend pipeline , Portal - web platform (data.nav.no) and Meta-data system for for automatic generation of visualizations . The team was given some task to complete before january 1st 2019. Every team member had to read the Accelerate book. And the team also where asked to get to know Docker and Kubernetes. Further more the team was asked to brainstorm ideas for solving “How can NAV deliver specific data sets they are sitting with, in a good and user-friendly manner (user-friendly for developers, media houses, private persons)". A purposed idea was to focus on a specific data type and expand it eventually if the solution is good or if there was time to improve the solution. The initial idea was to focus on treatment time. What kind of issues take the longest time  and shed light on treatment time. The goal was to streamline assessment of departments time spent on treatment. At 18.10.18 the team had it's first meeting with Eva Hadler to talk about guidance for the bachelor project. Eva was highly recommended and the teams was happy she decided to be the supervisor for the project. Eva shared her experiences with undergraduate projects and what was expected. The team had a sync meeting 23.10.18 and got Julian up to date on what the team had done in Norway. After a couple of meetings discussing frame works and tools the group had there first bachelor meeting in 2019. The team decided on regular workdays and hours. The team decide on to work with Github, Asana, Travis and Slack.  At  this point the project task was still a bit in the air. At are next group meeting at NAV IT. Robindra and Paul  presented the data anonymity project to the team. The essence of the project was to make Arx's functionality available to NAV's systems and build a framework that makes Arx's anonymization functionality available to NAVs data scientist. The sought after functionality where, being able to submit data sets to the service and receive an anonymized data set of the desired anonymity level. The group discussed different approaches to the problem and tools we can use. Tentatively the team planned an overall architecture with Java / Spring backend and Python / Jupyter Notebooks, Javascript / React frontend and Docker as scalability. The group agreed that this was a good project with both enough content and room for stretch goals.  At the next meeting 10.01.19 at NAV IT Robindra gave the team an introduction to ARX. The team decided on a English working language for documentation and code to make the open source project available to everyone. Robindra got the title as product owner and Sondre got the title as Scrum master.The team decided to work in to week sprints. It was decided to use seven sprints for development of the application and for weeks to write the project report.
+ Sondre, André, Viktor and Jeremiah had a meeting with NAV IT while Julian was studying abroad. This information meeting was with Tommy and Gøran. In short,it was determined that the goal was to build a "pipeline" from raw data that NAV sits on and make available to stakeholders outside NAV (media, private persons, etc.). The pipeline was to accommodate the entire range from integration with raw data systems at NAV, to visualization and typically front-end solutions. The product that NAV's Open Data project was to deliver is a common platform / toolbox for delivering open data to the Norwegian population. The idea was that the team will deliver a contribution to this project. The team must be involved in developing the plan for the specific product we are going to deliver, but it will be within the Open Data project framework. Concrete features in the Open Data project that the team could participate in was, API - backend pipeline , Portal - web platform (data.nav.no) and Meta-data system for for automatic generation of visualizations . The team was given some task to complete before january 1st 2019. Every team member had to read the Accelerate book. And the team also where asked to get to know Docker and Kubernetes. Further more the team was asked to brainstorm ideas for solving “How can NAV deliver specific data sets they are sitting with, in a good and user-friendly manner (user-friendly for developers, media houses, private persons)". A purposed idea was to focus on a specific data type and expand it eventually if the solution is good or if there was time to improve the solution. The initial idea was to focus on treatment time. What kind of issues take the longest time  and shed light on treatment time. The goal was to streamline assessment of departments time spent on treatment. At 18.10.18 the team had it's first meeting with Eva Hadler to talk about guidance for the bachelor project. Eva was highly recommended and the teams was happy she decided to be the supervisor for the project. Eva shared her experiences with undergraduate projects and what was expected. The team had a sync meeting 23.10.18 and got Julian up to date on what the team had done in Norway. After a couple of meetings discussing frame works and tools the group had there first bachelor meeting in 2019. The team decided on regular workdays and hours. The team decide to use Github, Asana, Travis and Slack. At this point the project task was still a bit in the air. At the next group meeting at NAV IT. Robindra and Paul  presented the data anonymity project to the team. The essence of the project was to make Arx's functionality available to NAV's systems and build a framework that makes Arx's anonymization functionality available to NAVs data scientist. The sought after functionality where, being able to submit data sets to the service and receive an anonymized data set of the desired anonymity level. The group discussed different approaches to the problem and tools we can use. Tentatively the team planned an overall architecture with Java / Spring backend and Python / Jupyter Notebooks, Javascript / React frontend and Docker as scalability. The group agreed that this was a good project with both enough content and room for stretch goals.  At the next meeting 10.01.19 at NAV IT Robindra gave the team an introduction to ARX. The team decided on a English working language for documentation and code to make the open source project available to everyone. Robindra got the title as product owner and Sondre got the title as Scrum master.The team decided to work in to week sprints. It was decided to use seven sprints for development of the application and for weeks to write the project report.
 
 #### Execution
 
@@ -112,7 +115,7 @@ Created the project webpage.
 
 - We did not create any sprint goals for this sprint 
 
-#### Sprint 0 review: 
+#### Sprint 0 Review: 
 
 The team finalized the project with NAV IT. The team did group education in Scrum and Phyton programming. As well as completing the entire backlog.
 The team presented the pre-project rapport to Eva the teams Bachelor thesis supervisor. Eva approved the teams pre-project rapport, but pointed out important areas of improvement for the final rapport.
@@ -125,13 +128,13 @@ Eva also provided guidance for the requirements document the group has to finali
 
  - Which demands are from NAV and which demands have the group formulated. 
 
-#### Sprint 0 retro:
+#### Sprint 0 Retro:
 
 In this first unofficial sprint we did not do a sprint retro.
 
 #### Sprint 1
 
-Duration monday 21,01.19 - friday 01.02.19 
+Duration 21.01.19 - 01.02.19 
 
 #### Sprint 1 Summary:
 
@@ -171,7 +174,7 @@ In sprint 1 we defined this definition of done (DoD) as part of our Sprint:
 
 - Code complaint to Static code review 
 
-#### Sprint 1 review
+#### Sprint 1 Review
 
 Participants: 
 - Robindra 
@@ -214,7 +217,7 @@ Requests for the next Sprint:
 
 - Provide continuous feedback to user when completing subactions with Python wrapper 
 
-#### Sprint 1 retro: 
+#### Sprint 1 Retro: 
 
 Good ot ordered by priority: 
 
@@ -230,7 +233,7 @@ Challenging
 
 #### Sprint 2
 
-Duration monday 04,02.19 - friday 15.02.19 
+Duration 04.02.19 - 15.02.19 
 
 #### Sprint 2 Summary: 
 
@@ -284,7 +287,7 @@ Documentation
 
     - Split ARX wrapper in classes 
 
-#### Sprint 2 review 
+#### Sprint 2 Review 
 
 Started working with implementing javadoc. 
 
@@ -296,7 +299,7 @@ Implemented functionality to programmatically display information from my reques
 
 Started implementing maven deployment and generation of PGP-keypair. 
 
-#### Sprint 2 retro: 
+#### Sprint 2 Retro: 
 
 Completed 18.02.19 
 
@@ -344,7 +347,7 @@ Improvements:
 
 #### Sprint 3
 
-Duration monday 18.02.19 - friday 01.03.19 
+Duration 18.02.19 - 01.03.19 
 
 #### Sprint 3 Summary:
 
@@ -412,7 +415,7 @@ Goals from sprint 2:
 
   -  AnonymizationPayload class 
 
-#### Sprint 3 review 
+#### Sprint 3 Review 
 
 Implemented the feature to retrieve analytics of re-identification risks for the dataset 
 
@@ -428,7 +431,7 @@ Generated PGP-keypair and encrypt all the jar-s and pom file upon deployment.
 
 Sonatype authentication upon deployment. 
 
-#### Sprint 3 retro 
+#### Sprint 3 Retro 
 
 We are going to keep concrete improvement from the last sprint. This has worked well for the group and the product owner. 
 
@@ -442,7 +445,7 @@ We will make ourself available for the Product owner(Robindra) at least one day 
 
 Where each team member writes down at least one thing for each the three categories. 
 
-#### Start doing: 
+#### Start: 
 
 - If we have to change workplace or time. Try to do it in daytime the day before 
 
@@ -454,7 +457,7 @@ Where each team member writes down at least one thing for each the three categor
 
 - Start focus on building features 
 
-#### Stop doing: 
+#### Stop: 
 
 - Stop coming a little late 
 
@@ -464,7 +467,7 @@ Where each team member writes down at least one thing for each the three categor
 
 - Stop assuming that  someone else will fix it 
 
-#### Continue doing: 
+#### Continue: 
 
 - Continue being open and helping each outer 
 
@@ -490,7 +493,7 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 4
 
-Duration monday 03.03.19 - friday 15.03.19 
+Duration 03.03.19 - 15.03.19 
 
 #### Sprint 4 Summary: 
 
@@ -533,42 +536,37 @@ Test Coverage
 Documentation: 
 
 - AaaS Javadoc 
-
     - All Classes 
-
     - All Controller methods 
-
     - All Service methods 
-
     - All ARX util methods 
 
 - PyAaaS docstring 
 
     - All classes 
-
     - All class methods 
-
     - Complex internal 
+
 - Functions/methods 
 
     - public functions 
 
 
-From Sprint 3: 
+Goals from Sprint 3: 
 
-Every project member is responsible for writing a short summery of their day in the project diary. 
+- Every project member is responsible for writing a short summery of their day in the project diary. 
 
-We schedule a debrief meeting (10 mins per member)before each Sprint Review for sharing of concrete features they have worked on. 
+- We schedule a debrief meeting (10 mins per member)before each Sprint Review for sharing of concrete features they have worked on. 
 
-We will make ourselves available for the PO(Robindra) at least one day a week. 
+- We will make ourselves available for the PO(Robindra) at least one day a week. 
 
-Refactor and reduce Technical debt. 
+- Refactor and reduce Technical debt. 
 
-- Split AaaS ARX wrapper in classes. 
+    - Split AaaS ARX wrapper in classes. 
 
-- Split PyAaaS AnonymizationPayload class. 
+    - Split PyAaaS AnonymizationPayload class. 
 
-#### Sprint 4 review: 
+#### Sprint 4 Review: 
 
 - Implemented a new model that fixed separator problem when making a Data object in the backend. 
 
@@ -586,7 +584,10 @@ Refactor and reduce Technical debt.
 
 #### Sprint 4 retro: 
 
-Where each team member writes down at least one thing for each the three categories.
+The group did a Start-stop-continue session 
+
+Where each team member writes down at least one thing for each the three categories. 
+
 
 #### Start: 
 
@@ -634,11 +635,393 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 5
 
+Duration: 18.03.19 - 31.03.19 
+
+#### Sprint 5 Summary: 
+
+ARXaaS went in to production on the NAIS platform. The team implemented HTTPS support and configuration of HTTPS. Metrics from the service was made available through Spring boot actuator and prometheus endpoints. The team implemeted logging service using Log4j. Exceptions are now returned to client with descriptive HTTP status. Risk profile has been made more rich with distrubited risk as a new data point and attacker success rate. Metrics from anonymization like attribute generalization is now returned with the anonymized data. Time elapsed when anonymizing is also returned. Properties of the PrivacyModels used in anonymization are included. Service now also has a subpage for documentation of the service and it's endpoints using Swagger.  Refactoring of the domain models is on-going. 
+
+#### Sprint 5 Backlog: 
+
+[INCOMPLETED] As a data engineer, I would like to have proper logging from a running ARXaaS application 
+
+[INCOMPLETED] As a maintainer, I would like PyAaaS and ARXaaS to be as decoupled as possible 
+
+[INCOMPLETED] As a data scientist I would like metadata on the anonymization performed on a given dataset 
+
+[COMPLETED] As a data scientist, I would like ARXaaS to be OpenAPI compliant so functionality can easily be discovered and used 
+
+[COMPLETED] As a data scientist, I would like to have a richer risk profile for my data set 
+
+[COMPLETED] As a data scientist, I would like descriptive exceptions when something went wrong. 
+
+[COMPLETED] As a data engineer i would like operational information about the running application 
+
+[COMPLETED] End to end SSL Encryption between ARXaaS and clients 
+
+#### Sprint 5 Goals: 
+
+From Sprint 4: 
+
+- Pair-program on features – Sondre is taskmaster 
+
+- Make sure product is shippable at end of Sprint – Julian is taskmaster 
+
+- Make sure deciscions are documented – Viktor 
+
+#### Sprint 5 Review: 
+
+Team presented implemeted features from Sprint 5 to Erik and Robindra. Robindra reqested the team to present the project on Fagforum for kunstig inteligens/data science i offentlig sektor. 
+
+Wishes for next Sprint by Robindra   : 
+
+- T-closness (with more models if possible/easy) 
+
+- Create presentation 
+
+- System dynamic for changes in the ARX project 
+
+Notes from team: 
+
+- More integration tests 
+
+- Increase test coverage(jacoco to properly read junit5??) 
+
+- After implemeting a new feature present it to team 
+
+- User documentation for setup of ARXaaS 
+
+- User documentation for PyAaaS(Sphinx) 
+
+#### Sprint 5 Retro: 
+
+The group did a Start-stop-continue session 
+
+Where each team member writes down at least one thing for each the three categories. 
+
+
+#### Start: 
+
+- Researching before building 
+
+- Learning ARX system/data 
+
+- Learning de-identification 
+
+- Refactoring 
+
+- Following best practice 
+
+- Pair-programming 
+
+- More pair-programming 
+
+- More smaller commits/pull-request 
+
+- Precise commits/pull-request 
+
+- Invest more time into making tasks more well defined 
+
+- Take small breaks when the air in the room is bad. 
+
+- More Java courses to improve my code quality 
+
+#### Continue: 
+
+- Challenge assumptions 
+
+- Moral/motivation 
+
+- Questioning 
+
+- Attendance 
+
+- Efficiently dividing tasks among team members 
+
+- good code reviews 
+
+- good team cooperation 
+
+- good communication 
+
+- team is solution orientated 
+
+#### Stop: 
+
+- Long/big pullreqests 
+
+- Big pull-request 
+
+- Adding too many tasks to sprint? 
+
 #### Sprint 6
+
+Duration: 01.04.19 - 12.04.19 
+
+#### Sprint 6 Summary: 
+
+The group prepared and had a presentation at DiFi about the bachelor project, and had a workshop with NAV data scientist on analyzing and anonymizing a dataset.  
+
+Started working on the Web app, that can connect to the analyze end point. Implemented 2 types of T-closeness and can be used to anonymize a dataset. The team decided not to implement the 3rd type of T-closeness as this was a bigger task than expected and would take a whole new sprint to fulfill. Fully implemented SSL encryption and created documentation on how to use it. Finished implementing metadata on the anonymization performed on a given dataset. Started PyARXaaS documentation in sphinx. Implemented edge case test and integration test of the end points. 
+
+#### Sprint 6 Backlog:
+
+[COMPLETED] as a data interested employee in NAV I would like to be able to analyze the risk profile of a given dataset in a web app 
+
+[COMPLETED] As a data scientist I would like that ARXaaS has been stress tested and what load I can expect the system to handle  
+
+[COMPLETED] As a developer on the bachelor project I would like the endpoints to have integration tests with edge cases and data content correctness tests (using ARX GUI as fasit)  
+
+[COMPLETED] Implement T-closeness(++) Privacy Model in service and Python client  
+
+[COMPLETED] Create Presentation for AI/data science forum 
+
+[COMPLETED] as a data scientist I would like metadata on the anonymization performed on a given dataset 
+
+[COMPLETED] End to end SSL Encryption between ARXaaS and clients 
+
+#### Sprit Goals:
+
+- By the end of the Sprint the team wants to be able to say the product usable by data scientist in NAV 
+
+- Test coverage on ARXaaS 70%++, Integration tests for all main endpoints with end case coverage 
+
+Suggestions for Sprint 7 backlog:
+
+- Create presentation for AI user forum - H 
+
+- Implement T-closeness(++) Privacy Model in service and Python client 
+
+- As a data scientist I would like that ARXaaS has been stress tested and what load I can expect the system to handle 
+
+- As a developer on the bachelor project I would like good test data to write tests with 
+
+- As a developer on the bachelor project I would like the end points to have integration tests with edge cases and data content correctness tests (using ARX GUI as fasit) 
+
+- As a NAV employee in I would like a web application to anonymize data with K-anonymity and L-diversity and imported csv hierarchies 
+
+- As a data scientist I would like to create hierarchies for my dataset using the ARXaaS service 
+
+Bugs to fix: 
+
+- Return data from anonymization does not have correct attribute types 
+
+#### Sprint 6 Retro:
+
+The group did a Start-stop-continue session 
+
+Where each team member writes down at least one thing for each the three categories. 
+
+#### Start:
+
+- Thinking deployment/shipping (applications/packages/docs/ci pipeline) 
+
+- Thinking handover in regards to code/docs 
+
+- Reaching out for assistance on hard features 
+
+- Bringing in team members on feature work (pair-program) 
+
+- Better motivation after assigned task is done 
+
+- Better planning and feedback before and after presentation/workshop 
+
+- More peer programming 
+
+- More pictures 
+
+- Writing documentation more targeted at the user 
+
+#### Stop: 
+
+- Winging it (Maybe small practice round) 
+
+- Not logging enough in asana when performing a task 
+
+- Not using branches in webarx, must make it easier to work in paralell 
+
+- Workshop 
+
+    - not tested  
+
+    - no dry run 
+
+#### Continue: 
+
+- Take ownership of the product 
+
+- Learning about ARX system 
+
+- Learning about anonymization 
+
+- Pair-programming when possible 
+
+- Reviews and merging principles 
+
+- Attendance 
+
+- Motivation 
+
+- Teamwork 
+
+- Tasks done 
+
+- Good feedback 
+
+- Customer happy 
+
+- Group still positive and working hard 
+
+- Being productive, and limiting the scope of tasks 
+
+![](img/Sprint6_1.ashx)
+
+![](img/Sprint6_2.ashx)
 
 #### Sprint 7
 
+Duration: 15.04.19 - 26.04.19 
+
+#### Sprint 7 Summary:
+
+The group prepared a demo of the final presentation for Eva about the bachelor project. Then the group also had a presentation for the sprint review. 
+
+Started implementing the different features for the Web app. All feature except for hierarchy generation are now available on the web app. The web app still needs a design overhaul. 
+
+Implemented suppression limit to be taken in a parameter, as well as logging the limit used. The suppression limit is now available on both the python client and the web app. 
+
+Privacy models used to anonymize the dataset are now logged as well. 
+
+Prepared different datasets and hierarchies to be load tested on the service.  
+
+Implemented hierarchy generation end-point on the service and is now available on the python client. 
+
+#### Sprint 7 Backlog: 
+
+[INCOMPLETED] Visualization/Description of Re-identifaction risk (K=?)  
+
+[COMPLETED] As a NAV user I would like a intuitive webapp to analyze and anonymize datasets 
+
+[COMPLETED]  ARXaaS hierarchy generation 
+
+[COMPLETED] Python wrapper hardning 
+
+[COMPLETED] Load testing using proper "hard to anonymize datasets" 
+
+[COMPLETED] As a Data scientist I would like the supression limit to be passed as a parameter  
+
+[COMPLETED] As a data scientist, I would like ARXaaS to provide richer logging 
+
+#### Sprint 7 Goals: 
+
+- The team prepares for handover on all technical deliveries - Andre 
+
+- Atleast two persons has knowledge on a given feature - Sondre 
+
+#### Sprit Retro: 
+
+The group did a sprint retro session for the entire project divided in:
+ 
+- Positive Learnings 
+- Negative Learnings 
+- Suprises  
+
+Where each team member writes down at least one thing for each the three categories.
+
+#### Positive Learnings: 
+
+- Continous Integration worked really well (thanks, Accelerate!)
+
+- Knowledge is well shared and spread across team members 
+
+- Sprint retro has worked well 
+
+- Solid agreement on decisions and productive discussions 
+
+- Spring Boot is a good framework for creating professional web applications 
+
+- Time spent on sprint planning makes time spent elsewhere more efficient. Time boxing worked well 
+
+- Great team 
+
+- Pair programming has worked really well 
+
+- Delivered a production worthy, whole product 
+
+- Test driven programming worked well 
+
+- Learning fullstack/professional product development 
+
+- Pair-programming 
+
+- The importance of keeping everyone up to date and engaged 
+
+- The importance of planning well ahead, and having everyone agreeing on the decisions along the way 
+
+- Scrum retro has worked well
+
+- Software
+
+
+- Share knowledge
+
+- Continues delivery 
+
+#### Negative Learnings:
+
+- Preparing for workshops, presentations has been underprioritized 
+
+- Creating software is time consuming, and cannot always be produced effectively by a single worker 
+
+- Taking time off in the middle of the semester is stressful 
+
+- Refactoring is tough 
+
+- Definition of Done and speccing is super hard, time consuming 
+
+- Estimating time requisites takes too much effort 
+
+- Learning new tech, especially Python is tough 
+
+- Creating good user stories is very demanding, 
+
+Perhaps format could be less stale if it had been less static and repetitive. Also more knowledge on user stories from product owner, better collaboration on creating them 
+
+- Need agile coach? 
+
+- Software takes time, nobody can do it all alone 
+
+- Prepare better for workshops and presentation 
+
+#### Suprises:
+
+- Lists and maps are pretty useful 
+
+- Putting effort into aligning team is valuable 
+
+- Very little time loss/waste from unfortunate events 
+
+- Pair programming requires some scheduling 
+
+- Knowledge silos appear fast 
+
+- Effort when aligning team 
+
+- Meetings and admin takes a lot of time 
+
+- Sprint retro 
+
 #### Development tools
+- Asana, Agile Kanban board
+- IntelliJ, Integrated Development Environment [Java]
+- PyCharm, Integrated Development Environment [Python]
+- Git, Version Control System
+- GitHub, Cloud Storage
+- Travis, Continous Integration Platform
+- Visual Studio Code,  Text Editor for Literal Documentation
+- CodeClimate
+- Jacoco
+
 
 #### Lessons learned during development
 

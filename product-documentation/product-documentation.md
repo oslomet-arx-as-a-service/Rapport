@@ -63,6 +63,32 @@ The anonymization metrics contain the transformation level used on each quasi-id
 
 This endpoint can be reached by writing "{web address of the service}/api/hierarchy" and is an HTTP POST method.
 
+The endpoint provides a interface to access ARX hierarchy builder features. This endpoint receives a request object
+containing the dataset column to create the hierarchy for, the builder type and builder specific attributes. This endpoint
+returns a response object containing the resulting hierarchy.
+
+Currently the following builders are supported:
+
+ - Redaction based
+ - Interval based
+ - Order based
+ 
+ ##### Redaction based hierarchy
+ 
+ This method builds hierarchies for categorical and non-categorical values using redaction. Dataset items are:
+
+  1. aligned left-to-right or right-to-left,
+  2. differences in length are filled with a padding character.
+  3. Equally long values are redacted, character by character from left-to-right or right-to-left.
+  
+  ##### Interval based hierarchy 
+  
+  This method builds hierarchies for non-categorical values by mapping them into given intervals.
+  
+  ##### Order based hierarchy
+  
+  This method builds hierarchies for categorical and non-categorical values by ordering the dataset items and merging them into groups with the defined sizes.
+
 #### Logging:
 
 ARXaaS has logging implemented using log4j. For every data set that is analyzed and anonymized. The application provides metrics for received and completed requests. The log displays the size of the dataset, number of rows and columns, source IP, dataset bytesize, privacy model used, suppression limit and request processing time.
