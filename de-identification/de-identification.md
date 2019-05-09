@@ -7,7 +7,7 @@
 
 ## Introduction
 
-De-Identification, Anonymization and Pseudonymization often confused and used with different intentions. There is a lack of clear definition of the terms. We have attempted to define the terms with guidance from our product owner.
+De-Identification, Anonymization and Pseudonymization often confused and used with different intentions. There is a lack of clear definition of the terms. The team have in this document attempted to define the terms with guidance from the product owner.
 
 De-Identification is a common term for reducing the probability that a person can be identified from a dataset. These datasets are commonly refered to as microdata datasets. Microdata datasets are datasets that provide information on a set of variables for individuals. In practical terms this means each row in the dataset represents a individual or entity. Summarizing microdata into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research.
 
@@ -47,7 +47,7 @@ When De-Identifying a dataset there is always a trade-off to be had between *dat
 We will briefly talk about the pseudonymization before moving on to Anonymization which has been the focus of the teams work is the basis of the features implemented in the solution.
 
  **Pseudonymization**
- Pseudonymization is a type of de-identification where the association between data and person is removed. It achieves this by introducing a new bi-directional mapping between a individual in the dataset and his or hers identifiers. Pseudonymization can be irreversible, in that case the mapping to the identifers are deleted or reversible. Pseudonymization is regarded as a weak form of de-identification as the identifiers have only been moved to a separate mapping.
+ Pseudonymization is a type of de-identification where the association between data and person is removed. It achieves this by introducing a new bi-directional mapping between a individual in the dataset and his or hers identifiers. Pseudonymization can be irreversible, in that case the mapping to the identifers are deleted. Pseudonymization is regarded as a weak form of de-identification as the identifiers have only been moved to a separate mapping.
 
  **Anonymization**
  Anonymization intends to irreversibly reduce the linkage between an individual and identifying information in a dataset. 
@@ -79,6 +79,7 @@ Additionally quasi identifying attributes are further categorized in the followi
     Sets of numeric attribute values can be transformed into a common value by user-specified aggregation functions.
  - Subsampling
     Releasing only a subset of the dataset instead of all the records
+
 
 #### Risk assessment
 Re-Identification is the reverse of de-identification and is the primary threat addressed by laws and regulation[https://www.sciencedirect.com/science/article/pii/S1386505618307007?via%3Dihub#bib0110]. Quantifying risk of re-identification associated with a dataset is of high importance. The key aspect for re-identification is the uniqueness of quasi identifying attributes and the uniqueness of the combinations of the attributes. Quasi attributes can be linked with additional data in the dataset or from external datasets to identify individuals.
@@ -136,7 +137,7 @@ Anonymization of dataset for public release has been thoroughly described, docum
 
 The process roughly breaks down into the following steps:
 
-1. determine the release model
+1. determine the release modRefactor el
 2. determine an acceptable re-identification risk threshold
 3. classify variables
 4. calculate the risk
