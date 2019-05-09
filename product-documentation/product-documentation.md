@@ -3,7 +3,7 @@
 ### Preface
 The purpose of this document is to give the reader a technical view of how the system has been build and the functionalities available in both the service and clients. This document also shows how the client works with the service. 
 
-This document is written with the expectation of being used for working with operations, maintinance or future development, it is therefore expected that the reader has programming knowledge. For better understanding of this document we recommend reading the presentation documentation first.
+This document is written with the expectation of being used for working with operations, maintenance or future development, it is therefore expected that the reader has programming knowledge. For a better understanding of this document we recommend reading the presentation documentation first.
 
 ### Introduction
 
@@ -13,9 +13,9 @@ This document is written with the expectation of being used for working with ope
 - Technologies
 #### Functionality
 
-The service has 3 end points, to reach these end-points a client must use a HTTP POST call to an web address that is running the service. These end points are written using a REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The end point address is formed by using an anotation on each controller and method.
+The service has 3 endpoints, to reach these end-points a client must use an HTTP POST call to a web address that is running the service. These endpoints are written using REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The endpoint address is formed by using an annotation on each controller and method.
 
-Example of a controller with a REST api end point:
+Example of a controller with a REST API endpoint:
 
 ```java
 
@@ -28,40 +28,40 @@ public class AnalyzationController {
 ```
 
 By following the REST architecture the web address is form in this format
-{web address of the service}/api/{function}. The resulting 3 end-points can then be reached by writting:
+{web address of the service}/api/{function}. The resulting 3 end-points can then be reached by writing:
   - {web address of the service}/api/analyze
   - {web address of the service}/api/anonymize
   - {web address of the service}/api/hierarchy
   
-When an end-point recieves a request object, it gets validated if it is correctly formated. When the validation process fails the end-point will send a response in the form of an error message. This validation works as an extra safety net, because the clients are designed to always send a request object with the correct format. When the validation process succeeds the service will send a response object containing a JSON body that gets unpacked and mapped by the clients. When the object is correclty formated but containts invalid parameters, the end-point will send a response object containing the error message and how to correct the error.
+When an end-point receives a request object, it gets validated if it is correctly formatted. When the validation process fails the end-point will send a response in the form of an error message. This validation works as an extra safety net, because the clients are designed to always send a request object with the correct format. When the validation process succeeds the service will send a response object containing a JSON body that gets unpacked and mapped by the clients. When the object is correctly formatted but contains invalid parameters, the end-point will send a response object containing the error message and how to correct the error.
 
-#### End points
+#### Endpoints
 
-This document will describe the functionality of each end point. This section will explain what each end point does and the response object it sends back to the user, as well as the different actions used with the request object sent to the end points.
+This document will describe the functionality of each endpoint. This section will explain what each endpoint does and the response object it sends back to the user, as well as the different actions used with the request object sent to the endpoints.
 
 ##### Analyzation
 
-This end point can be reached by writting "{web address of the service}/api/analyze" and is a HTTP POST method.
+This endpoint can be reached by writing "{web address of the service}/api/analyze" and is an HTTP POST method.
 
-The end point recieves a request object containing a data set to be analyzed and the attribute type list of the data set. The end point returns an object containing a risk profile that describes the re-identification risk and distribution of risk in a data set.
+The endpoint receives a request object containing a data set to be analyzed and the attribute type list of the data set. The endpoint returns an object containing a risk profile that describes the re-identification risk and distribution of risk in a data set.
 
-This end point creates a ARX data object with the data set and attribute type taken from the request object. This ARX data object is then analyzed against re-identification risk. After the analyzation process is done, a risk profile object containing a list of re-identification risk and destribution of risk is created and sent back as a response object.
+This endpoint creates an ARX data object with the data set and attribute type taken from the request object. This ARX data object is then analyzed against re-identification risk. After the analyzation process is done, a risk profile object containing a list of re-identification risk and distribution of risk is created and sent back as a response object.
 
-The risk profile object contains a re-identification risk that describes how anonymous the data set is and the destribution of risk in the data set.
+The risk profile object contains a re-identification risk that describes how anonymous the data set is and the distribution of risk in the data set.
 
 ##### Anonymization
 
-This end point can be reached by writting "{web address of the service}/api/anonymize" and is a HTTP POST method.
+This endpoint can be reached by writing "{web address of the service}/api/anonymize" and is an HTTP POST method.
 
-The end point recieves a request object contianing a data set to be anonymized, list of attribute types containing transformation models(hierarchy) and privacy models. This end point returns an object containing a anonymized data set, a risk profile, and a anonymization metrics.
+The endpoint receives a request object containing a data set to be anonymized, list of attribute types containing transformation models(hierarchy) and privacy models. This endpoint returns an object containing an anonymized data set, a risk profile, and an anonymization metrics.
 
-This end point uses the data taken from the request object and anonymizes it against re-identification risk, based on the attribute types, privacy model and transformation model defined in the request object. After the anonymization process is done, the anonymized data set is then analyzed on how anonymous it is and creates a risk profile.
+This endpoint uses the data taken from the request object and anonymizes it against re-identification risk, based on the attribute types, privacy model and transformation model defined in the request object. After the anonymization process is done, the anonymized data set is then analyzed on how anonymous it is and creates a risk profile.
 
-The anonymization metrics contains the transformation level used on each quasi-identifying attribute type, the meta data on the privacy models used to anonymize the data set and how long the anonymization process took in miliseconds. 
+The anonymization metrics contain the transformation level used on each quasi-identifying attribute type, the meta data on the privacy models used to anonymize the data set and how long the anonymization process took in milliseconds.
 
 ##### Hierarchy
 
-This end point can be reached by writting "{web address of the service}/api/hierarchy" and is a HTTP POST method.
+This endpoint can be reached by writing "{web address of the service}/api/hierarchy" and is an HTTP POST method.
 
 #### Logging:
 
@@ -69,7 +69,7 @@ ARXaaS has logging implemented using log4j. For every data set that is analyzed 
 
 ![](img/screenShotLog.png)
 
-In the case of an error or exception a full stack trace is printed to make debugging faster and more efficient.
+In the case of an error or exception, a full stack trace is printed to make debugging faster and more efficient.
 
 ![](img/ErrorLogStacktrace.png)
 
@@ -88,7 +88,7 @@ In the case of an error or exception a full stack trace is printed to make debug
 
 #### Short presentation
 
-As a stretch goal, the employer wished for a way to quickly access the ARX functionality. It was therefore decided to implement an interactive web frontend, by taking advantage of the flexible REST API provided by the ARXaaS service. Making this client available will give the user the posibility to analyze or anonymize their data, without the need to install software on their local machine.
+As a stretch goal, the employer wished for a way to quickly access the ARX functionality. It was therefore decided to implement an interactive web frontend, by taking advantage of the flexible REST API provided by the ARXaaS service. Making this client available will give the user the possibility to analyze or anonymize their data, without the need to install software on their local machine.
 
 #### Technologies
 
