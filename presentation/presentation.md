@@ -26,19 +26,20 @@ Its use of data in the development of new and improved services is often conting
 Our client for this assignment is NAV IT Data og Innsikt. Data og Innsikt is a department within NAV IT. The department delivers the development of systems and operations of data storage, data processing, data access and analytics.
 
 ### Project background
-AI Lab is a department in NAV IT Data og Innsikt, functioning as NAV ITs internal knowledge hub in machine learning and data science. One of the areas the team currently is handling is data anonymization. This area presents problems in both the legal and ethical domain, because of its close connection to personal data. 
+AI Lab is a team within NAV IT Data og Innsikt, functioning as NAV ITs internal knowledge hub in machine learning and data science. One of the areas the team currently is handling is data anonymization. This area presents problems in both the legal and ethical domain, because of its close connection to personal data. 
 Data anonymization is a large field with many projects worldwide. There are well established models and algorithms for both anonymization and analytics of data. AI Lab is currently utilizing both internal and external tools for data anonymization. One such tool is ARX, which is widely regarded as top-class anonymization software. ARX is an open source (Apache License, Version 2.0)  project distributed as a GUI application and as a Java JAR library. It is prominently used by large organizations to anonymize health and patient data.
 
 ARX contains a large and powerful amount of functionality for data anonymization, but the interaction with said functionality is limited to either interaction with the GUI application or programmatically with the Java API provided by the JAR. Neither option is well suited to modern data science applications. 
-Data science today is typically conducted within programming languages like Python and R. The data scientist develops scripts, notebooks and larger programs for extracting and analysing data. Early stage tasks typically include data cleaning and data transformation. Anonymisation may be viewed as such a data transformation task, but ARX currently does not integrate seamlessly into the typical Python/R-based data science workflow. 
-Moreover, while ARX provides functionality and flexibility for a skilled user, the front-end arguably requires knowledge of technical concepts and methods in anonymisation above and beyond that of the typical developer and which requires a non-trivial investment of time to learn and understand.
+Data science today is typically conducted within programming languages like Python and R. The data scientist develops scripts, notebooks and larger programs for extracting and analysing data. Early stage tasks typically include data cleaning and data transformation. Anonymization may be viewed as such a data transformation task, but ARX currently does not integrate seamlessly into the typical Python/R-based data science workflow. 
+Moreover, while ARX provides functionality and flexibility for a skilled user, the front-end arguably requires knowledge of technical concepts and methods in anonymization above and beyond that of the typical developer and which requires a non-trivial investment of time to learn and understand.
 
 The AI-lab has therefore requested the group to:
 - Provide access to ARX functionality from modern data science toolsets and workflows
-- Provide an extendable framework for making state-of-the-art anonymisation methods accessible to a wider audience in NAV IT by lowering the barriers to use.  
 
-### The Product - ARX as a Service
-ARX as a Service refers to the group of products that make up the ARX as a Service ecosystem. The center piece of this ecosystem is the micro service named ARXaaS. Addidtionally to ARXaaS there are two clients named PyARXaaS and WebARXaaS. These products provide Python and WEB usage of the service.
+- Provide an extendable framework for making state-of-the-art anonymization methods accessible to a wider audience in NAV IT by lowering the barriers to use.
+
+### The solution - Anonymization as a Service
+Anonymization as a Service refers to the group of products that make up the Anonymization as a Service ecosystem. The center piece of this ecosystem is the micro service named ARXaaS or ARX as a Service. Additionally to ARXaaS there are two clients named PyARXaaS and WebARXaaS. These products provide integration with ARXaaS from Python context and as a Web application.
 
 #### Current situation
 
@@ -57,13 +58,7 @@ De-Identification is a common term for reducing the probability that a person ca
 
 De-identification is a critical component in research. It permits sharing and using PII for secondary purposes by transforming the data util it can not longer be classified as PII.
 
-From [Statistical Disclosure Control: A Practice Guide](https://buildmedia.readthedocs.org/media/pdf/sdcpractice/latest/sdcpractice.pdf)
-*"The aim of anonymizing microdata is to transform the datasets to achieve an “acceptable level” of disclosure risk. The
-level of acceptability of disclosure risk and the need for anonymization are usually at the discretion of the data producer
-and guided by legislation."*
-
-There exist several models for both quantifiable assess the disclosure risk for a given dataset and anonymize a dataset until it meets required risk thresholds
-
+There exist several models for both quantifiable assess the disclosure risk for a given dataset and anonymize a dataset until it meets required risk thresholds. See the de-identification chapter for more in-depth documentation on the field of de-identification.
 
 #### Solution description
 The system will provide access to anonymization tools for data scientists at NAV IT. A data scientist should be able to anonymize tabular dataset based on user-specific configurations. Configurability includes privacy models, column attribute types and transformation models that determine how much data will be lost in the resulting anonymized dataset. A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
@@ -117,9 +112,6 @@ During the development of ARX as a Service the team learned and utilized a varie
 
 ### References
 personal data: https://gdpr-info.eu/issues/personal-data/
-K-anonymity: https://www.worldscientific.com/doi/abs/10.1142/S0218488502001648
-L-diversity: https://dl.acm.org/citation.cfm?doid=1217299.1217302
-T-closeness: https://ieeexplore.ieee.org/document/4221659
 
 ### Word list
 
