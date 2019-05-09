@@ -6,9 +6,13 @@
 
 ### Introduction
 
-This report contains the work done in this bachelor project that led to the final result. The project planning started 18.07.2018 and the bachelor project started 08.01.19 and lasted to 23.05.2019. The team has worked at Oslomet university in Oslo and NAV IT headquarters at sannergata 2 in Oslo. The team has worked together four days a week with fixed core work hour's nine to four. These days the team have worked together as a group, where they have worked on there assigned sprint tasks as well as made important project decisions. In addition to this all team members have worked from home as well.
+The planning for the bachelor project was initiated on the 18.07.2018. After that, the development officially started on the 08.01.19 and lasted until 06.05.2019. Then, the team worked on this report until the deadline on the 23.05.2019. The team has been working in Oslo, at OsloMet university and NAV IT headquarters in Sannergata 2, four days a week with fixed core work hours nine to four. Agile methods from the Scrum framework have been adopted across the entire duration of the project.
 
-In the course of the project period the team has had close contact with the product owner Robindra at NAV IT. In the first meeting with the product owner the minimal viable product was decided. The system should anonymize a tabular data set based on the user’s desired anonymity level with a minimum of K=4 anonymity. This functionality was to be delivered in a Phyton client. As a stretch goal the  product owner and the team wanted a WEB application.
+This report is documentation of the work done on the bachelor project, how the work was organized, as well as discoveries until delivery of this report.
+
+Over the course of the project period the team has had close contact with the product owner at NAV IT. In the first meeting with the product owner, the minimal viable product was decided. 
+"The system should anonymize a tabular data set based on the user’s desired anonymity level with a minimum of K=4 anonymity".
+This functionality was to be delivered in a Python client. As a stretch goal the  product owner and the team wanted a web application.
 
 This document starts with the teams planning and development methods......
 #[need more]
