@@ -5,21 +5,20 @@
 ### ToC
 
 ### Introduction
+This chapter covers the work process of the bachelor project. Points of significance include methods and tools that have assisted the team in developing the product and organizing the worflow.
 
-The planning for the bachelor project was initiated on the 18.07.2018. After that, the development officially started on the 08.01.19 and lasted until 06.05.2019. Then, the team worked on this report until the deadline on the 23.05.2019. The team has been working in Oslo, at OsloMet university and NAV IT headquarters in Sannergata 2, four days a week with fixed core work hours nine to four. Agile methods from the Scrum framework have been adopted across the entire duration of the project.
-
-This report is documentation of the work done on the bachelor project, how the work was organized, as well as discoveries until delivery of this report.
-
-Over the course of the project period the team has had close contact with the product owner at NAV IT. In the first meeting with the product owner, the minimal viable product was decided. 
+Agile methods from the Scrum framework have been adopted across the entire duration of the project.
+According to the agile manifesto...[Quote agile manifesto]
+Over the course of the project period, the team has been in close contact with the product owner at NAV IT. In the first meeting with the product owner, the minimal viable product was decided. 
 "The system should anonymize a tabular data set based on the user’s desired anonymity level with a minimum of K=4 anonymity".
 This functionality was to be delivered in a Python client. As a stretch goal the  product owner and the team wanted a web application.
 
-This document starts with the teams planning and development methods......
+This document starts with the team’s planning and development methods......
 #[need more]
 
 ### Planning and methods
 
-This chapter will explain the creation of the team and planning of the project as well as the planning during the project. The chapter starts with development methods applied by the team. Followed by project phases and the project conclusion and documentation.
+This chapter explains the creation of the team and planning of the project as well as the planning during the project. The chapter starts with development methods applied by the team, followed by documentation about project phases and conclusion.
 
 ### Development methods
 
@@ -30,7 +29,7 @@ Our approach was to deliver a minimum viable product and the deliver small featu
 
 The team decided to use a agile work process with our product owner's demands and wishes as our top priority. The team worked in to week sprints. At the start of every sprint the team did sprint planning and chose the user story's to add to the sprint backlog. The team then added the user storys chosen for the sprint to our Khanban board in Asana. The team members chose or assigned the different tasks as a group. A definition of done was specified for each sprint by the group. An example of this was every feature had to be tested before merging into the master branch. During the each sprint the team had daily scrum meetings to keep the rest of the team updated on each individuals progress as well as to share knowledge in the team. At the end of the sprint the team had a sprint retro meeting where each member made post-it notes labeled start, stop and continue. The start post-it notes where suggestions of items to be implemented in the next sprint. The stop post-it notes where things that had not worked well for the team or an individual. The continue post-it notes where items that worked well in the sprint and the team member wanted to keep doing in the next sprint. The project was divided in to seven sprints with a duration of two weeks where we presented the new features to our product owner at the end of each sprint. Then based of the feedback from the product owner the team created new user story's and definition of done for the next sprint.
 
-#### Continues integration pipeline
+#### Continous integration pipeline
 
 The team decided early in the process to set up a CI pipeline to automate tests and deployment.
 Every time a team member pushed a commit to our version control host Git . Travis testes every branch in a virtual environment before it can be allowed to be merged into master branch. If the job passes all test. It can be merged into to master branch providing it passes Code climate static code analyses test and SNYK vulnerability tests. After a team member approves the code review the branch is merged into master branch. Travis then deploys docker container to Google cloud and the NAV IT nais platform. Before deploying JAR and javadoc to Maven witch then hosts are Javadoc.
@@ -55,7 +54,7 @@ The team worked actively on slicing up big features requested by the product own
  
  #### Planning
 
- The team in Norway Sondre, André, Viktor and Jeremiah had a meeting with NAV IT while Julian was studying abroad. This information meeting was with Tommy and Gøran. In short, the goal was to build a "pipeline" from raw data that NAV sits on and make available to stakeholders outside NAV (media, private persons, etc.). The pipeline was to accommodate the entire range from integration with raw data systems at NAV, to visualization and typically front-end solutions. The product that NAV's Open Data project was to deliver is a common platform / toolbox for delivering open data to the Norwegian population. The idea was that the team will deliver a contribution to this project. The team must be involved in developing the plan for the specific product we are going to deliver, but it will be within the Open Data project framework. Concrete features in the Open Data project that the team could participate in was, API - backend pipeline , Portal - web platform (data.nav.no) and Meta-data system for for automatic generation of visualizations . The team was given some task to complete before january 1st 2019. Every team member had to read the Accelerate book. And the team also where asked to get to know Docker and Kubernetes. Further more the team was asked to brainstorm ideas for solving “How can NAV deliver specific data sets they are sitting with, in a good and user-friendly manner (user-friendly for developers, media houses, private persons)". A purposed idea was to focus on a specific data type and expand it eventually if the solution is good or if there was time to improve the solution. The initial idea was to focus on treatment time. What kind of issues take the longest time  and shed light on treatment time. The goal was to streamline assessment of departments time spent on treatment. At 18.10.18 the team had it's first meeting with Eva Hadler to talk about guidance for the bachelor project. Eva was highly recommended and the teams was happy she decided to be the supervisor for the project. Eva shared her experiences with undergraduate projects and what was expected. The team had a sync meeting 23.10.18 and got Julian up to date on what the team had done in Norway. After a couple of meetings discussing frame works and tools the group had there first bachelor meeting in 2019. The team decided on regular workdays and hours. The team decide on to work with Github, Asana, Travis and Slack.  At  this point the project task was still a bit in the air. At are next group meeting at NAV IT. Robindra and Paul  presented the data anonymity project to the team. The essence of the project was to make Arx's functionality available to NAV's systems and build a framework that makes Arx's anonymization functionality available to NAVs data scientist. The sought after functionality where, being able to submit data sets to the service and receive an anonymized data set of the desired anonymity level. The group discussed different approaches to the problem and tools we can use. Tentatively the team planned an overall architecture with Java / Spring backend and Python / Jupyter Notebooks, Javascript / React frontend and Docker as scalability. The group agreed that this was a good project with both enough content and room for stretch goals.  At the next meeting 10.01.19 at NAV IT Robindra gave the team an introduction to ARX. The team decided on a English working language for documentation and code to make the open source project available to everyone. Robindra got the title as product owner and Sondre got the title as Scrum master.The team decided to work in to week sprints. It was decided to use seven sprints for development of the application and for weeks to write the project report.
+ Sondre, André, Viktor and Jeremiah had a meeting with NAV IT while Julian was studying abroad. This information meeting was with Tommy and Gøran. In short,it was determined that the goal was to build a "pipeline" from raw data that NAV sits on and make available to stakeholders outside NAV (media, private persons, etc.). The pipeline was to accommodate the entire range from integration with raw data systems at NAV, to visualization and typically front-end solutions. The product that NAV's Open Data project was to deliver is a common platform / toolbox for delivering open data to the Norwegian population. The idea was that the team will deliver a contribution to this project. The team must be involved in developing the plan for the specific product we are going to deliver, but it will be within the Open Data project framework. Concrete features in the Open Data project that the team could participate in was, API - backend pipeline , Portal - web platform (data.nav.no) and Meta-data system for for automatic generation of visualizations . The team was given some task to complete before january 1st 2019. Every team member had to read the Accelerate book. And the team also where asked to get to know Docker and Kubernetes. Further more the team was asked to brainstorm ideas for solving “How can NAV deliver specific data sets they are sitting with, in a good and user-friendly manner (user-friendly for developers, media houses, private persons)". A purposed idea was to focus on a specific data type and expand it eventually if the solution is good or if there was time to improve the solution. The initial idea was to focus on treatment time. What kind of issues take the longest time  and shed light on treatment time. The goal was to streamline assessment of departments time spent on treatment. At 18.10.18 the team had it's first meeting with Eva Hadler to talk about guidance for the bachelor project. Eva was highly recommended and the teams was happy she decided to be the supervisor for the project. Eva shared her experiences with undergraduate projects and what was expected. The team had a sync meeting 23.10.18 and got Julian up to date on what the team had done in Norway. After a couple of meetings discussing frame works and tools the group had there first bachelor meeting in 2019. The team decided on regular workdays and hours. The team decide on to work with Github, Asana, Travis and Slack.  At  this point the project task was still a bit in the air. At are next group meeting at NAV IT. Robindra and Paul  presented the data anonymity project to the team. The essence of the project was to make Arx's functionality available to NAV's systems and build a framework that makes Arx's anonymization functionality available to NAVs data scientist. The sought after functionality where, being able to submit data sets to the service and receive an anonymized data set of the desired anonymity level. The group discussed different approaches to the problem and tools we can use. Tentatively the team planned an overall architecture with Java / Spring backend and Python / Jupyter Notebooks, Javascript / React frontend and Docker as scalability. The group agreed that this was a good project with both enough content and room for stretch goals.  At the next meeting 10.01.19 at NAV IT Robindra gave the team an introduction to ARX. The team decided on a English working language for documentation and code to make the open source project available to everyone. Robindra got the title as product owner and Sondre got the title as Scrum master.The team decided to work in to week sprints. It was decided to use seven sprints for development of the application and for weeks to write the project report.
 
 #### Execution
 
@@ -642,7 +641,19 @@ Where each team member writes down at least one thing for each the three categor
 
 #### Sprint 7
 
+##### Sprint
+
 #### Development tools
+- Asana, Agile Kanban board
+- IntelliJ, Integrated Development Environment [Java]
+- PyCharm, Integrated Development Environment [Python]
+- Git, Version Control System
+- GitHub, Cloud Storage
+- Travis, Continous Integration Platform
+- Visual Studio Code,  Text Editor for Literal Documentation
+- CodeClimate
+- Jacoco
+
 
 #### Lessons learned during development
 
