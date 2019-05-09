@@ -55,14 +55,12 @@ There are several products in the anonymization/de-identification space. But the
 #### De-Identification
 Following is a short description of the field of de-identification. For more in-depth explanations see the chapter De-Identification.
 
-De-Identification is a common term for reducing the probability that a person can be identified from a dataset containing *personal identifiable information* or PII. In practical terms this means each record in the dataset represents a individual or entity. Summarizing dataset containing PII into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research.
-
-De-identification is a critical component in research. It permits sharing and using PII for secondary purposes by transforming the data util it can not longer be classified as PII.
+De-Identification is a common term for reducing the probability that a person can be identified from a dataset containing *personal identifiable information* otherwise known as PII. Summarizing dataset containing PII into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research. De-identification permits sharing and using datasets containing PII by transforming the data util it can not longer be classified as PII.
 
 There exist several models for both quantifiable assess the disclosure risk for a given dataset and anonymize a dataset until it meets required risk thresholds. See the de-identification chapter for more in-depth documentation on the field of de-identification.
 
 #### Solution description
-The system will provide access to anonymization tools for data scientists at NAV IT. A data scientist should be able to anonymize tabular dataset based on user-specific configurations. Configurability includes privacy models, column attribute types and transformation models that determine how much data will be lost in the resulting anonymized dataset. A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
+The solution provides access to anonymization tools for data scientists at NAV IT. A data scientist is able to analyze and anonymize tabular dataset based on user-provided configurations. Tje user can configure privacy models, attribute types and transformation models(hierarchies). A common use case would be in a workflow where the data scientist is manipulating a dataset, and requires dynamic analysis of the data anonymity metrics. Another use case could involve integrating the system in a data pipeline to provide data analytics and anonymization capabilities.
 
 ##### System diagram
 
@@ -79,37 +77,43 @@ As the system diagram shows the system consists of three(so far) separate system
 - PyARXaaS - the wrapper package
     A python wrapper package for NAVs data scientist. The main requirement the teams product owner at NAV was that the anonymization functionality was made available in Python. This package abstracts the REST calls to ARXaaS and provides a easy to use API for the data scientist to analyze and anonymize their datasets.
 - WebARXaaS - the stretch goal
-    The project stretch goal. The product owner was clear from day one that the python package was the main priority of the team. But there are other user groups for anonymization at NAV. User groups without the required experience with programming to use a Python package. For this usergroup a simple to use web application where they could perform analysis and anonymization would be practical
+    The project stretch goal. The product owner was clear from day one that the python package was the main priority of the team. But there are other user groups for anonymization at NAV. User groups without the required experience with programming to use a Python package. For this user group a simple to use web application where they could perform analysis and anonymization would be practical
 
-These three products for the ARX as a Service ecosystem. The core functionality is the responsibility of the ARXaaS application. While the clients PyARXaaS and WebARXaaS provide user specific interfaces.
+These three products for the Anonymization as a Service ecosystem. The core functionality is the responsibility of the ARXaaS application. While the clients PyARXaaS and WebARXaaS provide user specific interfaces. A core idea behind the microservice design is to create a anonymization platform where lightweight clients would integrate the functionality in new and unique contexts. The team has implemented a Python client package and a web application but the room for further development and integration is wide open. And as the whole team has been hired as for a summer internship to continue the development we are confident the current solution and feature set is only the beginning.
 
 #### Deployment
-The team developed in a complete CI/CD pipeline for the core components using the Travis CI platform. As the client wished that the finished product could be deployed to NAVs internal container orchestration solution Nais, the team setup their own Kubernets cluster to continuously deploy to in the first sprints until the product stabilized and deployment moved to Nais.
+The team developed in a complete CI/CD pipeline for the different  components using the Travis CI platform. As the client wished that the finished product could be deployed to NAVs internal container orchestration solution Nais[https://nais.io/], the team setup a testing Kubernets cluster to continuously deploy to in the first sprints until the product stabilized and deployment moved to Nais in mid of april.
 
-The deployment of a single merge to master for the main service goes through the following steps before it is deployed to the Nais platform. If there is any failures the deployment is stopped and the team is notified.
+The pipeline is described in closer detail in the development process. But the team feels strongly that the continous integration pipeline has been instrumental to the project success. When a commit is merged to the master branch[https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is] for the main service goes through the following steps before it is deployed to the Nais platform. If there is any failures the deployment is stopped and the team is notified.
 
 - Test
+
     The full test suite is with unit tests, integration tests and system tests are ran.
 
 - Documentation
-    API documentation for the HTTP endpoints are generated. This documentation is a combination of human written text and auto generated snippets of information about the various endpoints, accepted HTTP verbs, request and response body JSON structure.
+
+    API documentation for the HTTP endpoints are generated and automatically tested. This documentation is a combination of human written text and auto generated snippets of information about the various endpoints, accepted HTTP verbs, request and response body JSON structure.
 
 - Packaging
+
     The service is packaged in different artifacts with different formats for the deployment and artifact hosting platforms. Main artifacts being Java JAR and docker.
 
-- Deployment
+- Publishing
+
     The packaged artifacts are deployed to different platforms and hosts. 
     - API Documentation is pushed to Github pages
     - Docker container is published to dockerhub
     - Source, Javadoc and class JARs are signed and published to maven central
 
-After a new deployment has been completed both the teams internal Kubernetes cluster and NAVs Nais platform deploys the new service version.
+- Deployment
+
+    After a new deployment has been completed both the teams internal Kubernetes cluster and NAVs Nais platform deploys the new service version.
 
 Having a complete CI/CD setup from essentially day meant the team was continously gathering feedback on the product. It meant the client could use the features implemented as they where implemented and most importantly it meant the team had real-time information on the stability of the product.
 
 ### Conclusion
 
-During the development of ARX as a Service the team learned and utilized a variety of new technologies. Experienced professional product development in a whole new domain (anonymization). A domain which puts a high premium on reliability and correctness. The team feels strongly that the have meet and delivered on the clients requests. The team has developed three separate technical products in synchronization with feedback from the customer. The success of the project was marked with a summer internship contracts from NAV IT for all team members the summer 2019. The team will during the summer focus on the further development of the product
+During the development of Anonymization as a Service the team learned and utilized a variety of new technologies. Experienced professional product development in a whole new domain (de-identification/anonymization). A domain which puts a high premium on reliability and correctness. The team feels strongly that the have delivered on the requirements presented by the client back in January. The team has developed three separate technical products in synchronization with feedback from the customer. The success of the project was marked with a summer internship contracts from NAV IT for all team members the summer 2019. The team will during the summer focus on the further development of the product.
 
 ### References
 personal data: https://gdpr-info.eu/issues/personal-data/
