@@ -2,14 +2,15 @@
 
 
 ## Preface
+This document is intended to present the problem domain this project aims to tackle. It is intended for readers without any knowledge of de-identification or anonymization. We recommend reading this document before the product documentation as this document will provided necessary context to the business domain of the solution.
 
 ## Table of Contents
 
 ## Introduction
 
-De-Identification, Anonymization and Pseudonymization often confused and used with different intentions. There is a lack of clear definition of the terms. The team have in this document attempted to define the terms with guidance from the product owner.
+De-Identification, Anonymization and Pseudonymization often confused and used with different intentions. The team have in this document defined the terms in accordance with available literature on the subject and with guidance from the product owner.
 
-De-Identification is a common term for reducing the probability that a person can be identified from a dataset. These datasets are commonly refered to as microdata datasets. Microdata datasets are datasets that provide information on a set of variables for individuals. In practical terms this means each row in the dataset represents a individual or entity. Summarizing microdata into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research.
+De-Identification is a common term for reducing the probability that a person can be identified from a microdata dataset. Microdata datasets are datasets that provide information on a set of variables for individuals. In practical terms this means each row in the dataset represents a individual or entity. Summarizing microdata into aggregates is a common method to de-identify the data, but this result in high levels of information loss and hinders other researches from verify the aggregate or do additional research.
 
 From [Statistical Disclosure Control: A Practice Guide](https://buildmedia.readthedocs.org/media/pdf/sdcpractice/latest/sdcpractice.pdf)
 *"The aim of anonymizing microdata is to transform the datasets to achieve an “acceptable level” of disclosure risk. The
@@ -36,15 +37,15 @@ and guided by legislation."*
 
 ## De-identification overview
 
-De-identification is a critical component in research,  mainly because it protects the privacy of individuals because once de-identified, a data set is considered to no longer contain personal identifiable information(PII). If a dataset does not include PII its use or distribution does not violate any privacy laws such as GDPR[https://gdpr.eu/data-privacy/]
+De-identification is a critical component in research. It protects the privacy of individuals contained in a dataset by removing the connection to the individual. A side benefit of this are the legal ramifications, because once de-identified, a dataset is not longer considered to contain personal identifiable information(PII). If a dataset does not include PII its use or distribution does not violate any privacy laws such as GDPR[https://gdpr.eu/data-privacy/].
+
+The goal when de-identifying is to remove enough data to be able the classify a dataset as de-identified, while still retaining a dataset that can be usefull. This means that when de-identifying a dataset there is always a trade-off to be had between *data privacy* and *data utility*. i.e. How hard it is to identify a individual in the dataset (data  protection) and how much value can be extracted from the dataset (data utility). These two interest are always at odds when de-identifying.
 
 There are two main types of de-identification:
  - Anonymization
  - Pseudonymization
 
-When De-Identifying a dataset there is always a trade-off to be had between *data privacy* and *data utility*. i.e. How hard it is to identify a individual in the dataset (data  protection) and how much value can be extracted from the dataset (data utility). These two interest are always at odds when de-identifying.
-
-We will briefly talk about the pseudonymization before moving on to Anonymization which has been the focus of the teams work is the basis of the features implemented in the solution.
+We will briefly talk about the pseudonymization before moving on to Anonymization which has been the focus of the teams work and the functionality implemented in the solution are anonymization features.
 
  **Pseudonymization**
  Pseudonymization is a type of de-identification where the association between data and person is removed. It achieves this by introducing a new bi-directional mapping between a individual in the dataset and his or hers identifiers. Pseudonymization can be irreversible, in that case the mapping to the identifers are deleted. Pseudonymization is regarded as a weak form of de-identification as the identifiers have only been moved to a separate mapping.
