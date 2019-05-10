@@ -11,6 +11,7 @@ This document is written with the expectation of being used for working with ope
 
 - Short presentation
 - Technologies
+
 #### Functionality
 
 The service has 3 endpoints, to reach these end-points a client must use an HTTP POST call to a web address that is running the service. These endpoints are written using REST architecture[https://en.wikipedia.org/wiki/Representational_state_transfer]. The endpoint address is formed by using an annotation on each controller and method.
@@ -99,14 +100,21 @@ In the case of an error or exception, a full stack trace is printed to make debu
 
 ![](img/ErrorLogStacktrace.png)
 
-- Security/https settings
-- Open source license
+#### Security:
+ARXaaS is a service that is intended to process sensitive data, so it is of importance that its transactions are protected by end to end encryption. HTTPS is an acknowledged and robust protocol that offers suitable protection, but it places unique demands on every potential owner of a server running ARXaaS. HTTPS is not achieved by the push of a button, and that is why an unconfigured instance of ARXaaS will default to running with regular HTTP. In order to activate HTTPS protection, the owner must possess an SSL certificate provided by a Certificate Authority (CA), and it must be applied during the configuration of the ARXaaS instance. [Reference User Manual]
 
-### Client side introduction
+##### SSL handshake
+With a valid HTTPS configuration, each request from a client to an ARXaaS service will initiate a SSL handshake. This is initated by the service replying to the client's request with a response containing its certificate, then awaiting the client's reply. Then, the client will verify the certificate's authenticity with a request to the certificate's CA. Depending on the response from the CA, the client will know whether or not it should trust the ARXaaS service's certificate, and the client will respond to the awaiting ARXaaS service accordingly. If the service reads OK from the response, the client and service will have established a secure connection, and they will proceed with execution of their intended transaction. [Reference relevant source(s)]
+
+#### Open source license
+ARXaaS is distributed under the MIT LICENSE. See LICENSE [https://github.com/oslomet-arx-as-a-service/ARXaaS/blob/master/LICENCE]
 
 
-### PyARXaaS
-PyARXaaS is a Python client package that provides abstractions for interacting with a ARXaaS instance. It is inspired by other client packages like PyGithub[https://github.com/PyGithub/PyGithub]. It  makes the integration of the risk analysis and de-identification functionality of ARXaaS as easy and intuitive as possible. The main user group of the package are data scientist that would be familiar and accustomed to work with data in Python. The main requirement from the client was that the anonymization functionality was to be made available in Python, this is the product which delivers on this requirement.
+#### Client side introduction
+
+
+#### PyARXaaS
+PyARXaaS is a Python client package that provides abstractions for interacting with a running instance of ARXaaS. It is inspired by other client packages like PyGithub[https://github.com/PyGithub/PyGithub]. It  makes the integration of the risk analysis and de-identification functionality of ARXaaS as easy and intuitive as possible. The main user group of the package are data scientist that would be familiar and accustomed to work with data in Python. The main requirement from the client was that the anonymization functionality was to be made available in Python, this is the product which delivers on this requirement.
 
 **The package features**
 - ARXaaS class for configuration and calling actions.
@@ -118,7 +126,7 @@ PyARXaaS is a Python client package that provides abstractions for interacting w
 #### Technologies
 #### Functionality
 #### Open source license
-PyARXaaS is distributed under the MIT license. See LICENCE [https://github.com/oslomet-arx-as-a-service/PyARXaaS/blob/master/LICENSE]
+PyARXaaS is distributed under the MIT license. See LICENSE [https://github.com/oslomet-arx-as-a-service/PyARXaaS/blob/master/LICENSE]
 
 ### WebARXaaS
 
