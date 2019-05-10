@@ -5,7 +5,7 @@ This chapter is a summary of the product we have developed. It's purpose is to g
 ### ToC
 
 ### Introduction
-The planning for this bachelor project was initiated on the 18.07.2018. After that, the development was officially started on the 08.01.19 and lasted until 06.05.2019. Then, the team worked on this report until the deadline on the 23.05.2019. The solution was deployed on NAV ITs internal platform first 15.april and has bean continuously deployed to until the report phase of the project. The team has been working in Oslo, at OsloMet university and NAV IT headquarters in Sannergata 2, four days a week with fixed core work hours nine to four. 
+The planning for this bachelor project was initiated on the 18.07.2018. After that, the development was officially started on the 08.01.19 and lasted until 06.05.2019. Then, the team worked on this report until the deadline on the 23.05.2019. The solution was deployed on NAV ITs internal platform first 15.april and has been continuously deployed to until the report phase of the project. The team has been working in Oslo, at OsloMet university and NAV IT headquarters in Sannergata 2, four days a week with fixed core work hours nine to four. 
 
 This work could not have been completed without the excellent support from our stakeholders at NAV IT Robindra Prabhu, Paul Bencze, Gøran Berntsen and Erik Vattekar. We also wish to thank NAV IT for trusting us with this important and challenging project, providing us with space to work in, inviting us to present to both internally at NAV and to other public sector agencies such as DiFi and the norwegian tax administration, and lastly for guiding us continuously thorough the process. The team is also grateful for the support from our Bachelor project supervisor Eva Hadler Vihovde.
 
@@ -14,7 +14,8 @@ The terms data and dataset are used continuously throughout the documentation. U
 ### Presentation of the group
  - Sondre - IT,
  Worked part time for NAV IT AI-lab since fall 2018. Has helped keep the team connected to different project stakeholders in NAV IT. Main competence is Java and Python development, but has worked with web development previously.
- - André
+ - André as a bachelors degree in machine engineering. Currently finishing a bachelors degree in software engineering.
+ Worked as an intern at Aker Solutions prior to studying computer engineering.
  - Julian
  - Viktor
  - Jeremiah has a bachelors degree in machine engineering. Currently studying for a bachelors degree in software engineering. Worked as an intern for OXX from January to May 2019. Main compentence in Java, javascript, C#, MySql.
