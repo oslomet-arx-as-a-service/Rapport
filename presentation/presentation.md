@@ -14,7 +14,8 @@ The terms data and dataset are used continuously throughout the documentation. U
 ### Presentation of the group
  - Sondre - IT,
  Worked part time for NAV IT AI-lab since fall 2018. Has helped keep the team connected to different project stakeholders in NAV IT. Main competence is Java and Python development, but has worked with web development previously.
- - André
+ - André as a bachelors degree in machine engineering. Currently finishing a bachelors degree in software engineering.
+ Worked as an intern at Aker Solutions prior to studying computer engineering.
  - Julian
  - Viktor
  - Jeremiah has a bachelors degree in machine engineering. Currently studying for a bachelors degree in software engineering. Worked as an intern for OXX from January to May 2019. Main compentence in Java, javascript, C#, MySql.
